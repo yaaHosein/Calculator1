@@ -1,5 +1,4 @@
 .button {
-    background-color: rgb(3, 138, 184);
     border: 7px solid rgb(213, 236, 213);
     color: white;
     padding: 10px 45px;
@@ -10,79 +9,7 @@
     background-color: rgb(81, 122, 121);
 }
 
-.button1 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button2 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button3 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button4 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button5 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button6 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button7 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button8 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button9 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button10 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button11 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button12 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button13 {
-    background-color: rgb(81, 122, 121)A;
-}
-
-.button14 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button15 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button16 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button17 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button18 {
-    background-color: rgb(81, 122, 121);
-}
-
-.button19 {
+.button1.button2.button3.button4.button5.button6.button7.button19.button8.button9.button10.button11.button12.button13.button14.button15.button18.button17 {
     background-color: rgb(81, 122, 121);
 }
 
@@ -94,6 +21,7 @@
     text-align: right;
     width: 285px;
     font-size: 25px;
+    height: 45px;
 }
 
 .button19 {
