@@ -1,12 +1,9 @@
 .button {
+    background-color: rgb(81, 122, 121);
     border: 7px solid rgb(213, 236, 213);
     color: white;
     padding: 10px 45px;
     font-size: 25px;
-}
-
-.button {
-    background-color: rgb(81, 122, 121);
 }
 
 #l {
