@@ -1,35 +1,32 @@
+.button,
+.result {
+  background-color: rgb(81, 122, 121);
+  border: 6px solid rgb(213, 236, 213);
+  color: white;
+  font-size: 25px;
+  padding: 5px;
+}
+
+.result {
+    /* calculate manually, we have 3 buttons in each row and each button 100px 
+    so the result div should be 300px 
+
+   But we have 5px padding on the left and 5px padding on the right 
+
+   300 - 10 = 290 
+
+   also we have 6px border on the left and 6px border on the right
+
+   290 = 12 = 286 
+    */ 
+  width: 286px; 
+}
+
 .button {
-    background-color: rgb(81, 122, 121);
-    border: 7px solid rgb(213, 236, 213);
-    color: white;
-    padding: 10px 45px;
-    font-size: 25px;
-}
+  /* 45px padding is too much */
+  /* padding: 10px 45px; */
 
-.button20 {
-    background-color: rgb(36, 117, 117);
-    padding: 15px 32px;
-    text-align: right;
-    width: 285px;
-    height: 45px;
-}
-
-.button19 {
-    padding: 10px 20px;
-}
-
-.button12 {
-    padding: 10px 48.7px;
-}
-
-.button14 {
-    padding: 10px 44.5px;
-}
-
-.button16 {
-    padding: 10px 47px;
-}
-
-.style {
-    margin: 0 auto;
+  /*  Setting fixed width and height to all buttons simplify the styling and space distributing */
+  width: 100px;
+  height: 100px;
 }
