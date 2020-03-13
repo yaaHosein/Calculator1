@@ -8,7 +8,7 @@
 }
 
 .result {
-    /* calculate manually, we have 3 buttons in each row and each button 100px 
+  /* calculate manually, we have 3 buttons in each row and each button 100px 
     so the result div should be 300px 
 
    But we have 5px padding on the left and 5px padding on the right 
@@ -18,8 +18,9 @@
    also we have 6px border on the left and 6px border on the right
 
    290 = 12 = 286 
-    */ 
-  width: 286px; 
+    */
+  background-color: rgb(36, 117, 117);
+  width: 286px;
 }
 
 .button {
