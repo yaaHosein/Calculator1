@@ -8,3 +8,4 @@ class Calculater {
         console.log(number2 - number1)
     };
 };
+//.
