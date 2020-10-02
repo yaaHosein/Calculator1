@@ -1,52 +1,54 @@
-const app0 = document.getElementById("app0");
-app0.addEventListener("click", function() {
+const button0 = document.getElementById("button0");
+button0.addEventListener("click", function() {
     console.log("0")
 });
-document.getElementById('app0').innerHTML = "0"
-const app1 = document.getElementById("app1");
-app1.addEventListener("click", function() {
+
+document.getElementById('button0').innerHTML = "0"
+const button1 = document.getElementById("button1");
+button1.addEventListener("click", function() {
     console.log("1")
 });
-const app2 = document.getElementById("app2");
-app2.addEventListener("click", function() {
-    console.log("2")
-});
-const app3 = document.getElementById("app3");
-app3.addEventListener("click", function() {
-    console.log("3")
-});
-const app4 = document.getElementById("app4");
-app4.addEventListener("click", function() {
-    console.log("4")
-});
-const app5 = document.getElementById("app5");
-app5.addEventListener("click", function() {
-    console.log("5")
-});
-const app6 = document.getElementById("app6");
-app6.addEventListener("click", function() {
-    console.log("6")
-});
-const app7 = document.getElementById("app7");
-app7.addEventListener("click", function() {
-    console.log("7")
-});
-
-const app8 = document.getElementById("app8");
-app8.addEventListener("click", function() {
-    console.log("8")
-});
-const app9 = document.getElementById("app9");
-app9.addEventListener("click", function() {
-    console.log("9")
-});
-
-
-var result = 0;
-var increaseButton = document.getElementById("increase-button");
-var result1 = document.getElementById("result1");
+const result = 0;
+const button1 = document.getElementById("button1")
+const result1 = document.getElementById("result1");
 result1.textContent = result;
-increaseButton.addEventListener("click", function() {
+increaseButton.addEventListener("click", function {
     result++;
     result1.textContent = result;
 });
+const button2 = document.getElementById("button2");
+button2.addEventListener("click", function() {
+    console.log("2")
+});
+const button3 = document.getElementById("button3");
+button3.addEventListener("click", function() {
+    console.log("3")
+});
+const button4 = document.getElementById("button4");
+button4.addEventListener("click", function() {
+    console.log("4")
+});
+const button5 = document.getElementById("button5");
+button5.addEventListener("click", function() {
+    console.log("5")
+});
+const button6 = document.getElementById("button6");
+button6.addEventListener("click", function() {
+    console.log("6")
+});
+const button7 = document.getElementById("button7");
+button7.addEventListener("click", function() {
+    console.log("7")
+});
+
+const button8 = document.getElementById("button8");
+button8.addEventListener("click", function() {
+    console.log("8")
+});
+const button9 = document.getElementById("button9");
+button9.addEventListener("click", function() {
+    console.log("9")
+});
+
+const result = document.getElementById("increase-button");
+console.log(result.innerHTML);
