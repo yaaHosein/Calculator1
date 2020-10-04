@@ -8,18 +8,22 @@ const button1 = document.getElementById("button1");
 button1.addEventListener("click", function() {
     console.log("1")
 });
-const result = 0;
-const button1 = document.getElementById("button1")
-const result1 = document.getElementById("result1");
-result1.textContent = result;
-increaseButton.addEventListener("click", function {
-    result++;
-    result1.textContent = result;
-});
+// let count = 0;
+// let result = document.getElementById("result1");
+// result1.textContent = count;
+// increaseButton.addEventListener("click", function() {
+//     count++;
+//     result1.textContent = count;
+// });
+
 const button2 = document.getElementById("button2");
+
 button2.addEventListener("click", function() {
     console.log("2")
 });
+
+{ document.getElementById("button2").innerHTML = 2; }
+
 const button3 = document.getElementById("button3");
 button3.addEventListener("click", function() {
     console.log("3")
@@ -50,5 +54,10 @@ button9.addEventListener("click", function() {
     console.log("9")
 });
 
-const result = document.getElementById("increase-button");
-console.log(result.innerHTML);
+//const result = document.getElementById("increase-button");
+// console.log(result.innerHTML);
+//
+//................................
+//let result = div.innerHTML
+//div.innerHTML = "7";
+//document.getElementById("button7").innerHTML = "7";
