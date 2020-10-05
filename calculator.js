@@ -7,9 +7,7 @@ let increaseButton = document.getElementById("button0");
 
 document.getElementById('button0').innerHTML = "0"
 const button1 = document.getElementById("button1");
-button1.addEventListener("click", function() {
-
-});
+button1.addEventListener("click", function() {});
 
 let result1 = document.getElementById("result1");
 result1.textContent = result;
