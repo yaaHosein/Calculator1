@@ -22,6 +22,7 @@ increaseButton.addEventListener("click", function() {
     result1.textContent = result;
 })
 
+
 const button2 = document.getElementById("button2");
 button2.addEventListener("click", function() {
 
