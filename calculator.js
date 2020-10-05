@@ -16,7 +16,6 @@ increaseButton.addEventListener("click", function() {
     result1.textContent = result;
 })
 
-
 result1.textContent = result;
 increaseButton.addEventListener("click", function() {
     result++;
