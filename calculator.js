@@ -1,10 +1,15 @@
 document.getElementById('button0').innerHTML = "0"
 let button = document.getElementById("increase-button");
 
-let count = 0;
+let result = 0;
 let increaseButton = document.getElementById("button0");
-result1.textContent = count;
+let result1 = document.getElementById("result1");
+result1.textContent = result;
 
+// By the way when I delete the following 3 lines nothing changes !!
+increaseButton.addEventListener("click", function() {
+    result++;
+})
 
 const button0 = document.getElementById("button0");
 button0.addEventListener("click", function() {
