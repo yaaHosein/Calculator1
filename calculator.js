@@ -1,12 +1,6 @@
 document.getElementById('button0').innerHTML = "0"
 let button = document.getElementById("increase-button");
 
-let result = 0;
-let increaseButton = document.getElementById("button0");
-let result1 = document.getElementById("result1");
-result1.textContent = result;
-
-
 const button0 = document.getElementById("button0");
 button0.addEventListener("click", function() {
     result1.textContent = 0;
