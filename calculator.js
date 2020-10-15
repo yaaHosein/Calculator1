@@ -1,11 +1,10 @@
 document.getElementById('button0').innerHTML = "0"
-let button = document.getElementById("show-number");
+let button = document.getElementById("result1");
 
 const button0 = document.getElementById("button0");
 button0.addEventListener("click", function() {
     result1.textContent = 0;
 });
-
 const button1 = document.getElementById("button1");
 button1.addEventListener("click", function() {
     result1.textContent = 1;
