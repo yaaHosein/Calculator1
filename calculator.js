@@ -7,13 +7,31 @@ button0.addEventListener("click", function() {
     result1.textContent = 0;
 });
 
-// const button1 = document.getElementById("button1");
-// const theCurrentValueOfResult1 = document.getElementById("result1").innerHTML;
-// button1.addEventListener("click", function() {
-//     result1.textContent = 1;
-//     const newValue = 1 + theCurrentValueOfResult1;
-//     result1.textContent = newValue;
-// });
+const button1 = document.getElementById("button1");
+const theCurrentValueOfResult1 = document.getElementById("result1").innerHTML;
+console.log(theCurrentValueOfResult1);
+button1.addEventListener("click", function() {
+    result1.textContent = 1;
+    const newValue = 1 + theCurrentValueOfResult1;
+    console.log(newValue);
+    result1.textContent = newValue;
+
+});
+
+
+const button1 = document.getElementById("button1");
+const theCurrentValueOfResult1 = document.getElementById("result1").innerHTML;
+console.log(theCurrentValueOfResult1["0"]);
+button1.addEventListener("click", function() {
+    result1.textContent = 1;
+    const newValue = 1 + theCurrentValueOfResult1;
+    console.log(newValue);
+    result1.textContent = newValue;
+});
+
+
+
+
 // const button1 = document.getElementById("button1");
 // const theCurrentValueOfResult1 = document.getElementById("result1").innerHTML;
 // button1.addEventListener("click", function() {
