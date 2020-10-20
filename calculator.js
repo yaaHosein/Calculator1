@@ -1,24 +1,56 @@
-document.getElementById('button0').innerHTML = "0"
+document.getElementById('button0').innerHTML = "0";
+
 let button = document.getElementById("result1");
 
 const button0 = document.getElementById("button0");
 button0.addEventListener("click", function() {
     result1.textContent = 0;
 });
-const button1 = document.getElementById("button1");
-button1.addEventListener("click", function() {
-    result1.textContent = 1;
-});
+
+// const button1 = document.getElementById("button1");
+// const theCurrentValueOfResult1 = document.getElementById("result1").innerHTML;
+// button1.addEventListener("click", function() {
+//     result1.textContent = 1;
+//     const newValue = 1 + theCurrentValueOfResult1;
+//     result1.textContent = newValue;
+// });
+// const button1 = document.getElementById("button1");
+// const theCurrentValueOfResult1 = document.getElementById("result1").innerHTML;
+// button1.addEventListener("click", function() {
+//     result1.textContent = 1;
+//     const newValue = 1 + theCurrentValueOfResult1;
+//     result1.textContent = newValue;
+//     result1.textContent = theCurrentValueOfResult1;
+// });
+
+// const button1 = document.getElementById("button1");
+// const theCurrentValueOfResult1 = document.getElementById("result1").innerHTML;
+// button1.addEventListener("click", function() {
+//     const newValue = 1 + theCurrentValueOfResult1;
+//     result1.textContent = newValue;
+// });
+
+// const button1 = document.getElementById("button1");
+// const theCurrentValueOfResult1 = document.getElementById("result1").innerHTML;
+// button1.addEventListener("click", function() {
+//     const newValue = 1 + theCurrentValueOfResult1;
+//     result1.textContent = newValue;
+//     result1.textContent = theCurrentValueOfResult1;
+// });
+
+
 
 const button2 = document.getElementById("button2");
 button2.addEventListener("click", function() {
     result1.textContent = 2;
+
 });
 
 const button3 = document.getElementById("button3");
 button3.addEventListener("click", function() {
     result1.textContent = 3;
 });
+
 
 const button4 = document.getElementById("button4");
 button4.addEventListener("click", function() {
