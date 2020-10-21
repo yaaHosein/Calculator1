@@ -8,50 +8,11 @@ button0.addEventListener("click", function() {
 });
 
 
-// const button1 = document.getElementById("button1");
-// button1.addEventListener("click", function() {
-//     const theCurrentValueOfResult1 = document.getElementById("result1").innerHTML;
-//     result1.textContent = 1;
-//     const newValue = 1 + theCurrentValueOfResult1;
-//     result1.textContent = newValue;
-//     document.getElementById("result1").innerHTML = newValue - 0;
-
-// });
-
-
-// const button1 = document.getElementById("button1");
-// button1.addEventListener("click", function() {
-//     const theCurrentValueOfResult1 = document.getElementById("result1").innerHTML;
-//     result1.textContent = 1;
-//     const newValue = 1 + theCurrentValueOfResult1;
-//     result1.textContent = newValue;
-
-//     document.getElementById("result1").innerHTML = newValue - '0';
-
-// });
-
-
 const button1 = document.getElementById("button1");
 button1.addEventListener("click", function() {
     const theCurrentValueOfResult1 = document.getElementById("result1").innerHTML;
-    result1.textContent = 1;
     const newValue = 1 + theCurrentValueOfResult1;
     result1.textContent = newValue;
-
-    const lastValue = newValue - "0";
-    result1.textContent = lastValue;
-});
-
-
-const button1 = document.getElementById("button1");
-button1.addEventListener("click", function() {
-    const theCurrentValueOfResult1 = document.getElementById("result1").innerHTML;
-    result1.textContent = 1;
-    const newValue = 1 + theCurrentValueOfResult1;
-    result1.textContent = newValue;
-
-    const lastValue = newValue - 0;
-    result1.textContent = lastValue;
 });
 
 
