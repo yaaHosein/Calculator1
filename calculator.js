@@ -1,5 +1,4 @@
 document.getElementById('button0').innerHTML = "0";
-
 let button = document.getElementById("result1");
 
 const button0 = document.getElementById("button0");
@@ -11,7 +10,7 @@ button0.addEventListener("click", function() {
 const button1 = document.getElementById("button1");
 button1.addEventListener("click", function() {
     const theCurrentValueOfResult1 = document.getElementById("result1").innerHTML;
-    const newValue = 1 + theCurrentValueOfResult1;
+    const newValue = theCurrentValueOfResult1 + 1;
     result1.textContent = newValue;
 });
 
