@@ -11,7 +11,9 @@ const button1 = document.getElementById("button1");
 button1.addEventListener("click", function() {
     const theCurrentValueOfResult1 = result1.textContent;
     const newValue = theCurrentValueOfResult1 + 1;
+    console.log(parseInt(newValue));
     result1.textContent = newValue;
+
 
 });
 
