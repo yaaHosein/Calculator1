@@ -88,7 +88,5 @@ button9.addEventListener("click", function() {
 });
 
 clearButton.addEventListener("click", function() {
-    const theCurrentValueOfResult1 = result1.textContent;
-    const newValue = theCurrentValueOfResult1 * 0;
-    result1.textContent = newValue
+    result1.textContent = 0;
 })
