@@ -88,5 +88,5 @@ button9.addEventListener("click", function() {
 });
 
 clearButton.addEventListener("click", function() {
-    result1.textContent = 0;
+    result1.textContent = '';
 })
