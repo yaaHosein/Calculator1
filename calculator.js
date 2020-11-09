@@ -1,6 +1,9 @@
 document.getElementById('button0').innerHTML = "0";
 let button = document.getElementById("result1");
 
+clearButton.addEventListener("click", function() {
+    result1.textContent = '';
+})
 
 button0.addEventListener("click", function() {
     const theCurrentValueOfResult1 = result1.textContent;
@@ -87,6 +90,13 @@ button9.addEventListener("click", function() {
 
 });
 
-clearButton.addEventListener("click", function() {
-    result1.textContent = '';
-})
+addingButton.addEventListener("click", function() {
+    const thePreviousNumber1 = 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 0;
+    const theLastNumber1 = 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 0;
+    const theAddedvalue = thePreviousNumber1 + theLastNumber1;
+    result1.textContent = theAddedvalue;
+
+});
+equalButton.addEventListener("click", function() {
+
+});
