@@ -1,100 +1,101 @@
 document.getElementById('button0').innerHTML = "0";
-let button = document.getElementById("result1");
+let button = document.getElementById("result");
 
 clearButton.addEventListener("click", function() {
-    result1.textContent = '';
+    result.textContent = '';
 })
 
+let currentResult = newValue;
+result.textContent = " ";
+
 button0.addEventListener("click", function() {
-    const theCurrentValueOfResult1 = result1.textContent;
-    const newValue = theCurrentValueOfResult1 + 0;
+    const CurrentValueOfresult = result.textContent;
+    const newValue = CurrentValueOfresult + 0;
     console.log(parseInt(newValue));
-    result1.textContent = newValue;
+    result.textContent = newValue;
 
 });
 
 button1.addEventListener("click", function() {
-    const theCurrentValueOfResult1 = result1.textContent;
-    const newValue = theCurrentValueOfResult1 + 1;
+    const CurrentValueOfresult = result.textContent;
+    const newValue = CurrentValueOfresult + 1;
     console.log(parseInt(newValue));
-    result1.textContent = newValue;
+    result.textContent = newValue;
 
 });
 
-
 button2.addEventListener("click", function() {
-    const theCurrentValueOfResult1 = result1.textContent;
-    const newValue = theCurrentValueOfResult1 + 2;
+    const CurrentValueOfresult = result.textContent;
+    const newValue = CurrentValueOfresult + 2;
     console.log(parseInt(newValue));
-    result1.textContent = newValue;
+    result.textContent = newValue;
 
 });
 
 
 button3.addEventListener("click", function() {
-    const theCurrentValueOfResult1 = result1.textContent;
-    const newValue = theCurrentValueOfResult1 + 3;
+    const CurrentValueOfresult = result.textContent;
+    const newValue = CurrentValueOfresult + 3;
     console.log(parseInt(newValue));
-    result1.textContent = newValue;
+    result.textContent = newValue;
 
 });
 
 
 button4.addEventListener("click", function() {
-    const theCurrentValueOfResult1 = result1.textContent;
-    const newValue = theCurrentValueOfResult1 + 4;
+    const CurrentValueOfresult = result.textContent;
+    const newValue = CurrentValueOfresult + 4;
     console.log(parseInt(newValue));
-    result1.textContent = newValue;
+    result.textContent = newValue;
 
 });
 
 
 button5.addEventListener("click", function() {
-    const theCurrentValueOfResult1 = result1.textContent;
-    const newValue = theCurrentValueOfResult1 + 5;
+    const CurrentValueOfresult = result.textContent;
+    const newValue = CurrentValueOfresult + 5;
     console.log(parseInt(newValue));
-    result1.textContent = newValue;
+    result.textContent = newValue;
 
 });
 
 button6.addEventListener("click", function() {
-    const theCurrentValueOfResult1 = result1.textContent;
-    const newValue = theCurrentValueOfResult1 + 6;
+    const CurrentValueOfresult = result.textContent;
+    const newValue = CurrentValueOfresult + 6;
     console.log(parseInt(newValue));
-    result1.textContent = newValue;
+    result.textContent = newValue;
 
 });
 
 button7.addEventListener("click", function() {
-    const theCurrentValueOfResult1 = result1.textContent;
-    const newValue = theCurrentValueOfResult1 + 7;
+    const CurrentValueOfresult = result.textContent;
+    const newValue = CurrentValueOfresult + 7;
     console.log(parseInt(newValue));
-    result1.textContent = newValue;
+    result.textContent = newValue;
 
 });
 
 button8.addEventListener("click", function() {
-    const theCurrentValueOfResult1 = result1.textContent;
-    const newValue = theCurrentValueOfResult1 + 8;
+    const CurrentValueOfresult = result.textContent;
+    const newValue = CurrentValueOfresult + 8;
     console.log(parseInt(newValue));
-    result1.textContent = newValue;
+    result.textContent = newValue;
 
 });
 
 
 button9.addEventListener("click", function() {
-    const theCurrentValueOfResult1 = result1.textContent;
-    const newValue = theCurrentValueOfResult1 + 9;
+    const CurrentValueOfresult = result.textContent;
+    const newValue = CurrentValueOfresult + 9;
     console.log(parseInt(newValue));
-    result1.textContent = newValue;
+    result.textContent = newValue;
 
 });
 
+
+
 addingButton.addEventListener("click", function() {
-    const thePreviousNumber1 = 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 0;
-    const theLastNumber1 = 1 || 2 || 3 || 4 || 5 || 6 || 7 || 8 || 9 || 0;
-    const theAddedvalue = thePreviousNumber1 + theLastNumber1;
-    result1.textContent = theAddedvalue;
+
 
 });
 equalButton.addEventListener("click", function() {
