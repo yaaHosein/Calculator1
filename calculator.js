@@ -7,6 +7,7 @@ clearButton.addEventListener("click", function() {
 
 
 let currentResult = 01;
+let anotherOperand = 1;
 
 button0.addEventListener("click", function() {
     const CurrentValueOfresult = result.textContent;
@@ -90,15 +91,11 @@ button9.addEventListener("click", function() {
 });
 
 addingButton.addEventListener("click", function() {
-    const CurrentValueOfresult = result.textContent;
-    const newValue = CurrentValueOfresult + "+";
-    result.textContent = newValue;
-    result.textContent = " ";
-
+    result.textContent = "";
 });
 
 equalButton.addEventListener("click", function() {
-    let anotherOperand = 1;
+
     let addedresult = currentResult + anotherOperand;
     result.textContent = addedresult;
 
