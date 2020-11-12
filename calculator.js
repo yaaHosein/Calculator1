@@ -1,13 +1,14 @@
-document.getElementById('button0').innerHTML = "0";
+let currentResult = Number;
+let nextOperand = Number;
 let button = document.getElementById("result");
+
+document.getElementById('button0').innerHTML = "0";
 
 clearButton.addEventListener("click", function() {
     result.textContent = '';
 })
 
 
-let currentResult = 01;
-let anotherOperand = 1;
 
 button0.addEventListener("click", function() {
     const CurrentValueOfresult = result.textContent;
@@ -96,7 +97,7 @@ addingButton.addEventListener("click", function() {
 
 equalButton.addEventListener("click", function() {
 
-    let addedresult = currentResult + anotherOperand;
-    result.textContent = addedresult;
+    let addedResult = currentResult + nextOperand;
+    result.textContent = addedResult;
 
 });
