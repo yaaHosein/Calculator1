@@ -98,8 +98,8 @@ addingButton.addEventListener("click", function() {
 });
 
 equalButton.addEventListener("click", function() {
-
-    let addedresult = currentResult + newValue;
+    let anotherOperand = 1;
+    let addedresult = currentResult + anotherOperand;
     result.textContent = addedresult;
 
 });
