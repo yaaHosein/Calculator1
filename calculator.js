@@ -8,6 +8,9 @@ clearButton.addEventListener("click", function() {
 let currentResult = newValue;
 result.textContent = " ";
 
+
+
+
 button0.addEventListener("click", function() {
     const CurrentValueOfresult = result.textContent;
     const newValue = CurrentValueOfresult + 0;
@@ -92,12 +95,14 @@ button9.addEventListener("click", function() {
 
 });
 
-
-
 addingButton.addEventListener("click", function() {
 
-
+    //  let addedresult = currentResult + newValue;
+    //  result.textContent = addedresult;
 });
 equalButton.addEventListener("click", function() {
+
+    // here I'm assigning the new result to the result div 
+    // result.textContent = addedresult;
 
 });
