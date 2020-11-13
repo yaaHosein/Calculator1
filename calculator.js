@@ -1,4 +1,7 @@
+let currenValue = Number;
+
 let button = document.getElementById("result");
+
 
 document.getElementById('button0').innerHTML = "0";
 
@@ -90,16 +93,14 @@ button9.addEventListener("click", function() {
 });
 
 addingButton.addEventListener("click", function() {
-    let lastValue = 01;
-    let plusSign = "+";
-    let currenValue = "";
+    let lastValue = Number;
+    let operaror = "+";
+    currenValue.textContent = ""
+
 });
 
 equalButton.addEventListener("click", function() {
-    let lastValue = 01;
-    let currenValue = "2";
-    console.log(parseInt(currenValue));
-    let additionResult = lastValue + currenValue
-    result.textContent = additionResult;
+    lastValue + currenValue = Number;
+    result.textContent = Number;
 
 });
