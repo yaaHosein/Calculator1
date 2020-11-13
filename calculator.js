@@ -5,13 +5,11 @@ let operator;
 
 let button = document.getElementById("result");
 
-
 document.getElementById('button0').innerHTML = "0";
 
 clearButton.addEventListener("click", function() {
     result.textContent = '';
 })
-
 
 
 button0.addEventListener("click", function() {
@@ -98,12 +96,25 @@ button9.addEventListener("click", function() {
 addButton.addEventListener("click", function() {
     lastValue = currentValue;
     operator = "+";
-    result.textContent = ""
+    result.textContent = "";
 
 });
 
+// equalButton.addEventListener("click", function() {
+//     if (operator === "+")
+//         console.log(parseInt(lastValue));
+//     console.log(parseInt(currentValue));
+//     let result = lastValue + currentValue;
+//     console.log(result);
+//     result.textContent = result;
+// });
+
+
 equalButton.addEventListener("click", function() {
-    if (operator = "+")
-        let result = console.log(parseInt(lastValue)) + console.log(parseInt(currentValue));
-    result.textContent = currenValue;
+    if (operator === "+")
+        console.log(parseInt(lastValue));
+    console.log(parseInt(currentValue));
+    let result1 = lastValue + currentValue;
+    console.log(result1);
+    result.textContent = result1;
 });
