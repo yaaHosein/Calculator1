@@ -1,5 +1,6 @@
 let lastValue;
 let operator;
+let currentValue;
 
 
 let button = document.getElementById("result");
@@ -96,7 +97,8 @@ addButton.addEventListener("click", function() {
     lastValue = document.getElementById("result").innerHTML;
     operator = "+";
     let currentValue = lastValue + "+";
-    currentValue.textContent = "";
+    result.textContent = currentValue;
+    result.textContent = "";
 
 });
 
@@ -104,11 +106,9 @@ addButton.addEventListener("click", function() {
 
 
 equalButton.addEventListener("click", function() {
-    let currentValue;
     if (operator === "+")
         console.log(parseInt(lastValue));
     console.log(parseInt(currentValue));
-    let result = lastValue + currentValue;
-    console.log(result);
-    result.textContent = result;
+    let result1 = lastValue + currentValue;
+    result1.textContent = result;
 });
