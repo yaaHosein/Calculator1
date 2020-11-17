@@ -1,7 +1,6 @@
 let lastValue;
 let operator;
 
-
 let button = document.getElementById("result");
 
 document.getElementById('button0').innerHTML = "0";
@@ -98,13 +97,39 @@ addButton.addEventListener("click", function() {
     result.textContent = "";
 });
 
+subtractButton.addEventListener("click", function() {
+    operator = "-";
+    lastValue = result.textContent;
+    result.textContent = "";
+});
 
-
+multiplyButton.addEventListener("click", function() {
+    operator = "*";
+    lastValue = result.textContent;
+    result.textContent = "";
+});
+divideButton.addEventListener("click", function() {
+    operator = "/";
+    lastValue = result.textContent;
+    result.textContent = "";
+});
 
 equalButton.addEventListener("click", function() {
-    if (operator === "+")
-        console.log(parseInt(lastValue));
-    console.log(parseInt(currentValue));
-    result1 = lastValue + currentValue;
-    result1.textContent = result;
+    let firstOperand = parseInt(lastValue);
+    let secondOperand = parseInt(result.textContent);
+    let _result;
+    console.log("opertator", operator);
+    if (operator === "+") {
+        _result = firstOperand + secondOperand;
+    }
+    if (operator === "-") {
+        _result = firstOperand - secondOperand;
+    }
+    if (operator === "*") {
+        _result = firstOperand * secondOperand;
+    }
+    if (operator === "/") {
+        _result = firstOperand / secondOperand;
+    }
+    result.textContent = _result;
 });
