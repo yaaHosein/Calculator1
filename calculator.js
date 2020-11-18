@@ -5,7 +5,7 @@ let button = document.getElementById("result");
 
 document.getElementById('button0').innerHTML = "0";
 
-clearButton.addEventListener("click", function() {
+clearingButton.addEventListener("click", function() {
     result.textContent = '';
 })
 
@@ -91,24 +91,31 @@ button9.addEventListener("click", function() {
     result.textContent = newValue;
 });
 
-addButton.addEventListener("click", function() {
+periodButton.addEventListener("click", function() {
+    const CurrentValueOfresult = result.textContent;
+    const newValue = CurrentValueOfresult + ".";
+    console.log(parseInt(newValue));
+    result.textContent = newValue;
+});
+
+addingButton.addEventListener("click", function() {
     operator = "+";
     lastValue = result.textContent;
     result.textContent = "";
 });
 
-subtractButton.addEventListener("click", function() {
+subtractingButton.addEventListener("click", function() {
     operator = "-";
     lastValue = result.textContent;
     result.textContent = "";
 });
 
-multiplyButton.addEventListener("click", function() {
+multiplyingButton.addEventListener("click", function() {
     operator = "*";
     lastValue = result.textContent;
     result.textContent = "";
 });
-divideButton.addEventListener("click", function() {
+dividingButton.addEventListener("click", function() {
     operator = "/";
     lastValue = result.textContent;
     result.textContent = "";
