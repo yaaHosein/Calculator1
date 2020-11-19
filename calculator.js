@@ -122,8 +122,8 @@ dividingButton.addEventListener("click", function() {
 });
 
 equalButton.addEventListener("click", function() {
-    let firstOperand = parseInt(lastValue);
-    let secondOperand = parseInt(result.textContent);
+    let firstOperand = parseFloat(lastValue);
+    let secondOperand = parseFloat(result.textContent);
     let _result;
     console.log("opertator", operator);
     if (operator === "+") {
