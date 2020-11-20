@@ -11,24 +11,24 @@ clearingButton.addEventListener("click", function() {
 
 
 button0.addEventListener("click", function() {
-    const CurrentValueOfresult = result.textContent;
-    const newValue = CurrentValueOfresult + 0;
+    const currentValueOfResult = result.textContent;
+    const newValue = currentValueOfResult + 0;
     console.log(parseInt(newValue));
     result.textContent = newValue;
 
 });
 
 button1.addEventListener("click", function() {
-    const CurrentValueOfresult = result.textContent;
-    const newValue = CurrentValueOfresult + 1;
+    const currentValueOfResult = result.textContent;
+    const newValue = currentValueOfResult + 1;
     console.log(parseInt(newValue));
     result.textContent = newValue;
 
 });
 
 button2.addEventListener("click", function() {
-    const CurrentValueOfresult = result.textContent;
-    const newValue = CurrentValueOfresult + 2;
+    const currentValueOfResult = result.textContent;
+    const newValue = currentValueOfResult + 2;
     console.log(parseInt(newValue));
     result.textContent = newValue;
 
@@ -36,8 +36,8 @@ button2.addEventListener("click", function() {
 
 
 button3.addEventListener("click", function() {
-    const CurrentValueOfresult = result.textContent;
-    const newValue = CurrentValueOfresult + 3;
+    const currentValueOfResult = result.textContent;
+    const newValue = currentValueOfResult + 3;
     console.log(parseInt(newValue));
     result.textContent = newValue;
 
@@ -45,8 +45,8 @@ button3.addEventListener("click", function() {
 
 
 button4.addEventListener("click", function() {
-    const CurrentValueOfresult = result.textContent;
-    const newValue = CurrentValueOfresult + 4;
+    const currentValueOfResult = result.textContent;
+    const newValue = currentValueOfResult + 4;
     console.log(parseInt(newValue));
     result.textContent = newValue;
 
@@ -54,48 +54,77 @@ button4.addEventListener("click", function() {
 
 
 button5.addEventListener("click", function() {
-    const CurrentValueOfresult = result.textContent;
-    const newValue = CurrentValueOfresult + 5;
+    const currentValueOfResult = result.textContent;
+    const newValue = currentValueOfResult + 5;
     console.log(parseInt(newValue));
     result.textContent = newValue;
 
 });
 
 button6.addEventListener("click", function() {
-    const CurrentValueOfresult = result.textContent;
-    const newValue = CurrentValueOfresult + 6;
+    const currentValueOfResult = result.textContent;
+    const newValue = currentValueOfResult + 6;
     console.log(parseInt(newValue));
     result.textContent = newValue;
 
 });
 
 button7.addEventListener("click", function() {
-    const CurrentValueOfresult = result.textContent;
-    const newValue = CurrentValueOfresult + 7;
+    const currentValueOfResult = result.textContent;
+    const newValue = currentValueOfResult + 7;
     console.log(parseInt(newValue));
     result.textContent = newValue;
 
 });
 
 button8.addEventListener("click", function() {
-    const CurrentValueOfresult = result.textContent;
-    const newValue = CurrentValueOfresult + 8;
+    const currentValueOfResult = result.textContent;
+    const newValue = currentValueOfResult + 8;
     console.log(parseInt(newValue));
     result.textContent = newValue;
 });
 
 button9.addEventListener("click", function() {
-    const CurrentValueOfresult = result.textContent;
-    const newValue = CurrentValueOfresult + 9;
+    const currentValueOfResult = result.textContent;
+    const newValue = currentValueOfResult + 9;
     console.log(parseInt(newValue));
     result.textContent = newValue;
 });
 
 periodButton.addEventListener("click", function() {
-    const CurrentValueOfresult = result.textContent;
-    const newValue = CurrentValueOfresult + ".";
+    const currentValueOfResult = result.textContent;
+    const newValue = currentValueOfResult + ".";
     console.log(parseInt(newValue));
     result.textContent = newValue;
+
+
+    if (newValue.includes("."++)) {
+        console.log("")
+    };
+
+    // var input = '';
+    // $(':button').click(function() {
+    //     input = $(this).attr("value");
+    //     if (input === '.') {
+    //         if (input === '.' + '.') {
+    //             input = '';
+    //         }
+    //     }
+    // });
+    // ========================
+    // function update_input() {
+
+    //     input_1 = input1.text;
+
+    //     if (input_1.match(".") == false) {
+    //         input1.restrict = ".0-9";
+    //     } else {
+    //         input1.restrict = "0-9";
+    //     }
+    // // }
+    // ===
+    // === === === === === === ===
+
 });
 
 addingButton.addEventListener("click", function() {
