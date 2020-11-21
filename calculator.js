@@ -92,40 +92,44 @@ button9.addEventListener("click", function() {
 });
 
 periodButton.addEventListener("click", function() {
+    // let __result;
     const currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + ".";
     console.log(parseInt(newValue));
     result.textContent = newValue;
+    if (currentValueOfResult.includes = "..") { result.textContent = "." }
 
 
-    if (newValue.includes("."++)) {
-        console.log("")
-    };
 
-    // var input = '';
-    // $(':button').click(function() {
-    //     input = $(this).attr("value");
-    //     if (input === '.') {
-    //         if (input === '.' + '.') {
-    //             input = '';
-    //         }
-    //     }
-    // });
-    // ========================
-    // function update_input() {
-
-    //     input_1 = input1.text;
-
-    //     if (input_1.match(".") == false) {
-    //         input1.restrict = ".0-9";
-    //     } else {
-    //         input1.restrict = "0-9";
-    //     }
-    // // }
-    // ===
-    // === === === === === === ===
-
+    // var __result = newValue;
+    // __result.includes("."++);
+    // console.log("");
 });
+
+// var input = '';
+// $(':button').click(function() {
+//     input = $(this).attr("value");
+//     if (input === '.') {
+//         if (input === '.' + '.') {
+//             input = '';
+//         }
+//     }
+// });
+// ========================
+// function update_input() {
+
+//     input_1 = input1.text;
+
+//     if (input_1.match(".") == false) {
+//         input1.restrict = ".0-9";
+//     } else {
+//         input1.restrict = "0-9";
+//     }
+// // }
+// ===
+// === === === === === === ===
+
+
 
 addingButton.addEventListener("click", function() {
     operator = "+";
