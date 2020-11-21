@@ -94,11 +94,15 @@ button9.addEventListener("click", function() {
 periodButton.addEventListener("click", function() {
     // let __result;
     const currentValueOfResult = result.textContent;
-    const newValue = currentValueOfResult + ".";
-    console.log(parseInt(newValue));
-    result.textContent = newValue;
-    if (currentValueOfResult.includes = "..") { result.textContent = "." }
+    if (currentValueOfResult.includes('.' + '.')) { result.textContent == "." }
 
+    const newValue = currentValueOfResult + ".";
+    // if (currentValueOfResult.includes('.' + '.')) { result.textContent == "." }
+
+    // if (currentValueOfResult.includes(".")) {
+    //     result.textContent == currentValueOfResult + "."
+    // }
+    result.textContent = newValue;
 
 
     // var __result = newValue;
