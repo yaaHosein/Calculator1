@@ -94,15 +94,25 @@ button9.addEventListener("click", function() {
 periodButton.addEventListener("click", function() {
     // let __result;
     const currentValueOfResult = result.textContent;
-    if (currentValueOfResult.includes('.' + '.')) { result.textContent == "." } else { result.textContent == "" };
+    // if (currentValueOfResult.includes('.' + '.')) { result.textContent == "." } else { result.textContent == "" };
 
     const newValue = currentValueOfResult + ".";
+
     // if (currentValueOfResult.includes('.' + '.')) { result.textContent == "." }
 
     // if (currentValueOfResult.includes(".")) {
     //     result.textContent == currentValueOfResult + "."
     // }
     result.textContent = newValue;
+    // if (newValue.includes('.') = false) { result.textContent == currentValueOfResult + "." }
+    // if (currentValueOfResult.includes('.') == false) { result.textContent = currentValueOfResult + "." }
+
+    // if (currentValueOfResult.includes('.') == false) { result.textContent = newValue + "." }
+    // if (currentValueOfResult.includes('.') == false) { result.textContent = currentValueOfResult + "." }
+    // if (currentValueOfResult.includes('.') == false) { result.textContent = newValue + "." }
+    // if (currentValueOfResult.includes('.') = false) { result.textContent == newValue + "." }
+
+    //else { result.textContent == "" };
 
 
     // var __result = newValue;
