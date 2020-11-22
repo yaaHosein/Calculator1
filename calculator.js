@@ -7,15 +7,13 @@ document.getElementById('button0').innerHTML = "0";
 
 clearingButton.addEventListener("click", function() {
     result.textContent = '';
-})
-
+});
 
 button0.addEventListener("click", function() {
     const currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + 0;
     console.log(parseInt(newValue));
     result.textContent = newValue;
-
 });
 
 button1.addEventListener("click", function() {
@@ -31,7 +29,6 @@ button2.addEventListener("click", function() {
     const newValue = currentValueOfResult + 2;
     console.log(parseInt(newValue));
     result.textContent = newValue;
-
 });
 
 
@@ -92,32 +89,45 @@ button9.addEventListener("click", function() {
 });
 
 periodButton.addEventListener("click", function() {
+    ////%% here I am listening 👌👂 the period-button click 
     // let __result;
+    //&& here I am saving the result in a vaiarble 
     const currentValueOfResult = result.textContent;
+    ////&& here I am getting the value of result div and saving  it in a variable 
     // if (currentValueOfResult.includes('.' + '.')) { result.textContent == "." } else { result.textContent == "" };
-
+    //&& here i am checking using if statment that if there is double "." in the current value of result div so let it to become only one period otherwise display in the result div empty  
     const newValue = currentValueOfResult + ".";
-
+    //&& here I'm adding "." to the current value of result div and saving it in another variable 
     // if (currentValueOfResult.includes('.' + '.')) { result.textContent == "." }
-
-    // if (currentValueOfResult.includes(".")) {
-    //     result.textContent == currentValueOfResult + "."
-    // }
+    //&& here i am checking using if statment that if there is double "." in the current value of result div so let it to become only one period
+    // if (currentValueOfResult.includes(".")) {result.textContent == currentValueOfResult + "."}
+    // && here i am checking using if statment that if there is one . in the current Value Of Result div let the result div equal to one .
     result.textContent = newValue;
+    //&& here i am displaying the last value to result div 
     // if (newValue.includes('.') = false) { result.textContent == currentValueOfResult + "." }
+    // && here i am checking using if statment that if there is one . in the new Value Of Result div let rsult div ==  the current value of result div +  .
     // if (currentValueOfResult.includes('.') == false) { result.textContent = currentValueOfResult + "." }
+    // && here i am checking using if statment that if there is not  . in the current Value Of Result div let the result div equal to current value of result div + one .
+    // if (currentValueOfResult.includes('.') == false) { result.textContent = newValue + "." }
+    //&& // && here i am checking using if statment that if there is not . in the current Value Of Result div let the result div equal to new value + one .
+    // if (currentValueOfResult.includes('.') == false) { result.textContent = currentValueOfResult + "." }
+    // && here i am checking using if statment that if there is not  . in the current Value Of Result div let the result div equal to current value of result div + one .
 
     // if (currentValueOfResult.includes('.') == false) { result.textContent = newValue + "." }
-    // if (currentValueOfResult.includes('.') == false) { result.textContent = currentValueOfResult + "." }
-    // if (currentValueOfResult.includes('.') == false) { result.textContent = newValue + "." }
+    // && here i am checking using if statment that if there is not  . in the current Value Of Result div let the result div equal to new value of result div + one .
+
     // if (currentValueOfResult.includes('.') = false) { result.textContent == newValue + "." }
+    // && here i am checking using if statment that if there is not  . in the current Value Of Result div let the result div equal to current value of result div + one .
 
     //else { result.textContent == "" };
-
+    //&& i think this comment is related to one of the first tries to find the solutions 
 
     // var __result = newValue;
+    //$$ here i am saving the result div in a vairable called new Value ;
     // __result.includes("."++);
+    //&& here i am checking if this result has 2 and more "."
     // console.log("");
+    //&& here i ma copying the result to console panel 
 });
 
 // var input = '';
@@ -142,8 +152,6 @@ periodButton.addEventListener("click", function() {
 // // }
 // ===
 // === === === === === === ===
-
-
 
 addingButton.addEventListener("click", function() {
     operator = "+";
