@@ -89,11 +89,23 @@ button9.addEventListener("click", function() {
 });
 
 periodButton.addEventListener("click", function() {
-    const currentValueOfResult = result.textContent;
+    let currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + ".";
     result.textContent = newValue;
-    if (currentValueOfResult.includes('.') === false) { newValue = currentValueOfResult + "." } else { result.textContent = currentValueOfResult }
+    if (currentValueOfResult.includes('.') === false) currentValueOfResult = currentValueOfResult + "."
+    else result.textContent = currentValueOfResult
 });
+
+// periodButton.addEventListener("click", function() {
+//     let currentValueOfResult = result.textContent;
+
+//     result.textContent = newValue;
+//     if (currentValueOfResult.includes('.') === false) {
+//         const newValue = currentValueOfResult + ".";
+//         currentValueOfResult = currentValueOfResult + "."
+//     } else result.textContent = currentValueOfResult
+// });
+
 
 addingButton.addEventListener("click", function() {
     operator = "+";
