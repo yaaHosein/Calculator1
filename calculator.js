@@ -89,15 +89,10 @@ button9.addEventListener("click", function() {
 });
 
 periodButton.addEventListener("click", function() {
-    let currentValueOfResult = result.textContent;
+    const currentValueOfResult = result.textContent;
     if (currentValueOfResult.includes('.') !== true)
-        currentValueOfResult = currentValueOfResult + ".";
-    // let newValue = currentValueOfResult;
-    // result.textContent = newValue;
-    result.textContent = currentValueOfResult;
+        result.textContent = currentValueOfResult + ".";
 });
-
-
 
 addingButton.addEventListener("click", function() {
     operator = "+";
