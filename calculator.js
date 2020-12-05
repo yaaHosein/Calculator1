@@ -99,6 +99,7 @@ negativeValueButton.addEventListener("click", function() {
         result.textContent = currentValueOfResult + "-";
 });
 
+
 addingButton.addEventListener("click", function() {
     operator = "+";
     lastValue = result.textContent;
