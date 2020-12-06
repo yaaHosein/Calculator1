@@ -94,10 +94,11 @@ periodButton.addEventListener("click", function() {
         result.textContent = currentValueOfResult + ".";
 });
 
-
 negativeValueButton.addEventListener("click", function() {
     const currentValueOfResult = result.textContent;
-    if (currentValueOfResult !== "" && currentValueOfResult[0] === "-") { result.textContent = currentValueOfResult.slice(0) };
+    if (currentValueOfResult !== "" && currentValueOfResult[0] !== "-") result.textContent = currentValueOfResult + "-";
+    if (currentValueOfResult !== "" && currentValueOfResult[0] === "-") result.textContent = currentValueOfResult.slice(0);
+
 });
 
 addingButton.addEventListener("click", function() {
