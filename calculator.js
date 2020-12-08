@@ -4,7 +4,6 @@ let operator;
 let button = document.getElementById("result");
 
 document.getElementById('button0').innerHTML = "0";
-
 clearingButton.addEventListener("click", function() {
     result.textContent = '';
 });
@@ -21,7 +20,6 @@ button1.addEventListener("click", function() {
     const newValue = currentValueOfResult + 1;
     console.log(parseInt(newValue));
     result.textContent = newValue;
-
 });
 
 button2.addEventListener("click", function() {
@@ -37,25 +35,20 @@ button3.addEventListener("click", function() {
     const newValue = currentValueOfResult + 3;
     console.log(parseInt(newValue));
     result.textContent = newValue;
-
 });
-
 
 button4.addEventListener("click", function() {
     const currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + 4;
     console.log(parseInt(newValue));
     result.textContent = newValue;
-
 });
-
 
 button5.addEventListener("click", function() {
     const currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + 5;
     console.log(parseInt(newValue));
     result.textContent = newValue;
-
 });
 
 button6.addEventListener("click", function() {
@@ -63,7 +56,6 @@ button6.addEventListener("click", function() {
     const newValue = currentValueOfResult + 6;
     console.log(parseInt(newValue));
     result.textContent = newValue;
-
 });
 
 button7.addEventListener("click", function() {
@@ -71,7 +63,6 @@ button7.addEventListener("click", function() {
     const newValue = currentValueOfResult + 7;
     console.log(parseInt(newValue));
     result.textContent = newValue;
-
 });
 
 button8.addEventListener("click", function() {
@@ -97,8 +88,7 @@ periodButton.addEventListener("click", function() {
 negativeValueButton.addEventListener("click", function() {
     const currentValueOfResult = result.textContent;
     if (currentValueOfResult !== "" && currentValueOfResult[0] !== "-") { result.textContent = "-" + currentValueOfResult };
-    if (currentValueOfResult !== "" && currentValueOfResult[0] === "-") { result.textContent = currentValueOfResult.slice(0) };
-
+    if (currentValueOfResult !== "" && currentValueOfResult[0] === "-") { result.textContent = currentValueOfResult.slice(2) };
 });
 
 addingButton.addEventListener("click", function() {
@@ -122,7 +112,6 @@ dividingButton.addEventListener("click", function() {
     lastValue = result.textContent;
     result.textContent = "";
 });
-
 equalButton.addEventListener("click", function() {
     let firstOperand = parseFloat(lastValue);
     let secondOperand = parseFloat(result.textContent);
