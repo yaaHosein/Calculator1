@@ -1,12 +1,6 @@
-let lastValue;
-let operator;
-
 let button = document.getElementById("result");
 
 document.getElementById('button0').innerHTML = "0";
-clearingButton.addEventListener("click", function() {
-    result.textContent = '';
-});
 
 button0.addEventListener("click", function() {
     const currentValueOfResult = result.textContent;
@@ -91,6 +85,9 @@ negativeValueButton.addEventListener("click", function() {
     if (currentValueOfResult !== "" && currentValueOfResult[0] === "-") { result.textContent = currentValueOfResult.slice(1) };
 });
 
+let lastValue;
+let operator;
+
 addingButton.addEventListener("click", function() {
     operator = "+";
     lastValue = result.textContent;
@@ -130,4 +127,7 @@ equalButton.addEventListener("click", function() {
         _result = firstOperand / secondOperand;
 
     result.textContent = _result;
+});
+clearingButton.addEventListener("click", function() {
+    result.textContent = '';
 });
