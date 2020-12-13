@@ -15,7 +15,8 @@ button0.addEventListener("click", function() {
     const newValue = currentValueOfResult + 0;
     console.log(parseInt(newValue));
     result.textContent = newValue;
-    if () {};
+    if (_firstOperand === 0) { result.textContent !== "" };
+    if (_firstOperand === "+" || "-" || "*" || "/") { result.textContent = "" };
 });
 button1.addEventListener("click", function() {
     const currentValueOfResult = result.textContent;
