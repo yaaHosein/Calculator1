@@ -98,7 +98,6 @@ negativeValueButton.addEventListener("click", function() {
     const currentValueOfResult = result.textContent;
     if (currentValueOfResult !== "" && currentValueOfResult[0] !== "-") { result.textContent = "-" + currentValueOfResult };
     if (currentValueOfResult !== "" && currentValueOfResult[0] === "-") { result.textContent = currentValueOfResult.slice(1) };
-
 });
 
 addingButton.addEventListener("click", function() {
