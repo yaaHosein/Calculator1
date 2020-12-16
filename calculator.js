@@ -1,6 +1,6 @@
 let lastValue;
 let operator;
-let firstOperandAndOperator;
+let _Operator;
 
 let button = document.getElementById("result");
 
@@ -11,7 +11,7 @@ clearingButton.addEventListener("click", function() {
 });
 
 button0.addEventListener("click", function() {
-    if (firstOperandAndOperator === "+" || "-" || "*" || "/") result.textContent = "";
+    if (_Operator === "+" || "-" || "*" || "/") result.textContent = "";
     const currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + 0;
     console.log(parseInt(newValue));
@@ -19,7 +19,7 @@ button0.addEventListener("click", function() {
 });
 
 button1.addEventListener("click", function() {
-    if (firstOperandAndOperator === "+" || "-" || "*" || "/") result.textContent = "";
+    if (_Operator === "+" || "-" || "*" || "/") result.textContent = "";
     const currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + 1;
     console.log(parseInt(newValue));
@@ -27,7 +27,7 @@ button1.addEventListener("click", function() {
 });
 
 button2.addEventListener("click", function() {
-    if (firstOperandAndOperator === "+" || "-" || "*" || "/") result.textContent = "";
+    if (_Operator === "+" || "-" || "*" || "/") result.textContent = "";
     const currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + 2;
     console.log(parseInt(newValue));
@@ -35,7 +35,7 @@ button2.addEventListener("click", function() {
 });
 
 button3.addEventListener("click", function() {
-    if (firstOperandAndOperator === "+" || "-" || "*" || "/") result.textContent = "";
+    if (_Operator === "+" || "-" || "*" || "/") result.textContent = "";
     const currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + 3;
     console.log(parseInt(newValue));
@@ -43,7 +43,7 @@ button3.addEventListener("click", function() {
 });
 
 button4.addEventListener("click", function() {
-    if (firstOperandAndOperator === "+" || "-" || "*" || "/") result.textContent = "";
+    if (_Operator === "+" || "-" || "*" || "/") result.textContent = "";
     const currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + 4;
     console.log(parseInt(newValue));
@@ -51,7 +51,7 @@ button4.addEventListener("click", function() {
 });
 
 button5.addEventListener("click", function() {
-    if (firstOperandAndOperator === "+" || "-" || "*" || "/") result.textContent = "";
+    if (_Operator === "+" || "-" || "*" || "/") result.textContent = "";
     const currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + 5;
     console.log(parseInt(newValue));
@@ -59,7 +59,7 @@ button5.addEventListener("click", function() {
 });
 
 button6.addEventListener("click", function() {
-    if (firstOperandAndOperator === "+" || "-" || "*" || "/") result.textContent = "";
+    if (_Operator === "+" || "-" || "*" || "/") result.textContent = "";
     const currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + 6;
     console.log(parseInt(newValue));
@@ -67,7 +67,7 @@ button6.addEventListener("click", function() {
 });
 
 button7.addEventListener("click", function() {
-    if (firstOperandAndOperator === "+" || "-" || "*" || "/") result.textContent = "";
+    if (_Operator === "+" || "-" || "*" || "/") result.textContent = "";
     const currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + 7;
     console.log(parseInt(newValue));
@@ -75,7 +75,7 @@ button7.addEventListener("click", function() {
 });
 
 button8.addEventListener("click", function() {
-    if (firstOperandAndOperator === "+" || "-" || "*" || "/") result.textContent = "";
+    if (_Operator === "+" || "-" || "*" || "/") result.textContent = "";
     const currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + 8;
     console.log(parseInt(newValue));
@@ -83,7 +83,7 @@ button8.addEventListener("click", function() {
 });
 
 button9.addEventListener("click", function() {
-    if (firstOperandAndOperator === "+" || "-" || "*" || "/") result.textContent = "";
+    if (_Operator === "+" || "-" || "*" || "/") result.textContent = "";
     const currentValueOfResult = result.textContent;
     const newValue = currentValueOfResult + 9;
     console.log(parseInt(newValue));
@@ -105,29 +105,20 @@ negativeValueButton.addEventListener("click", function() {
 addingButton.addEventListener("click", function() {
     operator = "+";
     lastValue = result.textContent;
-    firstOperandAndOperator = "+";
-    result.textContent = lastValue + firstOperandAndOperator;
+
 });
 subtractingButton.addEventListener("click", function() {
     operator = "-";
     lastValue = result.textContent;
-    firstOperandAndOperator = "-";
-    result.textContent = lastValue + firstOperandAndOperator;
 });
-
 multiplyingButton.addEventListener("click", function() {
     operator = "*";
     lastValue = result.textContent;
-    firstOperandAndOperator = "*";
-    result.textContent = lastValue + firstOperandAndOperator;
 });
 dividingButton.addEventListener("click", function() {
     operator = "/";
     lastValue = result.textContent;
-    firstOperandAndOperator = "/";
-    result.textContent = lastValue + firstOperandAndOperator;
 });
-
 equalButton.addEventListener("click", function() {
     let firstOperand = parseFloat(lastValue);
     let secondOperand = parseFloat(result.textContent);
