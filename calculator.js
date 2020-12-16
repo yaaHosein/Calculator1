@@ -118,6 +118,9 @@ multiplyingButton.addEventListener("click", function() {
 dividingButton.addEventListener("click", function() {
     operator = "/";
     lastValue = result.textContent;
+    // result.textContent = _Operator + "/";
+    result.textContent = _Operator + operator;
+
 });
 equalButton.addEventListener("click", function() {
     let firstOperand = parseFloat(lastValue);
