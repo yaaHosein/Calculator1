@@ -1,6 +1,6 @@
 let lastValue;
 let operator;
-let lastButtonClicked = "2";
+let lastButtonClicked = null;
 
 let button = document.getElementById("result");
 
@@ -105,22 +105,22 @@ negativeValueButton.addEventListener("click", function() {
 addingButton.addEventListener("click", function() {
     operator = "+";
     lastValue = result.textContent;
-
+    lastButtonClicked = "+";
 });
 subtractingButton.addEventListener("click", function() {
     operator = "-";
     lastValue = result.textContent;
-
+    lastButtonClicked = "-";
 });
 multiplyingButton.addEventListener("click", function() {
     operator = "*";
     lastValue = result.textContent;
-
+    lastButtonClicked = "*";
 });
 dividingButton.addEventListener("click", function() {
     operator = "/";
     lastValue = result.textContent;
-
+    lastButtonClicked = "/";
 });
 equalButton.addEventListener("click", function() {
     let firstOperand = parseFloat(lastValue);
