@@ -104,23 +104,27 @@ negativeValueButton.addEventListener("click", function() {
 
 addingButton.addEventListener("click", function() {
     operator = "+";
-    lastValue = result.textContent;
     lastButtonClicked = "+";
+    lastValue = result.textContent;
+    result.textContent = lastValue + lastButtonClicked;
 });
 subtractingButton.addEventListener("click", function() {
     operator = "-";
-    lastValue = result.textContent;
     lastButtonClicked = "-";
+    lastValue = result.textContent;
+    result.textContent = lastValue + lastButtonClicked;
 });
 multiplyingButton.addEventListener("click", function() {
     operator = "*";
-    lastValue = result.textContent;
     lastButtonClicked = "*";
+    lastValue = result.textContent;
+    result.textContent = lastValue + lastButtonClicked;
 });
 dividingButton.addEventListener("click", function() {
     operator = "/";
-    lastValue = result.textContent;
     lastButtonClicked = "/";
+    lastValue = result.textContent;
+    result.textContent = lastValue + lastButtonClicked;
 });
 equalButton.addEventListener("click", function() {
     let firstOperand = parseFloat(lastValue);
