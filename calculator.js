@@ -106,25 +106,21 @@ addingButton.addEventListener("click", function() {
     operator = "+";
     lastButtonClicked = "+";
     lastValue = result.textContent;
-    result.textContent = lastButtonClicked;
 });
 subtractingButton.addEventListener("click", function() {
     operator = "-";
     lastButtonClicked = "-";
     lastValue = result.textContent;
-    result.textContent = lastButtonClicked;
 });
 multiplyingButton.addEventListener("click", function() {
     operator = "*";
     lastButtonClicked = "*";
     lastValue = result.textContent;
-    result.textContent = lastButtonClicked;
 });
 dividingButton.addEventListener("click", function() {
     operator = "/";
     lastButtonClicked = "/";
     lastValue = result.textContent;
-    result.textContent = lastButtonClicked;
 });
 equalButton.addEventListener("click", function() {
     let firstOperand = parseFloat(lastValue);
