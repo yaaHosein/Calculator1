@@ -112,7 +112,6 @@ subtractingButton.addEventListener("click", function() {
     operator = "-";
     lastButtonClicked = "-";
     lastValue = result.textContent;
-    // lastButtonClicked = lastValue + "-";
 
 });
 multiplyingButton.addEventListener("click", function() {
