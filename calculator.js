@@ -16,6 +16,7 @@ button0.addEventListener("click", function() {
     const newValue = currentValueOfResult + 0;
     console.log(parseInt(newValue));
     result.textContent = newValue;
+    if (lastButtonClicked = currentValueOfResult) result.textContent = newValue;
 });
 
 button1.addEventListener("click", function() {
@@ -24,6 +25,7 @@ button1.addEventListener("click", function() {
     const newValue = currentValueOfResult + 1;
     console.log(parseInt(newValue));
     result.textContent = newValue;
+    if (lastButtonClicked = currentValueOfResult) result.textContent = newValue;
 });
 
 button2.addEventListener("click", function() {
@@ -32,6 +34,7 @@ button2.addEventListener("click", function() {
     const newValue = currentValueOfResult + 2;
     console.log(parseInt(newValue));
     result.textContent = newValue;
+    if (lastButtonClicked = currentValueOfResult) result.textContent = newValue;
 });
 
 button3.addEventListener("click", function() {
@@ -40,6 +43,7 @@ button3.addEventListener("click", function() {
     const newValue = currentValueOfResult + 3;
     console.log(parseInt(newValue));
     result.textContent = newValue;
+    if (lastButtonClicked = currentValueOfResult) result.textContent = newValue;
 });
 
 button4.addEventListener("click", function() {
@@ -48,6 +52,7 @@ button4.addEventListener("click", function() {
     const newValue = currentValueOfResult + 4;
     console.log(parseInt(newValue));
     result.textContent = newValue;
+    if (lastButtonClicked = currentValueOfResult) result.textContent = newValue;
 });
 
 button5.addEventListener("click", function() {
@@ -56,6 +61,7 @@ button5.addEventListener("click", function() {
     const newValue = currentValueOfResult + 5;
     console.log(parseInt(newValue));
     result.textContent = newValue;
+    if (lastButtonClicked = currentValueOfResult) result.textContent = newValue;
 });
 
 button6.addEventListener("click", function() {
@@ -64,6 +70,8 @@ button6.addEventListener("click", function() {
     const newValue = currentValueOfResult + 6;
     console.log(parseInt(newValue));
     result.textContent = newValue;
+    console.log(result.textContent = newValue);
+    if (lastButtonClicked = currentValueOfResult) result.textContent = newValue;
 });
 
 button7.addEventListener("click", function() {
@@ -72,6 +80,7 @@ button7.addEventListener("click", function() {
     const newValue = currentValueOfResult + 7;
     console.log(parseInt(newValue));
     result.textContent = newValue;
+    if (lastButtonClicked = currentValueOfResult) result.textContent = newValue;
 });
 
 button8.addEventListener("click", function() {
@@ -80,6 +89,7 @@ button8.addEventListener("click", function() {
     const newValue = currentValueOfResult + 8;
     console.log(parseInt(newValue));
     result.textContent = newValue;
+    if (lastButtonClicked = currentValueOfResult) result.textContent = newValue;
 });
 
 button9.addEventListener("click", function() {
@@ -88,6 +98,7 @@ button9.addEventListener("click", function() {
     const newValue = currentValueOfResult + 9;
     console.log(parseInt(newValue));
     result.textContent = newValue;
+    if (lastButtonClicked = currentValueOfResult) result.textContent = newValue;
 });
 
 periodButton.addEventListener("click", function() {
@@ -106,7 +117,6 @@ addingButton.addEventListener("click", function() {
     operator = "+";
     lastButtonClicked = "+";
     lastValue = result.textContent;
-
 });
 subtractingButton.addEventListener("click", function() {
     operator = "-";
