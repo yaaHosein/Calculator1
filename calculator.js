@@ -26,6 +26,7 @@ button1.addEventListener("click", function() {
     console.log(parseInt(newValue));
     result.textContent = newValue;
     lastButtonClicked = "Number";
+    console.log("hhh", lastButtonClicked);
 });
 
 button2.addEventListener("click", function() {
