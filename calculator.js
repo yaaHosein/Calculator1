@@ -2,6 +2,7 @@ let lastValue;
 let operator;
 let lastButtonClicked = null;
 
+
 let button = document.getElementById("result");
 
 document.getElementById('button0').innerHTML = "0";
@@ -120,6 +121,7 @@ addingButton.addEventListener("click", function() {
     lastValue = result.textContent;
 });
 subtractingButton.addEventListener("click", function() {
+    if (lastValue - result.textContent !== "") result.textContent = lastValue - result.textContent;
     operator = "-";
     lastButtonClicked = "Operator";
     lastValue = result.textContent;
