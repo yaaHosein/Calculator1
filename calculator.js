@@ -115,19 +115,15 @@ negativeValueButton.addEventListener("click", function() {
     if (currentValueOfResult !== "" && currentValueOfResult[0] === "-") { result.textContent = currentValueOfResult.slice(1) };
 });
 
+
+
+
 addingButton.addEventListener("click", function() {
     if (lastValue && result.textContent && operator !== null) {
         let firstOperand = parseFloat(lastValue);
         let secondOperand = parseFloat(result.textContent);
         let _result;
         if (operator === "+") _result = firstOperand + secondOperand;
-
-        if (operator === "-") _result = firstOperand - secondOperand;
-
-        if (operator === "*") _result = firstOperand * secondOperand;
-
-        if (operator === "/") _result = firstOperand / secondOperand;
-        result.textContent = _result;
     }
     operator = "+";
     lastButtonClicked = "Operator";
