@@ -121,6 +121,10 @@ addingButton.addEventListener("click", function() {
         let secondOperand = parseFloat(result.textContent);
         let _result;
         if (operator === "+") _result = firstOperand + secondOperand;
+        if (operator === "-") _result = firstOperand - secondOperand;
+        if (operator === "*") _result = firstOperand * secondOperand;
+        if (operator === "/")
+            _result = firstOperand / secondOperand;
         result.textContent = _result;
     }
     operator = "+";
@@ -129,17 +133,51 @@ addingButton.addEventListener("click", function() {
 });
 
 subtractingButton.addEventListener("click", function() {
+    if (lastValue && result.textContent && operator !== null) {
+        let firstOperand = parseFloat(lastValue);
+        let secondOperand = parseFloat(result.textContent);
+        let _result;
+        if (operator === "+") _result = firstOperand + secondOperand;
+        if (operator === "-") _result = firstOperand - secondOperand;
+        if (operator === "*") _result = firstOperand * secondOperand;
+        if (operator === "/")
+            _result = firstOperand / secondOperand;
+        result.textContent = _result;
+    }
     operator = "-";
     lastButtonClicked = "Operator";
     lastValue = result.textContent;
 });
-multiplyingButton.addEventListener("click", function() {
 
+multiplyingButton.addEventListener("click", function() {
+    if (lastValue && result.textContent && operator !== null) {
+        let firstOperand = parseFloat(lastValue);
+        let secondOperand = parseFloat(result.textContent);
+        let _result;
+        if (operator === "+") _result = firstOperand + secondOperand;
+        if (operator === "-") _result = firstOperand - secondOperand;
+        if (operator === "*") _result = firstOperand * secondOperand;
+        if (operator === "/")
+            _result = firstOperand / secondOperand;
+        result.textContent = _result;
+    }
     operator = "*";
     lastButtonClicked = "Operator";
     lastValue = result.textContent;
 });
+
 dividingButton.addEventListener("click", function() {
+    if (lastValue && result.textContent && operator !== null) {
+        let firstOperand = parseFloat(lastValue);
+        let secondOperand = parseFloat(result.textContent);
+        let _result;
+        if (operator === "+") _result = firstOperand + secondOperand;
+        if (operator === "-") _result = firstOperand - secondOperand;
+        if (operator === "*") _result = firstOperand * secondOperand;
+        if (operator === "/")
+            _result = firstOperand / secondOperand;
+        result.textContent = _result;
+    }
     operator = "/";
     lastButtonClicked = "Operator";
     lastValue = result.textContent;
@@ -151,15 +189,11 @@ equalButton.addEventListener("click", function() {
     console.log("opertator", operator);
     if (operator === "+")
         _result = firstOperand + secondOperand;
-
     if (operator === "-")
         _result = firstOperand - secondOperand;
-
     if (operator === "*")
         _result = firstOperand * secondOperand;
-
     if (operator === "/")
         _result = firstOperand / secondOperand;
-
     result.textContent = _result;
 });
