@@ -8,6 +8,7 @@ document.getElementById('button0').innerHTML = "0";
 
 clearingButton.addEventListener("click", function() {
     result.textContent = '';
+    lastValue = ""
 });
 
 button0.addEventListener("click", function() {
