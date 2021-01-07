@@ -1,5 +1,5 @@
 let lastValue;
-let operator;
+let operator = null;
 let lastButtonClicked = null;
 
 let button = document.getElementById("result");
@@ -7,6 +7,7 @@ let button = document.getElementById("result");
 document.getElementById('button0').innerHTML = "0";
 
 clearingButton.addEventListener("click", function() {
+    lastValue = "";
     result.textContent = '';
 });
 
@@ -126,7 +127,7 @@ function evaluate() {
             _result = firstOperand / secondOperand;
         result.textContent = _result;
     }
-}
+};
 
 addingButton.addEventListener("click", function() {
     evaluate();
