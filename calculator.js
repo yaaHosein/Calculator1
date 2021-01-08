@@ -1,7 +1,3 @@
-let lastValue = null;
-let operator = null;
-let lastButtonClicked = null;
-
 let button = document.getElementById("result");
 
 document.getElementById('button0').innerHTML = "0";
@@ -160,3 +156,8 @@ dividingButton.addEventListener("click", function() {
 equalButton.addEventListener("click", function() {
     evaluate();
 });
+
+
+let lastValue = null;
+let operator = null;
+let lastButtonClicked = null;
