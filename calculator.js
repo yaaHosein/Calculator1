@@ -1,4 +1,4 @@
-let lastValue;
+let lastValue = null;
 let operator = null;
 let lastButtonClicked = null;
 

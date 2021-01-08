@@ -1,7 +1,7 @@
 .button,
 .result {
     background-color: rgba(43, 83, 83, 0.781);
-    border: 6px solid rgb(213, 236, 213);
+    border: 6px solid rgba(229, 230, 224, 0.726);
     color: white;
     font-size: 25px;
     padding: 5px;
