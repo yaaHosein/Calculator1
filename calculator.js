@@ -125,6 +125,8 @@ function evaluate() {
         if (operator === "*") _result = firstOperand * secondOperand;
         if (operator === "/") _result = firstOperand / secondOperand;
         result.textContent = _result;
+        if (operator === "/" && secondOperand === 0)
+            result.textContent = 'Cannot divide by zero';
     }
 };
 
