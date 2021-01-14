@@ -4,6 +4,8 @@ let lastButtonClicked = null;
 
 let button = document.getElementById("result");
 
+document.querySelectorAll("[data-number]")
+
 document.getElementById('button0').innerHTML = "0";
 
 clearingButton.addEventListener("click", function() {
