@@ -4,7 +4,10 @@ let lastButtonClicked = null;
 
 let button = document.getElementById("result");
 
-document.querySelectorAll("[data-number]")
+let numBtnElem = document.querySelectorAll("[data-number]")
+numBtnElem.addEventListener("click", function() {});
+
+// numBtnElem.forEach(function() {});
 
 document.getElementById('button0').innerHTML = "0";
 
