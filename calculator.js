@@ -4,13 +4,11 @@ let lastButtonClicked = null;
 
 let button = document.getElementById("result");
 
-let numBtnElem = document.querySelectorAll("[data-number]")
-
 numBtnElem.forEach(function(button) {
             button.addEventListener('click', function() {
                     (lastButtonClicked === "Operator") result.textContent = "";
                     const currentValueOfResult = result.textContent;
-                    const newValue = currentValueOfResult + Number;
+                    const newValue = currentValueOfResult + numBtnElem.dataset;
                     console.log(parseInt(newValue));
                     result.textContent = newValue;
                     lastButtonClicked = "Number";
