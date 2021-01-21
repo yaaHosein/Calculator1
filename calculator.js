@@ -4,6 +4,7 @@ let lastButtonClicked = null;
 
 let button = document.getElementById("result");
 
+let numBtnElem = document.querySelectorAll("[data-number]")
 numBtnElem.forEach(function(button) {
             button.addEventListener('click', function() {
                     (lastButtonClicked === "Operator") result.textContent = "";
@@ -13,7 +14,6 @@ numBtnElem.forEach(function(button) {
                     result.textContent = newValue;
                     lastButtonClicked = "Number";
                 }
-
             });
 
         document.getElementById('button0').innerHTML = "0";
