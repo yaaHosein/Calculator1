@@ -5,43 +5,17 @@ let lastButtonClicked = null;
 let button = document.getElementById("result");
 
 let numBtnElem = document.querySelectorAll("[data-number]")
-    // numBtnElem.forEach(function(button) {
-    // button.addEventListener('click', function() {
-    //         (lastButtonClicked === "Operator") result.textContent = "";
-    //         const currentValueOfResult = result.textContent;
-    //         const newValue = currentValueOfResult + numBtnElem.dataset.number;
-    //         //const newValue = currentValueOfResult + numBtnElem.dataset.number;
-    //         console.log(parseInt(newValue));
-    //         result.textContent = newValue;
-    //         lastButtonClicked = "Number";
-    //     });
-    // });
-
-// numBtnElem.forEach(function(button) {
-//     button.addEventListener('click', function() {
-//         (lastButtonClicked === "Operator") result.textContent = "";
-//         const currentValueOfResult = result.textContent;
-//         const newValue = currentValueOfResult + numBtnElem.dataset;
-//         console.log(parseInt(newValue));
-//         result.textContent = newValue;
-//         lastButtonClicked = "Number";
-//     });
-// });
-
-
-// numBtnElem.forEach(function(button) {
-//     button.addEventListener('click', function() {
-//         numBtnElem.dataset.number;
-//     });
-// });
-
 
 numBtnElem.forEach(function(button) {
     button.addEventListener('click', function() {
-        numBtnElem.dataset
+        (lastButtonClicked === "Operator") result.textContent = "";
+        const currentValueOfResult = result.textContent;
+        const newValue = currentValueOfResult + button.dataset.number;
+        console.log(parseInt(newValue));
+        result.textContent = newValue;
+        lastButtonClicked = "Number";
     });
 });
-
 
 document.getElementById('button0').innerHTML = "0";
 
