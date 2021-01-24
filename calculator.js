@@ -5,6 +5,7 @@ let lastButtonClicked = null;
 let button = document.getElementById("result");
 
 let numBtns = document.querySelectorAll("[data-number]")
+let operBtns = document.querySelectorAll("[data-operator]")
 
 numBtns.forEach(function(button) {
     button.addEventListener('click', function() {
@@ -14,6 +15,15 @@ numBtns.forEach(function(button) {
         console.log(parseInt(newValue));
         result.textContent = newValue;
         lastButtonClicked = "Number";
+    });
+});
+
+operBtns.forEach(function(button) {
+    button.addEventListener('click', function() {
+        evaluate();
+        operator = button.dataset.operator;
+        lastButtonClicked = "Operator";
+        lastValue = result.textContent;
     });
 });
 
@@ -50,34 +60,6 @@ function evaluate() {
             result.textContent = 'Cannot divide by zero';
     }
 };
-
-addingButton.addEventListener("click", function() {
-    evaluate();
-    operator = "+";
-    lastButtonClicked = "Operator";
-    lastValue = result.textContent;
-});
-
-subtractingButton.addEventListener("click", function() {
-    evaluate();
-    operator = "-";
-    lastButtonClicked = "Operator";
-    lastValue = result.textContent;
-});
-
-multiplyingButton.addEventListener("click", function() {
-    evaluate();
-    operator = "*";
-    lastButtonClicked = "Operator";
-    lastValue = result.textContent;
-});
-
-dividingButton.addEventListener("click", function() {
-    evaluate();
-    operator = "/";
-    lastButtonClicked = "Operator";
-    lastValue = result.textContent;
-});
 
 equalButton.addEventListener("click", function() {
     evaluate();
