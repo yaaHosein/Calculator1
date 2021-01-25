@@ -4,103 +4,34 @@ let lastButtonClicked = null;
 
 let button = document.getElementById("result");
 
+let numBtns = document.querySelectorAll("[data-number]")
+let operBtns = document.querySelectorAll("[data-operator]")
+
+numBtns.forEach(function(button) {
+    button.addEventListener('click', function() {
+        if (lastButtonClicked === "Operator") result.textContent = "";
+        const currentValueOfResult = result.textContent;
+        const newValue = currentValueOfResult + button.dataset.number;
+        console.log(parseInt(newValue));
+        result.textContent = newValue;
+        lastButtonClicked = "Number";
+    });
+});
+
+operBtns.forEach(function(button) {
+    button.addEventListener('click', function() {
+        evaluate();
+        operator = button.dataset.operator;
+        lastButtonClicked = "Operator";
+        lastValue = result.textContent;
+    });
+});
+
 document.getElementById('button0').innerHTML = "0";
 
 clearingButton.addEventListener("click", function() {
     lastValue = "";
     result.textContent = '';
-});
-
-button0.addEventListener("click", function() {
-    if (lastButtonClicked === "Operator") result.textContent = "";
-    const currentValueOfResult = result.textContent;
-    const newValue = currentValueOfResult + 0;
-    console.log(parseInt(newValue));
-    result.textContent = newValue;
-    lastButtonClicked = "Number";
-});
-
-button1.addEventListener("click", function() {
-    if (lastButtonClicked === "Operator") result.textContent = "";
-    const currentValueOfResult = result.textContent;
-    const newValue = currentValueOfResult + 1;
-    console.log(parseInt(newValue));
-    result.textContent = newValue;
-    lastButtonClicked = "Number";
-});
-
-button2.addEventListener("click", function() {
-    if (lastButtonClicked === "Operator") result.textContent = "";
-    const currentValueOfResult = result.textContent;
-    const newValue = currentValueOfResult + 2;
-    console.log(parseInt(newValue));
-    result.textContent = newValue;
-    lastButtonClicked = "Number";
-});
-
-button3.addEventListener("click", function() {
-    if (lastButtonClicked === "Operator") result.textContent = "";
-    const currentValueOfResult = result.textContent;
-    const newValue = currentValueOfResult + 3;
-    console.log(parseInt(newValue));
-    result.textContent = newValue;
-    lastButtonClicked = "Number";
-});
-
-button4.addEventListener("click", function() {
-    if (lastButtonClicked === "Operator") result.textContent = "";
-    const currentValueOfResult = result.textContent;
-    const newValue = currentValueOfResult + 4;
-    console.log(parseInt(newValue));
-    result.textContent = newValue;
-    lastButtonClicked = "Number";
-});
-
-button5.addEventListener("click", function() {
-    if (lastButtonClicked === "Operator") result.textContent = "";
-    const currentValueOfResult = result.textContent;
-    const newValue = currentValueOfResult + 5;
-    console.log(parseInt(newValue));
-    result.textContent = newValue;
-    lastButtonClicked = "Number";
-});
-
-button6.addEventListener("click", function() {
-    if (lastButtonClicked === "Operator") result.textContent = "";
-    const currentValueOfResult = result.textContent;
-    const newValue = currentValueOfResult + 6;
-    console.log(parseInt(newValue));
-    result.textContent = newValue;
-    console.log(result.textContent = newValue);
-    lastButtonClicked = "Number";
-});
-
-button7.addEventListener("click", function() {
-    if (lastButtonClicked === "Operator") result.textContent = "";
-    const currentValueOfResult = result.textContent;
-    const newValue = currentValueOfResult + 7;
-    console.log(parseInt(newValue));
-    result.textContent = newValue;
-    // lastButtonClicked = 7;
-    lastButtonClicked = "Number";
-});
-
-button8.addEventListener("click", function() {
-    if (lastButtonClicked === "Operator") result.textContent = "";
-    const currentValueOfResult = result.textContent;
-    const newValue = currentValueOfResult + 8;
-    console.log(parseInt(newValue));
-    result.textContent = newValue;
-    lastButtonClicked = "Number";
-});
-
-button9.addEventListener("click", function() {
-    if (lastButtonClicked === "Operator") result.textContent = "";
-    const currentValueOfResult = result.textContent;
-    const newValue = currentValueOfResult + 9;
-    console.log(parseInt(newValue));
-    result.textContent = newValue;
-    lastButtonClicked = "Number";
 });
 
 periodButton.addEventListener("click", function() {
@@ -129,34 +60,6 @@ function evaluate() {
             result.textContent = 'Cannot divide by zero';
     }
 };
-
-addingButton.addEventListener("click", function() {
-    evaluate();
-    operator = "+";
-    lastButtonClicked = "Operator";
-    lastValue = result.textContent;
-});
-
-subtractingButton.addEventListener("click", function() {
-    evaluate();
-    operator = "-";
-    lastButtonClicked = "Operator";
-    lastValue = result.textContent;
-});
-
-multiplyingButton.addEventListener("click", function() {
-    evaluate();
-    operator = "*";
-    lastButtonClicked = "Operator";
-    lastValue = result.textContent;
-});
-
-dividingButton.addEventListener("click", function() {
-    evaluate();
-    operator = "/";
-    lastButtonClicked = "Operator";
-    lastValue = result.textContent;
-});
 
 equalButton.addEventListener("click", function() {
     evaluate();
