@@ -1,16 +1,23 @@
 class CalcualtorLogic {
-    add(number1, number2) {
+    constructor(number1, number2) {
         this.number1 = number1;
         this.number2 = number2;
     }
-    calculate() {
+    add() {
         console.log(this.number1 + this.number2)
+    };
+    subtract() {
+        console.log(this.number1 - this.number2)
+    };
+    divide() {
+        console.log(this.number1 / this.number2)
     }
-    subtract(number1, number2) { number1 - number2 };
-    divide(number1, number2) { number1 / number2 };
-    multiply(number1, number2) { number1 * number2 };
+    multiply() {
+        console.log(this.number1 * this.number2)
+    };
 };
 let firstCalculation = new CalcualtorLogic(1, 2)
-    // let firstCalculation = new CalcualtorLogic('1', '2')
-firstCalculation.calculate();
-console.log(parseInt(firstCalculation));
+firstCalculation.add();
+firstCalculation.subtract();
+firstCalculation.divide();
+firstCalculation.multiply();
