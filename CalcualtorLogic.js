@@ -1,19 +1,24 @@
 let result = 14;
-
 class CalcualtorLogic {
     add(number1, number2) {
         let result = number1 + number2;
-        // result = number1 + number2;
         return result;
-        // return result = number1 + number2;
     };
 };
-let calcualtorLogic_ = new CalcualtorLogic(6, 5)
-calcualtorLogic_.add(6, 5);
-console.log(calcualtorLogic_)
+let calcualtorLogic = new CalcualtorLogic(1, 2)
+new CalcualtorLogic(1, 2);
+// new CalcualtorLogic.add(1, 2);
+console.log(new CalcualtorLogic(1, 2));
 
 
+// let result = 14;
+// class CalcualtorLogic {
+//     add(number1, number2) {
 
-// firstCalculation.subtract();
-// firstCalculation.divide();
-// firstCalculation.multiply();
+
+//         // return result = number1 + number2;
+//     };
+// };
+// let calcualtorLogic = new CalcualtorLogic(1, 2)
+// new CalcualtorLogic(1, 2);
+// console.log(new CalcualtorLogic(1, 2));
