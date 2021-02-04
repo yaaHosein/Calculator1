@@ -5,5 +5,5 @@ class CalcualtorLogic {
     };
 };
 let calcualtorLogic = new CalcualtorLogic(1, 2)
-new calcualtorLogic(1, 2);
-// new calcualtorLogic();
+new CalcualtorLogic(1, 2)
+    // new CalcualtorLogic()
