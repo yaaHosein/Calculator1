@@ -17,20 +17,8 @@ class CalcualtorLogic {
     };
 };
 
-let calcualtorLogic = new CalcualtorLogic(1, 2);
-let calcualtorLogic1 = new CalcualtorLogic(1, 2);
-let calcualtorLogic2 = new CalcualtorLogic(1, 2);
-let calcualtorLogic3 = new CalcualtorLogic(1, 2);
-
-
-// let calcualtorLogic = new CalcualtorLogic(1, 2);
-// console.log(calcualtorLogic.add(1, 2))
-
-// let calcualtorLogic1 = new CalcualtorLogic(1, 2);
-// console.log(calcualtorLogic1.subtract(1, 2))
-
-// let calcualtorLogic2 = new CalcualtorLogic(1, 2);
-// console.log(calcualtorLogic2.multiply(1, 2))
-
-// let calcualtorLogic3 = new CalcualtorLogic(1, 2);
-// console.log(calcualtorLogic3.divide(1, 2))
+let calcualtorLogic = new CalcualtorLogic();
+console.log(calcualtorLogic.add(1, 2))
+console.log(calcualtorLogic.subtract(1, 2))
+console.log(calcualtorLogic.multiply(1, 2))
+console.log(calcualtorLogic.divide(1, 2))
