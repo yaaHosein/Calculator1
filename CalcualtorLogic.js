@@ -18,7 +18,7 @@ class CalcualtorLogic {
 };
 
 let calcualtorLogic = new CalcualtorLogic();
-console.log(calcualtorLogic.add(1, 2))
-console.log(calcualtorLogic.subtract(1, 2))
-console.log(calcualtorLogic.multiply(1, 2))
-console.log(calcualtorLogic.divide(1, 2))
+calcualtorLogic.add();
+calcualtorLogic.subtract();
+calcualtorLogic.multiply();
+calcualtorLogic.divide();
