@@ -22,3 +22,9 @@ calcualtorLogic.add();
 calcualtorLogic.subtract();
 calcualtorLogic.multiply();
 calcualtorLogic.divide();
+
+class Calcualtor {
+    constructor(selector) {
+
+    }
+};
