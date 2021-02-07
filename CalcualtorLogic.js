@@ -26,13 +26,10 @@
 
     class Calcualtor {
         constructor(selector) {
-            let hostElement = document.querySelector("#hostElement")
+            document.querySelector("#hostElement")
             this.selector = selector;
-            hostElement()
         }
 
-
     };
-    let calcualtor = new Calcualtor()
-    calcualtor.hostElement()
+    let calcualtor = new Calcualtor("#hostElement");
 }
