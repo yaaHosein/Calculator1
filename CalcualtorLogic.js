@@ -33,5 +33,6 @@
 
 
     };
-
+    let calcualtor = new Calcualtor()
+    calcualtor.hostElement()
 }
