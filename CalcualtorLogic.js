@@ -26,10 +26,10 @@
 
     class Calcualtor {
         constructor(selector) {
-            document.querySelector("#hostElement")
             this.selector = selector;
+            let buttons = document.querySelectorAll(".button")
+            let hotstElem = document.querySelector("#hostElement")
         }
-
     };
-    let calcualtor = new Calcualtor("#hostElement");
+    let calcualtor = new Calcualtor(".button");
 }
