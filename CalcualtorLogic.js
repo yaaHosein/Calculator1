@@ -31,5 +31,5 @@
             let hotstElem = document.querySelector("#hostElement")
         }
     };
-    let calcualtor = new Calcualtor(".button");
+    let calcualtor = new Calcualtor(".#hostElement");
 }
