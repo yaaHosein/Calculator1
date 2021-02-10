@@ -37,6 +37,3 @@
     // let calcualtor = new Calcualtor();
 
 }
-
-let hostElem = document.querySelector("#hostElement").innerHTML = "I love Sayed Mohammad Hassan💖🌹 and His beautiful and sweet daughter 💖Liza💖"
-console.log(hostElem);
