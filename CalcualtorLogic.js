@@ -27,9 +27,16 @@
     class Calcualtor {
         constructor(selector) {
             this.selector = selector;
-            let buttons = document.querySelectorAll(".button")
-            let hotstElem = document.querySelector("#hostElement")
-        }
-    };
-    let calcualtor = new Calcualtor(".button");
+            // let buttons = document.querySelectorAll(".button")
+            let hostElem = document.querySelector("#hostElement").innerHTML = "I love Sayed Mohammad Hassan💖🌹 and His beautiful and sweet daughter 💖Liza💖"
+            console.log(hostElem);
+        };
+    }
+
+
+    // let calcualtor = new Calcualtor();
+
 }
+
+let hostElem = document.querySelector("#hostElement").innerHTML = "I love Sayed Mohammad Hassan💖🌹 and His beautiful and sweet daughter 💖Liza💖"
+console.log(hostElem);
