@@ -36,6 +36,7 @@ class Calculator {
             `
     };
 }
+
 const calc1 = new Calculator(".foo");
 const calc2 = new Calculator("#baz");
 const calc3 = new Calculator("#hostElement");
