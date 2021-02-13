@@ -25,20 +25,11 @@ calcualtorLogic.divide();
 
 class Calculator {
     constructor(selector) {
-        // this.selector = document.querySelectorAll(".button")
-        this.selector = document.querySelector(selector);
-        this.selector.innerHTML = `
-            <div>
-                <h2>
-                    Calcualtor
-                </h2>
-            </div>
-            `
+        this.selector = document.querySelector("#hostElement");
+        // this.selector.innerHTML = `<div><h2>Calcualtor</h2></div>`
     };
+    // render() {};
 }
 
-const calc1 = new Calculator(".foo");
-const calc2 = new Calculator("#baz");
-const calc3 = new Calculator("#hostElement");
-
-// let calcualtor = new Calcualtor(".button");
+// const calcualtor1.render = new Calculator("#hostElement");
+// const calcualtor2.render = new Calcualtor(".button");
