@@ -31,5 +31,5 @@ class Calculator {
     // render() {};
 }
 
-// const calcualtor1.render = new Calculator("#hostElement");
-// const calcualtor2.render = new Calcualtor(".button");
+// const calcualtor1 = new Calculator();
+calcualtor1.render();
