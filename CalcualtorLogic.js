@@ -25,8 +25,8 @@ calcualtorLogic.divide();
 
 class Calculator {
     constructor(selector) {
-        this.selector = document.querySelector("#hostElement");
-        // this.selector.innerHTML = `<div><h2>Calcualtor</h2></div>`
+        let hostElem = document.querySelector("#hostElement");
+        // hostElem.innerHTML = ;
     };
     // render() {};
 }
