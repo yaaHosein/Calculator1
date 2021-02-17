@@ -25,10 +25,10 @@ calcualtorLogic.divide();
 
 class Calculator {
     constructor(selector) {
-        let hostElem = document.querySelector("#hostElement");
-        // hostElem.innerHTML = ;
+        hostElem = document.querySelector(selector);
+        // this.hostElem.innerHTML = ;
     };
-    // render() {};
+    render() {};
 }
 
 // const calcualtor1 = new Calculator();
