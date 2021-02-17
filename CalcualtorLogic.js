@@ -1,3 +1,4 @@
+let hostElem;
 class CalcualtorLogic {
     add(number1, number2) {
         let result = number1 + number2;
@@ -22,6 +23,7 @@ calcualtorLogic.add();
 calcualtorLogic.subtract();
 calcualtorLogic.multiply();
 calcualtorLogic.divide();
+
 
 class Calculator {
     constructor(selector) {
