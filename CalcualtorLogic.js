@@ -30,7 +30,7 @@ class Calculator {
     };
     render() {
         const wrapperDiv = document.createElement('div');
-        wrapperDiv.className = 'wrapper';
+        wrapperDiv.classList.add = 'wrapper';
     };
 }
 const calculator1 = new Calculator();
