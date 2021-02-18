@@ -29,7 +29,8 @@ class Calculator {
         this.hostElem = document.querySelector(selector);
     };
     render() {
-        const wrapperDiv = document.createElement("div")
+        const wrapperDiv = document.createElement('div');
+        wrapperDiv.className = 'wrapper';
     };
 }
 const calculator1 = new Calculator();
