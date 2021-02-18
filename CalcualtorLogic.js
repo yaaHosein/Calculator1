@@ -28,6 +28,8 @@ class Calculator {
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
     };
-    render() {};
+    render() {
+        const wrapperDiv = document.createElement("div")
+    };
 }
 const calculator1 = new Calculator();
