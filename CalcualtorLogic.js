@@ -1,4 +1,3 @@
-let hostElem;
 class CalculatorLogic {
     add(number1, number2) {
         let result = number1 + number2;
@@ -27,11 +26,8 @@ calcualtorLogic.divide();
 
 class Calculator {
     constructor(selector) {
-        hostElem = document.querySelector(selector);
-        this.hostElem.innerHTML = ;
+        this.hostElem = document.querySelector(selector);
     };
     render() {};
 }
-
 const calculator1 = new Calculator();
-calculator1.render();
