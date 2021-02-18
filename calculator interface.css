@@ -1,12 +1,18 @@
+* {
+    background-color: mintcream;
+    margin: 2.5px;
+}
+
 .button,
 .result {
-    background-color: rgba(43, 83, 83, 0.781);
-    border: 3.5px solid rgba(229, 230, 224, 0.726);
-    color: white;
+    background-color: blanchedalmond;
+    border: 0.5px solid rgba(19, 22, 5, 0.726);
+    color: black;
     font-size: 25px;
     padding: 5px;
     min-height: 60px;
-    border-radius: 6%;
+    border-radius: 8%;
+    box-shadow: 1px 2px 5px rgb(77 68 133);
 }
 
 .result {
@@ -21,8 +27,12 @@
 
    290 = 12 = 286 
     */
-    background-color: rgba(43, 83, 83, 0.781);
-    width: 290px;
+    background-color: rgba(255, 230, 179, 0.849);
+    width: 306px;
+    border-radius: 6%;
+    margin-left: 6px;
+    min-height: 64px;
+    font-size: 28px;
 }
 
 .button {
@@ -31,10 +41,10 @@
     /*  Setting fixed width and height to all buttons simplify the styling and space distributing */
     width: 100px;
     height: 60px;
-    border-radius: 12%;
+    border-radius: 10%;
 }
 
 .wrapper {
-    background-color: rgb(62, 7, 212);
     display: inline-block;
+    margin: 0 auto;
 }
