@@ -30,10 +30,10 @@ class Calculator {
     };
     render() {
         const wrapperDiv = document.createElement('div');
+        const resultDiv = document.createElement('div');
         wrapperDiv.classList.add("wrapper");
         // console.log(wrapperDiv.outerHTML);
-        const resultDiv = document.createElement('div');
-        resultDiv.classList.add("result");
+        resultDiv.id = "result";
     };
 }
 // const calculator1 = new Calculator();
