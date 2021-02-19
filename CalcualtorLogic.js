@@ -18,10 +18,10 @@ class CalculatorLogic {
 };
 
 let calculatorLogic = new CalculatorLogic();
-calcualtorLogic.add();
-calcualtorLogic.subtract();
-calcualtorLogic.multiply();
-calcualtorLogic.divide();
+calculatorLogic.add();
+calculatorLogic.subtract();
+calculatorLogic.multiply();
+calculatorLogic.divide();
 
 
 class Calculator {
@@ -31,6 +31,9 @@ class Calculator {
     render() {
         const wrapperDiv = document.createElement('div');
         wrapperDiv.classList.add("wrapper");
+        // console.log(wrapperDiv.outerHTML);
+        const resultDiv = document.createElement('div');
+        resultDiv.classList.add("result");
     };
 }
-const calculator1 = new Calculator();
+// const calculator1 = new Calculator();
