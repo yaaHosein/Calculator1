@@ -32,7 +32,7 @@ class Calculator {
         const wrapperDiv = document.createElement('div');
         const resultDiv = document.createElement('div');
         wrapperDiv.classList.add("wrapper");
-        // console.log(wrapperDiv.outerHTML);
+        resultDiv.classList.add("result");
         resultDiv.id = "result";
     };
 }
