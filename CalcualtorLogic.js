@@ -35,6 +35,8 @@ class Calculator {
         resultDiv.classList.add("result");
         resultDiv.id = "result";
         wrapperDiv.appendChild(resultDiv);
+        wrapperDiv.appendChild(this.hostElem)
     };
 }
-// const calculator1 = new Calculator();
+const calculator1 = new Calculator(".wrapper");
+calculator1.render();
