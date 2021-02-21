@@ -34,6 +34,7 @@ class Calculator {
         wrapperDiv.classList.add("wrapper");
         resultDiv.classList.add("result");
         resultDiv.id = "result";
+        document.wrapperDiv.appendChild(resultDiv);
     };
 }
 // const calculator1 = new Calculator();
