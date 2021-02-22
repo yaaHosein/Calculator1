@@ -141,7 +141,6 @@ class Calculator {
         // clearingButton.dataset.number = "Clear";
         // clearingButton.classList.add("button");
         // const clearingButtonText = document.createTextNode("Clear");
-
     };
 }
 const calculator1 = new Calculator(".wrapper");
