@@ -55,6 +55,10 @@ class Calculator {
         div.appendChild(button7);
         div.appendChild(button8);
         div.appendChild(button9);
+        wrapperDiv.appendChild(div);
+
+
+
 
         // const button4 = document.createElement("button");
         // button4.dataset.number = "4";
@@ -70,6 +74,7 @@ class Calculator {
         // button6.dataset.number = "6";
         // button6.classList.add("button");
         // const button6Text = document.createTextNode("6");
+
 
         // const button1 = document.createElement("button");
         // button1.dataset.number = "1";
