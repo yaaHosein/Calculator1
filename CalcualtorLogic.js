@@ -56,25 +56,26 @@ class Calculator {
         div.appendChild(button8);
         div.appendChild(button9);
         wrapperDiv.appendChild(div);
-
-
-
-
-        // const button4 = document.createElement("button");
-        // button4.dataset.number = "4";
-        // button4.classList.add("button");
-        // const button4Text = document.createTextNode("4");
-
-        // const button5 = document.createElement("button");
-        // button5.dataset.number = "5";
-        // button5.classList.add("button");
-        // const button5Text = document.createTextNode("5");
-
-        // const button6 = document.createElement("button");
-        // button6.dataset.number = "6";
-        // button6.classList.add("button");
-        // const button6Text = document.createTextNode("6");
-
+        const div2 = document.createElement("div");
+        const button4 = document.createElement("button");
+        button4.dataset.number = "4";
+        button4.classList.add("button");
+        const button4Text = document.createTextNode("4");
+        button4.appendChild(button4Text);
+        const button5 = document.createElement("button");
+        button5.dataset.number = "5";
+        button5.classList.add("button");
+        const button5Text = document.createTextNode("5");
+        button5.appendChild(button5Text);
+        const button6 = document.createElement("button");
+        button6.dataset.number = "6";
+        button6.classList.add("button");
+        const button6Text = document.createTextNode("6");
+        button6.appendChild(button6Text);
+        div2.appendChild(button4);
+        div2.appendChild(button5);
+        div2.appendChild(button6);
+        wrapperDiv.appendChild(div2);
 
         // const button1 = document.createElement("button");
         // button1.dataset.number = "1";
@@ -100,6 +101,47 @@ class Calculator {
         // periodButton.dataset.number = ".";
         // periodButton.classList.add("button");
         // const periodButtonText = document.createTextNode(".");
+
+
+        // const negativeValueButton = document.createElement("button");
+        // negativeValueButton.dataset.number = "±";
+        // negativeValueButton.classList.add("button");
+        // const negativeValueButtonText = document.createTextNode("±");
+
+        // const multiplyingButton = document.createElement("button");
+        // multiplyingButton.dataset.number = "*";
+        // multiplyingButton.classList.add("button");
+        // const multiplyingButtonText = document.createTextNode("*");
+
+        // const addingButton = document.createElement("button");
+        // addingButton.dataset.number = "+";
+        // addingButton.classList.add("button");
+        // const addingButtonText = document.createTextNode("+");
+
+
+        // const subtractingButton = document.createElement("button");
+        // subtractingButton.dataset.number = "-";
+        // subtractingButton.classList.add("button");
+        // const subtractingButtonText = document.createTextNode("-");
+
+
+        // const dividingButton = document.createElement("button");
+        // dividingButton.dataset.number = "/";
+        // dividingButton.classList.add("button");
+        // const dividingButtonText = document.createTextNode("/");
+
+
+        // const equalButton = document.createElement("button");
+        // equalButton.dataset.number = "=";
+        // equalButton.classList.add("button");
+        // const equalButtonText = document.createTextNode("=");
+
+
+        // const clearingButton = document.createElement("button");
+        // clearingButton.dataset.number = "Clear";
+        // clearingButton.classList.add("button");
+        // const clearingButtonText = document.createTextNode("Clear");
+
     };
 }
 const calculator1 = new Calculator(".wrapper");
