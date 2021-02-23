@@ -104,13 +104,11 @@ class Calculator {
         button0.appendChild(button0Text);
         const periodButton = document.createElement("button");
         periodButton.dataset.number = ".";
-        periodButton.id = "periodButton";
         periodButton.classList.add("button");
         const periodButtonText = document.createTextNode(".");
         periodButton.appendChild(periodButtonText);
         const negativeValueButton = document.createElement("button");
         negativeValueButton.dataset.number = "±";
-        negativeValueButton.id = "negativeValueButton";
         negativeValueButton.classList.add("button");
         const negativeValueButtonText = document.createTextNode("±");
         negativeValueButton.appendChild(negativeValueButtonText);
