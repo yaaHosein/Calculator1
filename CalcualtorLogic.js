@@ -35,7 +35,6 @@ class Calculator {
         resultDiv.classList.add("result");
         resultDiv.id = "result";
         wrapperDiv.appendChild(resultDiv);
-        this.hostElem.appendChild(wrapperDiv);
         const div = document.createElement("div");
         const button7 = document.createElement("button");
         button7.dataset.number = "7";
@@ -116,17 +115,17 @@ class Calculator {
         wrapperDiv.appendChild(div4);
         const div5 = document.createElement("div");
         const multiplyingButton = document.createElement("button");
-        multiplyingButton.dataset.number = "*";
+        multiplyingButton.dataset.operator = "*";
         multiplyingButton.classList.add("button");
         const multiplyingButtonText = document.createTextNode("*");
         multiplyingButton.appendChild(multiplyingButtonText)
         const addingButton = document.createElement("button");
-        addingButton.dataset.number = "+";
+        addingButton.dataset.operator = "+";
         addingButton.classList.add("button");
         const addingButtonText = document.createTextNode("+");
         addingButton.appendChild(addingButtonText)
         const subtractingButton = document.createElement("button");
-        subtractingButton.dataset.number = "-";
+        subtractingButton.dataset.operator = "-";
         subtractingButton.classList.add("button");
         const subtractingButtonText = document.createTextNode("-");
         subtractingButton.appendChild(subtractingButtonText);
@@ -136,12 +135,11 @@ class Calculator {
         wrapperDiv.appendChild(div5);
         const div6 = document.createElement("div");
         const dividingButton = document.createElement("button");
-        dividingButton.dataset.number = "/";
+        dividingButton.dataset.operator = "/";
         dividingButton.classList.add("button");
         const dividingButtonText = document.createTextNode("/");
         dividingButton.appendChild(dividingButtonText);
         const equalButton = document.createElement("button");
-        equalButton.dataset.number = "=";
         equalButton.classList.add("button");
         const equalButtonText = document.createTextNode("=");
         equalButton.appendChild(equalButtonText);
@@ -153,7 +151,7 @@ class Calculator {
         div6.appendChild(equalButton);
         div6.appendChild(clearingButton);
         wrapperDiv.appendChild(div6);
-        console.log(wrapperDiv)
+        this.hostElem.appendChild(wrapperDiv);
     };
 }
 const calculator1 = new Calculator(".wrapper");
