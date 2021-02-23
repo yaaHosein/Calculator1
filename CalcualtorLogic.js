@@ -129,7 +129,12 @@ class Calculator {
         subtractingButton.dataset.number = "-";
         subtractingButton.classList.add("button");
         const subtractingButtonText = document.createTextNode("-");
-        subtractingButton.appendChild(subtractingButtonText)
+        subtractingButton.appendChild(subtractingButtonText);
+        div5.appendChild(multiplyingButton);
+        div5.appendChild(addingButton);
+        div5.appendChild(subtractingButton);
+        wrapperDiv.appendChild(div5);
+        const div6 = document.createElement("div");
         const dividingButton = document.createElement("button");
         dividingButton.dataset.number = "/";
         dividingButton.classList.add("button");
@@ -144,13 +149,11 @@ class Calculator {
         clearingButton.classList.add("button");
         const clearingButtonText = document.createTextNode("Clear");
         clearingButton.appendChild(clearingButtonText)
-        div5.appendChild(multiplyingButton);
-        div5.appendChild(addingButton);
-        div5.appendChild(subtractingButton);
-        div5.appendChild(dividingButton);
-        div5.appendChild(equalButton);
-        div5.appendChild(clearingButton);
-        wrapperDiv.appendChild(div5);
+        div6.appendChild(dividingButton);
+        div6.appendChild(equalButton);
+        div6.appendChild(clearingButton);
+        wrapperDiv.appendChild(div6);
+        console.log(wrapperDiv)
     };
 }
 const calculator1 = new Calculator(".wrapper");
