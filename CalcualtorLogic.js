@@ -114,6 +114,43 @@ class Calculator {
         div4.appendChild(periodButton);
         div4.appendChild(negativeValueButton);
         wrapperDiv.appendChild(div4);
+        const div5 = document.createElement("div");
+        const multiplyingButton = document.createElement("button");
+        multiplyingButton.dataset.number = "*";
+        multiplyingButton.classList.add("button");
+        const multiplyingButtonText = document.createTextNode("*");
+        multiplyingButton.appendChild(multiplyingButtonText)
+        const addingButton = document.createElement("button");
+        addingButton.dataset.number = "+";
+        addingButton.classList.add("button");
+        const addingButtonText = document.createTextNode("+");
+        addingButton.appendChild(addingButtonText)
+        const subtractingButton = document.createElement("button");
+        subtractingButton.dataset.number = "-";
+        subtractingButton.classList.add("button");
+        const subtractingButtonText = document.createTextNode("-");
+        subtractingButton.appendChild(subtractingButtonText)
+        const dividingButton = document.createElement("button");
+        dividingButton.dataset.number = "/";
+        dividingButton.classList.add("button");
+        const dividingButtonText = document.createTextNode("/");
+        dividingButton.appendChild(dividingButtonText);
+        const equalButton = document.createElement("button");
+        equalButton.dataset.number = "=";
+        equalButton.classList.add("button");
+        const equalButtonText = document.createTextNode("=");
+        equalButton.appendChild(equalButtonText);
+        const clearingButton = document.createElement("button");
+        clearingButton.classList.add("button");
+        const clearingButtonText = document.createTextNode("Clear");
+        clearingButton.appendChild(clearingButtonText)
+        div5.appendChild(multiplyingButton);
+        div5.appendChild(addingButton);
+        div5.appendChild(subtractingButton);
+        div5.appendChild(dividingButton);
+        div5.appendChild(equalButton);
+        div5.appendChild(clearingButton);
+        wrapperDiv.appendChild(div5);
     };
 }
 const calculator1 = new Calculator(".wrapper");
