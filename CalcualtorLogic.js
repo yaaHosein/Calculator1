@@ -96,7 +96,28 @@ class Calculator {
         div3.appendChild(button2);
         div3.appendChild(button3);
         wrapperDiv.appendChild(div3);
-        console.log(wrapperDiv)
+        const div4 = document.createElement("div");
+        const button0 = document.createElement("button");
+        button0.dataset.number = "0";
+        button0.classList.add("button");
+        const button0Text = document.createTextNode("0");
+        button0.appendChild(button0Text);
+        const periodButton = document.createElement("button");
+        periodButton.dataset.number = ".";
+        periodButton.id = "periodButton";
+        periodButton.classList.add("button");
+        const periodButtonText = document.createTextNode(".");
+        periodButton.appendChild(periodButtonText);
+        const negativeValueButton = document.createElement("button");
+        negativeValueButton.dataset.number = "±";
+        negativeValueButton.id = "negativeValueButton";
+        negativeValueButton.classList.add("button");
+        const negativeValueButtonText = document.createTextNode("±");
+        negativeValueButton.appendChild(negativeValueButtonText);
+        div4.appendChild(button0);
+        div4.appendChild(periodButton);
+        div4.appendChild(negativeValueButton);
+        wrapperDiv.appendChild(div4);
     };
 }
 const calculator1 = new Calculator(".wrapper");
