@@ -153,6 +153,20 @@ class Calculator {
         wrapperDiv.appendChild(div6);
         this.hostElem.appendChild(wrapperDiv);
     };
-}
+    getButtonsRow(buttons) {
+        const div = document.createElement("div");
+        for (let button of buttons) {
+            button = document.createElement("button");
+            button.dataset.number;
+            const buttonText = document.createTextNode();
+            button.appendChild(buttonText);
+            div.appendChild(button);
+        }
+        return div
+    }
+};
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
+const div1 = this.getButtonsRow(["7", "8", "9"]);
+const div2 = this.getButtonsRow(["4", "5", "6"]);
+const div3 = this.getButtonsRow(["1", "2", "3"]);
