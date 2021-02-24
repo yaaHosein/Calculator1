@@ -152,16 +152,18 @@ class Calculator {
         div6.appendChild(clearingButton);
         wrapperDiv.appendChild(div6);
         this.hostElem.appendChild(wrapperDiv);
-        const div1 = this.getButtonsRow(["7", "8", "9"]);
-        const div2 = this.getButtonsRow(["4", "5", "6"]);
-        const div3 = this.getButtonsRow(["1", "2", "3"]);
+        const div7 = this.getButtonsRow(["7", "8", "9"]);
+        const div8 = this.getButtonsRow(["4", "5", "6"]);
+        const div9 = this.getButtonsRow(["1", "2", "3"]);
+        console.log(div7);
     };
     getButtonsRow(buttons) {
         const div = document.createElement("div");
         for (let button of buttons) {
+            // console.log(button)
             var buttonElement = document.createElement("button");
-            buttonElement.dataset.number = "7" || "8" || "9" || "4" || "5" || "6" || "1" || "2" || "3";
-            const buttonElementText = document.createTextNode("7" || "8" || "9" || "4" || "5" || "6" || "1" || "2" || "3");
+            buttonElement.dataset.number = button;
+            const buttonElementText = document.createTextNode(button);
             buttonElement.appendChild(buttonElementText);
             div.appendChild(buttonElement);
         }
