@@ -151,16 +151,17 @@ class Calculator {
         div6.appendChild(equalButton);
         div6.appendChild(clearingButton);
         wrapperDiv.appendChild(div6);
+        const row1 = this.getButtonsRow(["7", "8", "9"]);
+        const row2 = this.getButtonsRow(["4", "5", "6"]);
+        const row3 = this.getButtonsRow(["1", "2", "3"]);
+        wrapperDiv.appendChild(row1);
+        wrapperDiv.appendChild(row2);
+        wrapperDiv.appendChild(row3);
         this.hostElem.appendChild(wrapperDiv);
-        const div7 = this.getButtonsRow(["7", "8", "9"]);
-        const div8 = this.getButtonsRow(["4", "5", "6"]);
-        const div9 = this.getButtonsRow(["1", "2", "3"]);
-        console.log(div7);
     };
     getButtonsRow(buttons) {
         const div = document.createElement("div");
         for (let button of buttons) {
-            // console.log(button)
             var buttonElement = document.createElement("button");
             buttonElement.dataset.number = button;
             const buttonElementText = document.createTextNode(button);
@@ -170,5 +171,6 @@ class Calculator {
         return div
     }
 };
+
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
