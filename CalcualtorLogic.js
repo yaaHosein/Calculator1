@@ -160,8 +160,8 @@ class Calculator {
         const div = document.createElement("div");
         for (let button of buttons) {
             var buttonElement = document.createElement("button");
-            buttonElement.dataset.number = this.getButtonsRow(["7", "8", "9"]);
-            const buttonElementText = document.createTextNode(this.getButtonsRow(["7", "8", "9"]));
+            buttonElement.dataset.number = "7" || "8" || "9" || "4" || "5" || "6" || "1" || "2" || "3";
+            const buttonElementText = document.createTextNode("7" || "8" || "9" || "4" || "5" || "6" || "1" || "2" || "3");
             buttonElement.appendChild(buttonElementText);
             div.appendChild(buttonElement);
         }
