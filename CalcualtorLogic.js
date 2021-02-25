@@ -35,6 +35,12 @@ class Calculator {
         resultDiv.classList.add("result");
         resultDiv.id = "result";
         wrapperDiv.appendChild(resultDiv);
+        const row1 = this.getButtonsRow(["7", "8", "9"]);
+        const row2 = this.getButtonsRow(["4", "5", "6"]);
+        const row3 = this.getButtonsRow(["1", "2", "3"]);
+        wrapperDiv.appendChild(row1);
+        wrapperDiv.appendChild(row2);
+        wrapperDiv.appendChild(row3);
         const div4 = document.createElement("div");
         const button0 = document.createElement("button");
         button0.dataset.number = "0";
@@ -91,12 +97,6 @@ class Calculator {
         div6.appendChild(equalButton);
         div6.appendChild(clearingButton);
         wrapperDiv.appendChild(div6);
-        const row1 = this.getButtonsRow(["7", "8", "9"]);
-        const row2 = this.getButtonsRow(["4", "5", "6"]);
-        const row3 = this.getButtonsRow(["1", "2", "3"]);
-        wrapperDiv.appendChild(row1);
-        wrapperDiv.appendChild(row2);
-        wrapperDiv.appendChild(row3);
         this.hostElem.appendChild(wrapperDiv);
     };
     getButtonsRow(buttons) {
@@ -104,6 +104,7 @@ class Calculator {
         for (let button of buttons) {
             var buttonElement = document.createElement("button");
             buttonElement.dataset.number = button;
+            buttonElement.classList.add("button");
             const buttonElementText = document.createTextNode(button);
             buttonElement.appendChild(buttonElementText);
             div.appendChild(buttonElement);
