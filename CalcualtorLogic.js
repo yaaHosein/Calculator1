@@ -23,7 +23,6 @@ calculatorLogic.subtract();
 calculatorLogic.multiply();
 calculatorLogic.divide();
 
-
 class Calculator {
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
@@ -38,15 +37,15 @@ class Calculator {
         const row1 = this.getButtonsRow(["7", "8", "9"]);
         const row2 = this.getButtonsRow(["4", "5", "6"]);
         const row3 = this.getButtonsRow(["1", "2", "3"]);
-        const row4 = this.getButtonsRow(["0", ".", "±"]);
-        const row5 = this.getButtonsRow(["*", "+", "-"]);
-        const row6 = this.getButtonsRow(["/", "=", "Clear"]);
+        // const row4 = this.getButtonsRow(["0", ".", "±"]);
+        const row5 = this.getButtonsRow2(["*", "+", "-"]);
+        // const row6 = this.getButtonsRow(["/", "=", "Clear"]);
         wrapperDiv.appendChild(row1);
         wrapperDiv.appendChild(row2);
         wrapperDiv.appendChild(row3);
-        wrapperDiv.appendChild(row4);
+        // wrapperDiv.appendChild(row4);
         wrapperDiv.appendChild(row5);
-        wrapperDiv.appendChild(row6);
+        // wrapperDiv.appendChild(row6);
         this.hostElem.appendChild(wrapperDiv);
     };
     getButtonsRow(buttons) {
@@ -61,7 +60,18 @@ class Calculator {
         }
         return div
     }
-
+    getButtonsRow2(buttons) {
+        const div = document.createElement("div");
+        for (let button of buttons) {
+            var buttonElement = document.createElement("button");
+            buttonElement.dataset.operator = button;
+            buttonElement.classList.add("button");
+            const buttonElementText = document.createTextNode(button);
+            buttonElement.appendChild(buttonElementText);
+            div.appendChild(buttonElement);
+        }
+        return div
+    }
 };
 
 const calculator1 = new Calculator(".wrapper");
