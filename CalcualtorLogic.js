@@ -37,15 +37,29 @@ class Calculator {
         const row1 = this.getButtonsRow(["7", "8", "9"]);
         const row2 = this.getButtonsRow(["4", "5", "6"]);
         const row3 = this.getButtonsRow(["1", "2", "3"]);
-        // const row4 = this.getButtonsRow(["0", ".", "±"]);
-        const row5 = this.getButtonsRow2(["*", "+", "-"]);
-        // const row6 = this.getButtonsRow(["/", "=", "Clear"]);
+        const row4 = this.getOperatorsRow(["*", "+", "-"]);
         wrapperDiv.appendChild(row1);
         wrapperDiv.appendChild(row2);
         wrapperDiv.appendChild(row3);
-        // wrapperDiv.appendChild(row4);
-        wrapperDiv.appendChild(row5);
-        // wrapperDiv.appendChild(row6);
+        wrapperDiv.appendChild(row4);
+        const div4 = document.createElement("div");
+        const button0 = document.createElement("button");
+        button0.dataset.number = "0";
+        button0.classList.add("button");
+        const button0Text = document.createTextNode("0");
+        button0.appendChild(button0Text);
+        const periodButton = document.createElement("button");
+        periodButton.classList.add("button");
+        const periodButtonText = document.createTextNode(".");
+        periodButton.appendChild(periodButtonText);
+        const negativeValueButton = document.createElement("button");
+        negativeValueButton.classList.add("button");
+        const negativeValueButtonText = document.createTextNode("±");
+        negativeValueButton.appendChild(negativeValueButtonText);
+        div4.appendChild(button0);
+        div4.appendChild(periodButton);
+        div4.appendChild(negativeValueButton);
+        wrapperDiv.appendChild(div4);
         this.hostElem.appendChild(wrapperDiv);
     };
     getButtonsRow(buttons) {
@@ -60,7 +74,7 @@ class Calculator {
         }
         return div
     }
-    getButtonsRow2(buttons) {
+    getOperatorsRow(buttons) {
         const div = document.createElement("div");
         for (let button of buttons) {
             var buttonElement = document.createElement("button");
