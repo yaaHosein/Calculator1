@@ -23,14 +23,19 @@ calculatorLogic.subtract();
 calculatorLogic.multiply();
 calculatorLogic.divide();
 
+
 class Calculator {
+
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
+        this.resultDiv = document.querySelector();
     };
     render() {
         const wrapperDiv = document.createElement('div');
         wrapperDiv.classList.add("wrapper");
+
         const resultDiv = document.createElement('div');
+        resultDiv = null;
         resultDiv.classList.add("result");
         resultDiv.id = "result";
         wrapperDiv.appendChild(resultDiv);
@@ -60,6 +65,8 @@ class Calculator {
         div4.appendChild(periodButton);
         div4.appendChild(negativeValueButton);
         wrapperDiv.appendChild(div4);
+        currentResult = null;
+
         this.hostElem.appendChild(wrapperDiv);
     };
     getButtonsRow(buttons) {
@@ -90,3 +97,5 @@ class Calculator {
 
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
+calculator1.getButtonsRow(["hi", "5", "button"])
+console.log(calculator1)
