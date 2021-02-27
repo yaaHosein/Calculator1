@@ -28,7 +28,7 @@ class Calculator {
     resultElement = null;
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
-        // this.resultDiv = document.;
+        this.resultDiv = document.createElement('div');
     };
     render() {
         const wrapperDiv = document.createElement('div');
