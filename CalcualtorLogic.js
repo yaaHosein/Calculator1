@@ -33,11 +33,10 @@ class Calculator {
     render() {
         const wrapperDiv = document.createElement('div');
         wrapperDiv.classList.add("wrapper");
-
         const resultDiv = document.createElement('div');
-        resultDiv = null;
         resultDiv.classList.add("result");
         resultDiv.id = "result";
+        currentResult = null;
         wrapperDiv.appendChild(resultDiv);
         const row1 = this.getButtonsRow(["7", "8", "9"]);
         const row2 = this.getButtonsRow(["4", "5", "6"]);
@@ -65,8 +64,6 @@ class Calculator {
         div4.appendChild(periodButton);
         div4.appendChild(negativeValueButton);
         wrapperDiv.appendChild(div4);
-        currentResult = null;
-
         this.hostElem.appendChild(wrapperDiv);
     };
     getButtonsRow(buttons) {
@@ -97,5 +94,3 @@ class Calculator {
 
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
-calculator1.getButtonsRow(["hi", "5", "button"])
-console.log(calculator1)
