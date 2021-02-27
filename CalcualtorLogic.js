@@ -23,12 +23,12 @@ calculatorLogic.subtract();
 calculatorLogic.multiply();
 calculatorLogic.divide();
 
-
 class Calculator {
-
+    currentResult = 0;
+    resultElement = null;
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
-        this.resultDiv = document.querySelector();
+        // this.resultDiv = document.;
     };
     render() {
         const wrapperDiv = document.createElement('div');
@@ -36,7 +36,12 @@ class Calculator {
         const resultDiv = document.createElement('div');
         resultDiv.classList.add("result");
         resultDiv.id = "result";
-        currentResult = null;
+
+        resultDiv.appendChild(
+            document.createTextNode(this.currentResult)
+        );
+        this.resultElement = resultDiv;
+
         wrapperDiv.appendChild(resultDiv);
         const row1 = this.getButtonsRow(["7", "8", "9"]);
         const row2 = this.getButtonsRow(["4", "5", "6"]);
