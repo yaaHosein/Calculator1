@@ -1,3 +1,7 @@
+let lastValue = null;
+let operator = null;
+let lastButtonClicked = null;
+
 class CalculatorLogic {
     add(number1, number2) {
         let result = number1 + number2;
@@ -67,9 +71,6 @@ class Calculator {
         div4.appendChild(negativeValueButton);
         wrapperDiv.appendChild(div4);
         this.hostElem.appendChild(wrapperDiv);
-
-
-
     };
     getButtonsRow(buttons) {
         const div = document.createElement("div");
@@ -96,9 +97,14 @@ class Calculator {
         return div
     }
     onButtonNumberClick(event) {
-        const buttonElement_ = document.createElement("button");
-        buttonElement_ = this.onButtonNumberClick();
+        buttonElement = this.onButtonNumberClick();
+        if (lastButtonClicked === "Operator") { result.textContent = "" };
+        const currentValueOfResult = result.textContent;
+        const newValue = currentValueOfResult + button.dataset.number;
+        console.log(parseInt(newValue));
+        result.textContent = newValue;
+        lastButtonClicked = "Number";
     }
-};
+}
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
