@@ -35,12 +35,10 @@ class Calculator {
         const resultDiv = document.createElement('div');
         resultDiv.classList.add("result");
         resultDiv.id = "result";
-
         resultDiv.appendChild(
             document.createTextNode(this.currentResult)
         );
         this.resultElement = resultDiv;
-
         wrapperDiv.appendChild(resultDiv);
         const row1 = this.getButtonsRow(["7", "8", "9"]);
         const row2 = this.getButtonsRow(["4", "5", "6"]);
@@ -98,9 +96,9 @@ class Calculator {
         return div
     }
     onButtonNumberClick(event) {
-        console.log("foo");
+        const buttonElement_ = document.createElement("button");
+        buttonElement_ = this.onButtonNumberClick();
     }
 };
-
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
