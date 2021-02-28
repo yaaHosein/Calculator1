@@ -70,6 +70,9 @@ class Calculator {
         div4.appendChild(negativeValueButton);
         wrapperDiv.appendChild(div4);
         this.hostElem.appendChild(wrapperDiv);
+
+
+
     };
     getButtonsRow(buttons) {
         const div = document.createElement("div");
@@ -94,6 +97,9 @@ class Calculator {
             div.appendChild(buttonElement);
         }
         return div
+    }
+    onButtonNumberClick(event) {
+        console.log("foo");
     }
 };
 
