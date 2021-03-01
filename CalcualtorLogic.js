@@ -78,13 +78,10 @@ class Calculator {
             const buttonElementText = document.createTextNode(button);
             buttonElement.appendChild(buttonElementText);
             div.appendChild(buttonElement);
-            buttonElement.addEventListener('click', function() {
-                if (button === "Operator") { result.textContent = "" };
-                this.onButtonNumberClick;
-            })
+            buttonElement.addEventListener("click", this.onButtonNumberClick);
+            if (button === "Operator") { result.textContent = "" };
         }
         return div;
-
     }
 
     getOperatorsRow(buttons) {
