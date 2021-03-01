@@ -79,30 +79,33 @@ class Calculator {
             buttonElement.appendChild(buttonElementText);
             div.appendChild(buttonElement);
             buttonElement.addEventListener('click', function() {
-                if (button === "Operator") result.textContent = "";
+                if (button === "Operator") { result.textContent = "" };
                 this.onButtonNumberClick;
             })
-            return div;
+        }
+        return div;
 
-        }
-        getOperatorsRow(buttons) {
-            const div = document.createElement("div");
-            for (let button of buttons) {
-                var buttonElement = document.createElement("button");
-                buttonElement.dataset.operator = button;
-                buttonElement.classList.add("button");
-                const buttonElementText = document.createTextNode(button);
-                buttonElement.appendChild(buttonElementText);
-                div.appendChild(buttonElement);
-            }
-            return div
-        }
-        onButtonNumberClick(event) {
-                console.log("clickedNumbBtn");
-            }
-            // onButtonOperatorClick(event){
-            // console.log("clickedOpeBtn")
-            // }
     }
-    const calculator1 = new Calculator(".wrapper");
-    calculator1.render();
+
+    getOperatorsRow(buttons) {
+        const div = document.createElement("div");
+        for (let button of buttons) {
+            var buttonElement = document.createElement("button");
+            buttonElement.dataset.operator = button;
+            buttonElement.classList.add("button");
+            const buttonElementText = document.createTextNode(button);
+            buttonElement.appendChild(buttonElementText);
+            div.appendChild(buttonElement);
+        }
+        return div
+    }
+    onButtonNumberClick(event) {
+            console.log("clickedNumbBtn");
+        }
+        // onButtonOperatorClick(event){
+        // console.log("clickedOpeBtn")
+        // }
+}
+
+const calculator1 = new Calculator(".wrapper");
+calculator1.render();
