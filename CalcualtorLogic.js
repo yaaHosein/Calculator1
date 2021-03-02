@@ -79,11 +79,9 @@ class Calculator {
             buttonElement.appendChild(buttonElementText);
             div.appendChild(buttonElement);
             buttonElement.addEventListener("click", this.onButtonNumberClick);
-
         }
         return div;
     }
-
     getOperatorsRow(buttons) {
         const div = document.createElement("div");
         for (let button of buttons) {
@@ -95,13 +93,10 @@ class Calculator {
             div.appendChild(buttonElement);
         }
         return div
-    }
+    };
     onButtonNumberClick(event) {
-            console.log("clickedNumbBtn");
-        }
-        // onButtonOperatorClick(event){
-        // console.log("clickedOpeBtn")
-        // }
+        console.log(event);
+    };
 }
 
 const calculator1 = new Calculator(".wrapper");
