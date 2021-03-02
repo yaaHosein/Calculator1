@@ -79,6 +79,7 @@ class Calculator {
             buttonElement.appendChild(buttonElementText);
             div.appendChild(buttonElement);
             buttonElement.addEventListener("click", this.onButtonNumberClick);
+
         }
         return div;
     }
