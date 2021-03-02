@@ -81,6 +81,11 @@ class Calculator {
             buttonElement.addEventListener("click", this.onButtonNumberClick);
             if (buttonElement === "Operator") { resultElement.textContent = "" };
             //    if (buttonElement === "Operator") { this.resultElement.textContent = "" };
+            buttonElement = result.textContent;
+            const newValue = this.resultElement + buttonElement
+            console.log(parseInt(newValue));
+            this.resultElement.textContent = newValue;
+            buttonElement = "Number";
         }
         return div;
     }
