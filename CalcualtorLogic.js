@@ -1,3 +1,4 @@
+// let currentResult;
 class CalculatorLogic {
     add(number1, number2) {
         let result = number1 + number2;
@@ -95,7 +96,9 @@ class Calculator {
         return div
     };
     onButtonNumberClick(event) {
-        console.log(event);
+        const newValue = event.target.dataset.number;
+        //  const newValue = this.currentResult + event.target.dataset.number;
+        console.log(parseInt(newValue));
     };
 }
 
