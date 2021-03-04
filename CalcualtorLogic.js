@@ -25,7 +25,7 @@ calculatorLogic.divide();
 
 class Calculator {
     currentResult = 0;
-    resultElement = null;
+    resultElement = parseInt(this.currentResult);
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
         this.onButtonNumberClick = this.onButtonNumberClick.bind(this);
@@ -96,7 +96,7 @@ class Calculator {
         return div
     };
     onButtonNumberClick(event) {
-        const dataNumContent = this.currentResult + event.target.dataset.number;
+        let dataNumContent = this.currentResult + event.target.dataset.number;
         console.log(dataNumContent);
         console.log(this.currentResult);
     }
