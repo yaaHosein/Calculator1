@@ -28,6 +28,7 @@ class Calculator {
     resultElement = null;
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
+        this.onButtonNumberClick = this.onButtonNumberClick.bind(this);
     };
 
     render() {
@@ -97,6 +98,7 @@ class Calculator {
     onButtonNumberClick(event) {
         const dataNumContent = this.currentResult + event.target.dataset.number;
         console.log(dataNumContent);
+        console.log(this.currentResult);
     }
 }
 
