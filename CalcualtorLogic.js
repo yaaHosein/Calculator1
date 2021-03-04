@@ -25,8 +25,7 @@ calculatorLogic.divide();
 
 class Calculator {
     currentResult = 0;
-    // resultElement = parseInt(this.currentResult);
-    resultElement = console.log(parseInt(this.currentResult));
+    resultElement = null;
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
         this.onButtonNumberClick = this.onButtonNumberClick.bind(this);
@@ -98,8 +97,8 @@ class Calculator {
     };
     onButtonNumberClick(event) {
         let dataNumContent = this.currentResult + event.target.dataset.number;
-        console.log(dataNumContent);
-        console.log(this.currentResult);
+        let updatedCurrentResult = console.log(parseInt(this.currentResult));
+        this.resultElement = updatedCurrentResult;
     }
 }
 
