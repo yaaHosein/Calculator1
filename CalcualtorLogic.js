@@ -95,10 +95,9 @@ class Calculator {
         return div
     };
     onButtonNumberClick(event) {
-        const dataNumContent = event.target.dataset.number;
-        //  const dataNumbercontent = this.currentResult + event.target.dataset.number;
+        const dataNumContent = this.currentResult + event.target.dataset.number;
         console.log(dataNumContent);
-    };
+    }
 }
 
 const calculator1 = new Calculator(".wrapper");
