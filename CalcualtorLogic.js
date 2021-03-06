@@ -100,6 +100,8 @@ class Calculator {
         console.log(parseInt(dataNumContent));
         this.currentResult = dataNumContent + event.target.dataset.number;
         this.resultElement = this.currentResult + event.target.dataset.number;
+        // this.resultElement = this.currentResult+dataNumContent;
+        // this.resultElement = this.currentResult;
     }
 }
 
