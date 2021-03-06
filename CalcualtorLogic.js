@@ -95,11 +95,23 @@ class Calculator {
         }
         return div
     };
+
+
     onButtonNumberClick(event) {
         let dataNumContent = this.currentResult + event.target.dataset.number;
-        this.resultElement = console.log(parseInt(dataNumContent))
+        if (event.target.dataset.number === "Operator") this.resultElement = "";
+        this.resultElement = dataNumContent;
+        console.log(parseInt(dataNumContent));
+        this.currentResult = dataNumContent;
+        dataNumContent = "Number"
     }
+
 }
 
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
+
+
+// data - number of clicked button
+// current value of result div
+// result div which we need to update
