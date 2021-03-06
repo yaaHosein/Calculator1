@@ -95,17 +95,13 @@ class Calculator {
         }
         return div
     };
-
-
     onButtonNumberClick(event) {
         let dataNumContent = this.currentResult + event.target.dataset.number;
-        if (event.target.dataset.number === "Operator") this.resultElement = "";
         this.resultElement = dataNumContent;
-        console.log(parseInt(dataNumContent));
+        parseInt(dataNumContent);
         this.currentResult = dataNumContent;
-        dataNumContent = "Number"
+        console.log(this.currentResult);
     }
-
 }
 
 const calculator1 = new Calculator(".wrapper");
