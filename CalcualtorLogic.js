@@ -96,14 +96,15 @@ class Calculator {
         return div
     };
     onButtonNumberClick(event) {
-        let dataNumContent = this.currentResult + event.target.dataset.number;
-        console.log(parseInt(dataNumContent));
-        this.currentResult = dataNumContent + event.target.dataset.number;
-        this.resultElement = this.currentResult + event.target.dataset.number;
-        // this.resultElement = this.currentResult+dataNumContent;
-        // this.resultElement = this.currentResult;
+        let dataNumAndCurrentResult = this.currentResult + event.target.dataset.number;
+        console.log(dataNumAndCurrentResult);
+        let currentResult_ = document.querySelector(".result");
+        let currentResultValue = currentResult_.innerHTML;
+        let clickcedButton = event.target.dataset.number;
+        console.log(parseInt(currentResultValue));
+        this.resultElement = currentResultValue + clickcedButton;
+        console.log(this.resultElement);
     }
 }
-
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
