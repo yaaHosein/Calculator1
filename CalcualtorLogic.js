@@ -100,6 +100,7 @@ class Calculator {
         let currentResult_ = this.currentResult;
         let clickcedButtonandCurrentResult_ = clickcedButton + currentResult_;
         this.resultElement = currentResult_ + clickcedButtonandCurrentResult_;
+        console.log(this.resultElement);
     }
 }
 const calculator1 = new Calculator(".wrapper");
