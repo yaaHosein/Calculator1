@@ -96,11 +96,21 @@ class Calculator {
         return div
     };
     onButtonNumberClick(event) {
-        let clickcedButton = event.target.dataset.number;
-        let currentResult_ = this.currentResult;
-        let clickcedButtonandCurrentResult_ = clickcedButton + currentResult_;
-        this.resultElement = currentResult_ + clickcedButtonandCurrentResult_;
+        const clickedButton = event.target.dataset.number;
+        let clickcedButtonAndCurrentResult = 0 + clickedButton;
+        this.resultElement = clickcedButtonAndCurrentResult + clickedButton;
         console.log(this.resultElement);
+
+        // const clickedButton = event.target.dataset.number;
+        // let clickcedButtonAndCurrentResult = "0" + clickedButton;
+        // this.resultElement = clickcedButtonAndCurrentResult + clickedButton;
+        // console.log(this.resultElement);
+
+        // const clickedButton = event.target.dataset.number;
+        // let currentResult_ = this.currentResult;
+        // let clickcedButtonAndCurrentResult = currentResult_ + clickedButton;
+        // this.resultElement = currentResult_ + clickcedButtonAndCurrentResult;
+        // console.log(this.resultElement);
     }
 }
 const calculator1 = new Calculator(".wrapper");
