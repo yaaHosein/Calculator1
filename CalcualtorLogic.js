@@ -97,7 +97,6 @@ class Calculator {
     };
     onButtonNumberClick(event) {
         const currentResultAndclickedButton = this.currentResult + event.target.dataset.number;
-        console.log(parseInt(currentResultAndclickedButton));
         this.currentResult = currentResultAndclickedButton;
     }
 }
