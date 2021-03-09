@@ -26,12 +26,17 @@ calculatorLogic.divide();
 class Calculator {
     currentResult = 0;
     resultElement = null;
+
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
         this.onButtonNumberClick = this.onButtonNumberClick.bind(this);
     };
 
     render() {
+        let button = document.getElementById("result");
+        let numBtns = document.querySelectorAll("[data-number]")
+        let operBtns = document.querySelectorAll("[data-operator]")
+
         const wrapperDiv = document.createElement('div');
         wrapperDiv.classList.add("wrapper");
         const resultDiv = document.createElement('div');
@@ -99,9 +104,7 @@ class Calculator {
         const currentResultAndclickedButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedButton;
     }
-    updateResultElement() {
-
-    }
+    updateResultElement() {}
 
 }
 const calculator1 = new Calculator(".wrapper");
