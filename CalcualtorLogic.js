@@ -33,10 +33,6 @@ class Calculator {
     };
 
     render() {
-        let button = document.getElementById("result");
-        let numBtns = document.querySelectorAll("[data-number]")
-        let operBtns = document.querySelectorAll("[data-operator]")
-
         const wrapperDiv = document.createElement('div');
         wrapperDiv.classList.add("wrapper");
         const resultDiv = document.createElement('div');
@@ -103,9 +99,14 @@ class Calculator {
     onButtonNumberClick(event) {
         const currentResultAndclickedButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedButton;
+        console.log(currentResultAndclickedButton)
     }
-    updateResultElement() {}
+    updateResultElement() {
+        const updatedResult = document.getElementById('result').innerHTML = this.currentResult;
+        // document.getElementById('result').innerHTML = this.currentResult;
+    }
 
 }
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
+// calculator1.updateResultElement();
