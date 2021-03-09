@@ -99,6 +99,10 @@ class Calculator {
         const currentResultAndclickedButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedButton;
     }
+    updateResultElement() {
+
+    }
+
 }
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
