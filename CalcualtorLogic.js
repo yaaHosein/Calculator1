@@ -102,7 +102,7 @@ class Calculator {
         console.log(currentResultAndclickedButton)
     }
     updateResultElement() {
-        this.resultElement.innerHTML = this.currentResult;
+        // this.resultElement.innerHTML = this.currentResult;
         this.resultElement.textContent = this.currentResult;
     }
 }
