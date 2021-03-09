@@ -102,11 +102,10 @@ class Calculator {
         console.log(currentResultAndclickedButton)
     }
     updateResultElement() {
-        const updatedResult = document.getElementById('result').innerHTML = this.currentResult;
-        // document.getElementById('result').innerHTML = this.currentResult;
+        this.resultElement.innerHTML = this.currentResult;
+        this.resultElement.textContent = this.currentResult;
     }
-
 }
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
-// calculator1.updateResultElement();
+calculator1.updateResultElement();
