@@ -52,11 +52,14 @@ class Calculator {
         wrapperDiv.appendChild(row3);
         wrapperDiv.appendChild(row4);
         const div4 = document.createElement("div");
+
         const button0 = document.createElement("button");
         button0.dataset.number = "0";
         button0.classList.add("button");
         const button0Text = document.createTextNode("0");
         button0.appendChild(button0Text);
+
+
         const periodButton = document.createElement("button");
         periodButton.classList.add("button");
         const periodButtonText = document.createTextNode(".");
@@ -99,12 +102,13 @@ class Calculator {
     onButtonNumberClick(event) {
         const currentResultAndclickedButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedButton;
+        .addEventListener("click", {});
         this.updateResultElement();
+
     }
     updateResultElement() {
         this.resultElement.textContent = this.currentResult;
     }
-
 }
 
 const calculator1 = new Calculator(".wrapper");
