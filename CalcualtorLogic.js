@@ -26,12 +26,10 @@ calculatorLogic.divide();
 class Calculator {
     currentResult = 0;
     resultElement = null;
-
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
         this.onButtonNumberClick = this.onButtonNumberClick.bind(this);
     };
-
     render() {
         const wrapperDiv = document.createElement('div');
         wrapperDiv.classList.add("wrapper");
@@ -52,15 +50,12 @@ class Calculator {
         wrapperDiv.appendChild(row3);
         wrapperDiv.appendChild(row4);
         const div4 = document.createElement("div");
-
         const button0 = document.createElement("button");
         button0.dataset.number = "0";
         button0.classList.add("button");
         const button0Text = document.createTextNode("0");
         button0.appendChild(button0Text);
-        // button0.addEventListener("click", this.onButtonNumberClick);
-
-
+        button0.addEventListener("click", this.onButtonNumberClick);
         const periodButton = document.createElement("button");
         periodButton.classList.add("button");
         const periodButtonText = document.createTextNode(".");
@@ -104,10 +99,12 @@ class Calculator {
         const currentResultAndclickedButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedButton;
         this.updateResultElement();
-        button0.addEventListener("click", );
     }
     updateResultElement() {
         this.resultElement.textContent = this.currentResult;
+    }
+    onOperatorButtonClick() {
+
     }
 }
 
