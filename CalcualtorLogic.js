@@ -58,7 +58,7 @@ class Calculator {
         button0.classList.add("button");
         const button0Text = document.createTextNode("0");
         button0.appendChild(button0Text);
-        button0.addEventListener("click", this.onButtonNumberClick);
+        // button0.addEventListener("click", this.onButtonNumberClick);
 
 
         const periodButton = document.createElement("button");
@@ -103,8 +103,8 @@ class Calculator {
     onButtonNumberClick(event) {
         const currentResultAndclickedButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedButton;
-        // .addEventListener("click", {});
         this.updateResultElement();
+        button0.addEventListener("click", );
     }
     updateResultElement() {
         this.resultElement.textContent = this.currentResult;
