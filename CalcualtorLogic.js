@@ -26,6 +26,7 @@ calculatorLogic.divide();
 class Calculator {
     currentResult = 0;
     resultElement = null;
+    operator = this.currentResult;
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
         this.onButtonNumberClick = this.onButtonNumberClick.bind(this);
@@ -92,6 +93,7 @@ class Calculator {
             const buttonElementText = document.createTextNode(button);
             buttonElement.appendChild(buttonElementText);
             div.appendChild(buttonElement);
+            buttonElement.addEventListener("click", this.onOperatorButtonClick);
         }
         return div
     };
@@ -103,8 +105,10 @@ class Calculator {
     updateResultElement() {
         this.resultElement.textContent = this.currentResult;
     }
-    onOperatorButtonClick() {
-
+    onOperatorButtonClick(event) {
+        const curntRsltAndOperclkdBtn = this.currentResult + event.target.dataset.operator;
+        this.currentResult = curntRsltAndOperclkdBtn;
+        this.updateResultElement();
     }
 }
 
