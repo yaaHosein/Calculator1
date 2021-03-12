@@ -69,6 +69,12 @@ class Calculator {
         div4.appendChild(periodButton);
         div4.appendChild(negativeValueButton);
         wrapperDiv.appendChild(div4);
+        const dividingButton = document.createElement("button");
+        dividingButton.classList.add("button");
+        const dividingButtonText = document.createTextNode("/");
+        dividingButton.appendChild(dividingButtonText);
+        wrapperDiv.appendChild(dividingButton);
+        dividingButton.addEventListener("click", this.onOperatorButtonClick);
         this.hostElem.appendChild(wrapperDiv);
     };
     getButtonsRow(buttons) {
@@ -107,7 +113,6 @@ class Calculator {
     }
     onOperatorButtonClick(event) {
         const curntRsltAndOperclkdBtn = event.target.dataset.operator;
-        console.log(curntRsltAndOperclkdBtn);
     }
 }
 
