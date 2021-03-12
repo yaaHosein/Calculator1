@@ -106,12 +106,11 @@ class Calculator {
         this.resultElement.textContent = this.currentResult;
     }
     onOperatorButtonClick(event) {
-        const curntRsltAndOperclkdBtn = this.currentResult + event.target.dataset.operator;
-        this.currentResult = curntRsltAndOperclkdBtn;
-        this.updateResultElement();
+        const curntRsltAndOperclkdBtn = event.target.dataset.operator;
+        console.log(curntRsltAndOperclkdBtn);
     }
 }
 
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
-calculator1.updateResultElement()
+// calculator1.updateResultElement()
