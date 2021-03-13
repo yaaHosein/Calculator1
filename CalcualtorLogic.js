@@ -113,7 +113,7 @@ class Calculator {
     }
     onOperatorButtonClick(event) {
         const curntRsltAndOperclkdBtn = event.target.dataset.operator;
-        operator = curntRsltAndOperclkdBtn;
+        this.operator = curntRsltAndOperclkdBtn;
     }
 }
 
