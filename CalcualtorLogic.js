@@ -45,11 +45,9 @@ class Calculator {
         const row1 = this.getButtonsRow(["7", "8", "9"]);
         const row2 = this.getButtonsRow(["4", "5", "6"]);
         const row3 = this.getButtonsRow(["1", "2", "3"]);
-        const row4 = this.getOperatorsRow(["*", "+", "-"]);
         wrapperDiv.appendChild(row1);
         wrapperDiv.appendChild(row2);
         wrapperDiv.appendChild(row3);
-        wrapperDiv.appendChild(row4);
         const div4 = document.createElement("div");
         const button0 = document.createElement("button");
         button0.dataset.number = "0";
@@ -69,6 +67,8 @@ class Calculator {
         div4.appendChild(periodButton);
         div4.appendChild(negativeValueButton);
         wrapperDiv.appendChild(div4);
+        const row4 = this.getOperatorsRow(["*", "+", "-"]);
+        wrapperDiv.appendChild(row4);
         const dividingButton = document.createElement("button");
         dividingButton.classList.add("button");
         const dividingButtonText = document.createTextNode("/");
