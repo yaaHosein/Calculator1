@@ -112,8 +112,8 @@ class Calculator {
         this.resultElement.textContent = this.currentResult;
     }
     onOperatorButtonClick(event) {
-        const curntRsltAndOperclkdBtn = event.target.dataset.operator;
-        this.operator = curntRsltAndOperclkdBtn;
+        const OperclkdBtn = event.target.dataset.operator;
+        this.operator = OperclkdBtn;
     }
 }
 
