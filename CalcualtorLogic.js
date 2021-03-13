@@ -26,7 +26,7 @@ calculatorLogic.divide();
 class Calculator {
     currentResult = 0;
     resultElement = null;
-    operator = this.buttonElement;
+    operator = null;
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
         this.onButtonNumberClick = this.onButtonNumberClick.bind(this);
