@@ -110,16 +110,16 @@ class Calculator {
         if (currentResultAndclickedButton && this.operator !== null) {
             let firstOperand = parseFloat(currentResultAndclickedButton);
             let secondOperand = parseFloat(event.target.dataset.number);
-
-            if (operator === "+") this.resultElement = firstOperand + secondOperand;
-            if (operator === "-") this.resultElement = firstOperand - secondOperand;
-            if (operator === "*") this.resultElement = firstOperand * secondOperand;
-            if (operator === "/") this.resultElement = firstOperand / secondOperand;
+            if (this.operator === "+") this.resultElement = firstOperand + secondOperand;
+            if (this.operator === "-") this.resultElement = firstOperand - secondOperand;
+            if (this.operator === "*") this.resultElement = firstOperand * secondOperand;
+            if (this.operator === "/") this.resultElement = firstOperand / secondOperand;
             this.currentResult = this.resultElement.textContent;
             // this.currentResult = this.resultElement;
             // if (operator === "/" && secondOperand === 0)
             //     this.resultElement.textContent = 'Cannot divide by zero';
             // this.updateResultElement();
+
         }
     }
     updateResultElement() {
