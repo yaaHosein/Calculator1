@@ -107,20 +107,8 @@ class Calculator {
         const currentResultAndclickedButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedButton;
         this.updateResultElement();
-        if (currentResultAndclickedButton && this.operator !== null) {
-            let firstOperand = parseFloat(currentResultAndclickedButton);
-            let secondOperand = parseFloat(event.target.dataset.number);
-            if (this.operator === "+") this.resultElement = firstOperand + secondOperand;
-            if (this.operator === "-") this.resultElement = firstOperand - secondOperand;
-            if (this.operator === "*") this.resultElement = firstOperand * secondOperand;
-            if (this.operator === "/") this.resultElement = firstOperand / secondOperand;
-            this.currentResult = this.resultElement.textContent;
-            // this.currentResult = this.resultElement;
-            // if (operator === "/" && secondOperand === 0)
-            //     this.resultElement.textContent = 'Cannot divide by zero';
-            // this.updateResultElement();
-
-        }
+        this.operator = event.target.dataset.operator;
+        currentResultAndclickedButton = this.currentResul.textContent;
     }
     updateResultElement() {
         this.resultElement.textContent = this.currentResult;
@@ -130,8 +118,6 @@ class Calculator {
         this.operator = OperclkdBtn;
     }
 }
-
-
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
 // calculator1.updateResultElement()
