@@ -106,6 +106,7 @@ class Calculator {
     onButtonNumberClick(event) {
         const currentResultAndclickedButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedButton;
+        this.operator = event.target.dataset.operator;
         this.updateResultElement();
     }
     updateResultElement() {
