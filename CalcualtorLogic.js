@@ -106,8 +106,8 @@ class Calculator {
     onButtonNumberClick(event) {
         const currentResultAndclickedButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedButton;
-        this.operator = event.target.dataset.operator;
-        this.updateResultElement();
+        this.updateResultElement(this.operator);
+        // console.log(currentResultAndclickedButton);
     }
     updateResultElement() {
         this.resultElement.textContent = this.currentResult;
