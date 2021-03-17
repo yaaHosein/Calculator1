@@ -107,6 +107,7 @@ class Calculator {
         const currentResultAndclickedNumButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedNumButton;
         this.updateResultElement();
+        // console.log(this.last)
 
     }
     updateResultElement() {
@@ -115,6 +116,7 @@ class Calculator {
     onOperatorButtonClick(event) {
         const OperclkdBtn = event.target.dataset.operator;
         this.operator = OperclkdBtn;
+        // this.last = foo;
         //if (this.resultElement === this.currentResult + this.operator) this.currentResult = this.resultElement;
         if (this.resultElement === this.currentResult + OperclkdBtn) this.currentResult = this.resultElement;
         console.log(this.resultElement);
