@@ -104,9 +104,10 @@ class Calculator {
         return div
     };
     onButtonNumberClick(event) {
-        const currentResultAndclickedButton = this.currentResult + event.target.dataset.number;
-        this.currentResult = currentResultAndclickedButton;
-        // console.log(currentResultAndclickedButton);
+        const currentResultAndclickedNumButton = this.currentResult + event.target.dataset.number;
+        this.currentResult = currentResultAndclickedNumButton;
+        this.updateResultElement();
+
     }
     updateResultElement() {
         this.resultElement.textContent = this.currentResult;
@@ -114,6 +115,10 @@ class Calculator {
     onOperatorButtonClick(event) {
         const OperclkdBtn = event.target.dataset.operator;
         this.operator = OperclkdBtn;
+        //if (this.resultElement === this.currentResult + this.operator) this.currentResult = this.resultElement;
+        if (this.resultElement === this.currentResult + OperclkdBtn) this.currentResult = this.resultElement;
+        console.log(this.resultElement);
+        console.log(this.currentResult);
     }
 }
 const calculator1 = new Calculator(".wrapper");
