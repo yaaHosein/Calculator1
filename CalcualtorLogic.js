@@ -24,6 +24,8 @@ calculatorLogic.multiply();
 calculatorLogic.divide();
 
 class Calculator {
+
+
     currentResult = 0;
     resultElement = null;
     operator = null;
@@ -107,20 +109,15 @@ class Calculator {
         const currentResultAndclickedNumButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedNumButton;
         this.updateResultElement();
-        // console.log(this.last)
-
     }
     updateResultElement() {
         this.resultElement.textContent = this.currentResult;
     }
     onOperatorButtonClick(event) {
-        const OperclkdBtn = event.target.dataset.operator;
-        this.operator = OperclkdBtn;
-        // this.last = foo;
-        //if (this.resultElement === this.currentResult + this.operator) this.currentResult = this.resultElement;
-        if (this.resultElement === this.currentResult + OperclkdBtn) this.currentResult = this.resultElement;
-        console.log(this.resultElement);
-        console.log(this.currentResult);
+        this.operator = event.target.dataset.operator;
+        if (this.resultElement === this.currentResult + this.operator) this.currentResult = this.resultElement;
+        this.updateResultElement;
+        // console.log(this.operator)
     }
 }
 const calculator1 = new Calculator(".wrapper");
