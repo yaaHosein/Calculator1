@@ -29,6 +29,7 @@ class Calculator {
     currentResult = 0;
     resultElement = null;
     operator = null;
+    // last = 5;
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
         this.onButtonNumberClick = this.onButtonNumberClick.bind(this);
@@ -106,18 +107,27 @@ class Calculator {
         return div
     };
     onButtonNumberClick(event) {
+        if (this.lastButtonClicked === "operator") this.resultElement = "";
         const currentResultAndclickedNumButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedNumButton;
         this.updateResultElement();
+
+        // console.log(this.last)
     }
     updateResultElement() {
         this.resultElement.textContent = this.currentResult;
     }
     onOperatorButtonClick(event) {
         this.operator = event.target.dataset.operator;
-        if (this.resultElement === this.currentResult + this.operator) this.currentResult = this.resultElement;
-        this.updateResultElement;
+        this.currentResult = 0;
+        this.currentResult = this.currentResult + event.target.dataset.operator;
+        this.lastButtonClicked = "opertaor"
+        this.resultElement = this.currentResult;
+        console.log(this.resultElement)
+
         // console.log(this.operator)
+        // this.last = "foo"
+
     }
 }
 const calculator1 = new Calculator(".wrapper");
