@@ -24,12 +24,12 @@ calculatorLogic.multiply();
 calculatorLogic.divide();
 
 class Calculator {
-
-
     currentResult = 0;
     resultElement = null;
     operator = null;
-    // last = 5;
+    lastButtonClicked = null;
+    lastValue = null
+
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
         this.onButtonNumberClick = this.onButtonNumberClick.bind(this);
@@ -107,27 +107,20 @@ class Calculator {
         return div
     };
     onButtonNumberClick(event) {
-        if (this.lastButtonClicked === "operator") this.resultElement = "";
+        if (this.lastButtonClicked === "operator") this.currentResult = "";
         const currentResultAndclickedNumButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedNumButton;
         this.updateResultElement();
-
         // console.log(this.last)
     }
     updateResultElement() {
         this.resultElement.textContent = this.currentResult;
     }
     onOperatorButtonClick(event) {
-        this.operator = event.target.dataset.operator;
-        this.currentResult = 0;
-        this.currentResult = this.currentResult + event.target.dataset.operator;
+        const clkedOperButn = event.target.dataset.operator;
+        this.operator = clkedOperButn;
         this.lastButtonClicked = "opertaor"
-        this.resultElement = this.currentResult;
-        console.log(this.resultElement)
-
-        // console.log(this.operator)
-        // this.last = "foo"
-
+        this.lastValue = this.resultElement;
     }
 }
 const calculator1 = new Calculator(".wrapper");
