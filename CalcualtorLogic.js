@@ -28,7 +28,7 @@ class Calculator {
     resultElement = null;
     operator = null;
     lastButtonClicked = null;
-    lastValue = null
+
 
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
@@ -119,7 +119,7 @@ class Calculator {
         const clkedOperButn = event.target.dataset.operator;
         this.operator = clkedOperButn;
         this.lastButtonClicked = "opertaor"
-        this.lastValue = this.resultElement;
+        this.updateResultElement();
     }
 }
 const calculator1 = new Calculator(".wrapper");
