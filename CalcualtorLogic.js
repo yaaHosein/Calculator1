@@ -116,10 +116,13 @@ class Calculator {
         this.resultElement.textContent = this.currentResult;
     }
     onOperatorButtonClick(event) {
+        const clkedOperButnValue1;
         const clkedOperButn = event.target.dataset.operator;
         this.operator = clkedOperButn;
         this.lastButtonClicked = "opertaor"
-        this.updateResultElement();
+        let clkedOperButnValue = document.querySelector(".button")
+        clkedOperButnValue1 = clkedOperButnValue.innerHTML;
+
     }
 }
 const calculator1 = new Calculator(".wrapper");
