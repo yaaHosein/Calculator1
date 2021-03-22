@@ -28,6 +28,7 @@ class Calculator {
     resultElement = null;
     operator = null;
     lastButtonClicked = null;
+    lastValue = null;
 
 
     constructor(selector) {
@@ -118,8 +119,8 @@ class Calculator {
     onOperatorButtonClick(event) {
         this.operator = event.target.dataset.operator;
         this.lastButtonClicked = "operator";
-        this.currentResult = this.currentResult + this.operator;
-        console.log(this.currentResult)
+        this.lastValue = this.currentResult + this.operator;
+        console.log(this.newValue)
     }
 }
 const calculator1 = new Calculator(".wrapper");
