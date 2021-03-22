@@ -123,6 +123,7 @@ class Calculator {
         let clkedOperButnValue = document.querySelector(".button")
         clkedOperButnValue1 = clkedOperButnValue.innerHTML;
 
+        this.currentResult = currentResult
     }
 }
 const calculator1 = new Calculator(".wrapper");
