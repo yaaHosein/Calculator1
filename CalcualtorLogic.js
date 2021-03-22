@@ -116,20 +116,10 @@ class Calculator {
         this.resultElement.textContent = this.currentResult;
     }
     onOperatorButtonClick(event) {
-        // defining new variable ;
-        const clkedOperButnValue1;
-        // defining another variable and assigning its value to the clicked operator button;
-        const clkedOperButn = event.target.dataset.operator;
-        // assigning variable operator property to the clicked operator button
-        this.operator = clkedOperButn;
-        // assigning a property (flag) as last button clicked which has "operator" as a name 
-        this.lastButtonClicked = "operator"
-            // defining new variable and assigning it to  query selector by class name;
-        let clkedOperButnValue = document.querySelector(".button");
-        // assigning clkedOperButnValue1 to the clkedOperButnValue's value
-        clkedOperButnValue1 = clkedOperButnValue.innerHTML;
-        // saving the current result property in a new property has (this.currentResult) as a name 
-        this.currentResult = currentResult;
+        this.operator = event.target.dataset.operator;
+        this.lastButtonClicked = "operator";
+        this.currentResult = this.currentResult + this.operator;
+        console.log(this.currentResult)
     }
 }
 const calculator1 = new Calculator(".wrapper");
