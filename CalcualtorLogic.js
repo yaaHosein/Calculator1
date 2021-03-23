@@ -27,7 +27,9 @@ class Calculator {
     currentResult = 0;
     resultElement = null;
     operator = null;
+    // for making the first operand remove after clicking on the operator button
     lastButtonClicked = null;
+    // for storing the current result and clicked operator 
     lastValue = null;
 
 
@@ -108,17 +110,22 @@ class Calculator {
         return div
     };
     onButtonNumberClick(event) {
+        // for making the first operand remove after clicking on the opertaor button so I can add the next operands only 
         if (this.lastButtonClicked === "operator") this.currentResult = "";
         const currentResultAndclickedNumButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedNumButton;
+        // for copying the content of current result to the result div 
         this.updateResultElement();
     }
     updateResultElement() {
         this.resultElement.textContent = this.currentResult;
     }
     onOperatorButtonClick(event) {
+        // for selecting the clicked operator 
         this.operator = event.target.dataset.operator;
+        // a flag helping in clearing the current result after clicking the next operands after operator buttons 
         this.lastButtonClicked = "operator";
+        // assigning the current result which includes the first operand and the operator in new var for some purposes later
         this.lastValue = this.currentResult;
     }
 }
