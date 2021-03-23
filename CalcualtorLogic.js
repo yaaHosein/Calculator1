@@ -119,8 +119,7 @@ class Calculator {
     onOperatorButtonClick(event) {
         this.operator = event.target.dataset.operator;
         this.lastButtonClicked = "operator";
-        this.lastValue = this.currentResult + this.operator;
-        console.log(this.newValue)
+        this.lastValue = this.currentResult;
     }
 }
 const calculator1 = new Calculator(".wrapper");
