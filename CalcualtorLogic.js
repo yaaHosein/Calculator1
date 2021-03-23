@@ -36,6 +36,7 @@ class Calculator {
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
         this.onButtonNumberClick = this.onButtonNumberClick.bind(this);
+        this.onOperatorButtonClick = this.onOperatorButtonClick.bind(this);
     };
     render() {
         const wrapperDiv = document.createElement('div');
