@@ -32,9 +32,9 @@ class Calculator {
     // for storing the current result and clicked operator 
     lastValue = null;
 
-
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
+        // controling this property
         this.onButtonNumberClick = this.onButtonNumberClick.bind(this);
         this.onOperatorButtonClick = this.onOperatorButtonClick.bind(this);
     };
@@ -82,6 +82,18 @@ class Calculator {
         dividingButton.appendChild(dividingButtonText);
         wrapperDiv.appendChild(dividingButton);
         dividingButton.addEventListener("click", this.onOperatorButtonClick);
+        const equalButton = document.createElement("button");
+        equalButton.classList.add("button");
+        const equalButtonText = document.createTextNode("=");
+        equalButton.appendChild(equalButtonText);
+        wrapperDiv.appendChild(equalButton);
+        equalButton.addEventListener("click", this.onOperatorButtonClick);
+        const clearingButton = document.createElement("button");
+        clearingButton.classList.add("button");
+        const clearingButtonText = document.createTextNode("Clear");
+        clearingButton.appendChild(clearingButtonText);
+        wrapperDiv.appendChild(clearingButton);
+        clearingButton.addEventListener("click", this.onOperatorButtonClick);
         this.hostElem.appendChild(wrapperDiv);
     };
     getButtonsRow(buttons) {
@@ -111,13 +123,14 @@ class Calculator {
         return div
     };
     onButtonNumberClick(event) {
-        // for making the first operand remove after clicking on the opertaor button so I can add the next operands only 
-        if (this.lastButtonClicked === "operator") this.currentResult = "";
-        const currentResultAndclickedNumButton = this.currentResult + event.target.dataset.number;
-        this.currentResult = currentResultAndclickedNumButton;
-        // for copying the content of current result to the result div 
-        this.updateResultElement();
-    }
+            // for making the first operand remove after clicking on the opertaor button so I can add the next operands only 
+            if (this.lastButtonClicked === "operator") this.currentResult = "";
+            const currentResultAndclickedNumButton = this.currentResult + event.target.dataset.number;
+            this.currentResult = currentResultAndclickedNumButton;
+            // for copying the content of current result to the result div 
+            this.updateResultElement();
+        }
+        // copying current result to resultElement
     updateResultElement() {
         this.resultElement.textContent = this.currentResult;
     }
