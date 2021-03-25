@@ -93,7 +93,7 @@ class Calculator {
         const clearingButtonText = document.createTextNode("Clear");
         clearingButton.appendChild(clearingButtonText);
         wrapperDiv.appendChild(clearingButton);
-        clearingButton.addEventListener("click", this.onClickButtonClick);
+        clearingButton.addEventListener("click", this.onClearButtonClick);
         this.hostElem.appendChild(wrapperDiv);
     };
     getButtonsRow(buttons) {
@@ -135,17 +135,19 @@ class Calculator {
         this.resultElement.textContent = this.currentResult;
     }
     onOperatorButtonClick(event) {
-        // for selecting the clicked operator 
-        this.operator = event.target.dataset.operator;
-        // a flag helping in clearing the current result after clicking the next operands after operator buttons 
-        this.lastButtonClicked = "operator";
-        // assigning the current result which includes the first operand and the operator in new var for some purposes later
-        this.lastValue = this.currentResult;
+            // for selecting the clicked operator 
+            this.operator = event.target.dataset.operator;
+            // a flag helping in clearing the current result after clicking the next operands after operator buttons 
+            this.lastButtonClicked = "operator";
+            // assigning the current result which includes the first operand and the operator in new var for some purposes later
+            this.lastValue = this.currentResult;
 
-    }
-    onClickButtonClick(event) {
+        }
+        //onClearButtonClick() {
+    onClearButtonClick(event) {
         //this. = event.target.;
         this.lastValue = "";
+        this.currentResult = "";
     }
     onEqualButtonClick(event) {
 
