@@ -135,22 +135,32 @@ class Calculator {
         this.resultElement.textContent = this.currentResult;
     }
     onOperatorButtonClick(event) {
-            // for selecting the clicked operator 
-            this.operator = event.target.dataset.operator;
-            // a flag helping in clearing the current result after clicking the next operands after operator buttons 
-            this.lastButtonClicked = "operator";
-            // assigning the current result which includes the first operand and the operator in new var for some purposes later
-            this.lastValue = this.currentResult;
+        // for selecting the clicked operator 
+        this.operator = event.target.dataset.operator;
+        // a flag helping in clearing the current result after clicking the next operands after operator buttons 
+        this.lastButtonClicked = "operator";
+        // assigning the current result which includes the first operand and the operator in new var for some purposes later
+        this.lastValue = this.currentResult;
+    }
 
-        }
-        //onClearButtonClick() {
+    //onClearButtonClick() {
     onClearButtonClick(event) {
         //this. = event.target.;
         this.lastValue = "";
         this.currentResult = "";
     }
     onEqualButtonClick(event) {
+        if (thi.lastValue && this.currentResult && thi.operator !== null) {
+            firstOperand = this.lastValue;
+            secondOperand = this.currentResult
 
+            if (this.operator === "+") this.currentResult = this.firstOperand + this.secondOperand;
+            if (this.operator === "-") this.currentResult = this.firstOperand - this.econdOperand;
+            if (this.operator === "*") this.currentResult = this.firstOperand * this.secondOperand;
+            if (this.operator === "/") this.currentResult = this.firstOperand / this.secondOperand;
+            if (this.operator === "/" && this.secondOperand === 0)
+                this.currentResult = 'Cannot divide by zero';
+        }
     }
 }
 const calculator1 = new Calculator(".wrapper");
