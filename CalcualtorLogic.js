@@ -91,6 +91,7 @@ class Calculator {
         const clearingButton = document.createElement("button");
         clearingButton.classList.add("button");
         const clearingButtonText = document.createTextNode("Clear");
+        clearingButton.id = "clearingButton"
         clearingButton.appendChild(clearingButtonText);
         wrapperDiv.appendChild(clearingButton);
         clearingButton.addEventListener("click", this.onClearButtonClick);
@@ -145,7 +146,7 @@ class Calculator {
 
     //onClearButtonClick() {
     onClearButtonClick(event) {
-        //this. = event.target.;
+
         this.lastValue = "";
         this.currentResult = "";
     }
