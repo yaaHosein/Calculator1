@@ -87,13 +87,13 @@ class Calculator {
         const equalButtonText = document.createTextNode("=");
         equalButton.appendChild(equalButtonText);
         wrapperDiv.appendChild(equalButton);
-        equalButton.addEventListener("click", this.onOperatorButtonClick);
+        equalButton.addEventListener("click", this.onEqualButtonClick);
         const clearingButton = document.createElement("button");
         clearingButton.classList.add("button");
         const clearingButtonText = document.createTextNode("Clear");
         clearingButton.appendChild(clearingButtonText);
         wrapperDiv.appendChild(clearingButton);
-        clearingButton.addEventListener("click", this.onOperatorButtonClick);
+        clearingButton.addEventListener("click", this.onClickButtonClick);
         this.hostElem.appendChild(wrapperDiv);
     };
     getButtonsRow(buttons) {
@@ -141,6 +141,14 @@ class Calculator {
         this.lastButtonClicked = "operator";
         // assigning the current result which includes the first operand and the operator in new var for some purposes later
         this.lastValue = this.currentResult;
+
+    }
+    onClickButtonClick(event) {
+        //this. = event.target.;
+        this.lastValue = "";
+    }
+    onEqualButtonClick(event) {
+
     }
 }
 const calculator1 = new Calculator(".wrapper");
