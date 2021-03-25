@@ -150,7 +150,7 @@ class Calculator {
         this.currentResult = "";
     }
     onEqualButtonClick(event) {
-        if (thi.lastValue && this.currentResult && thi.operator !== null) {
+        if (this.lastValue && this.currentResult && this.operator !== null) {
             firstOperand = this.lastValue;
             secondOperand = this.currentResult
 
