@@ -34,11 +34,14 @@ class Calculator {
 
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
-        // controling this property
+        // controling this property 
         this.onButtonNumberClick = this.onButtonNumberClick.bind(this);
         this.onOperatorButtonClick = this.onOperatorButtonClick.bind(this);
-        this.onClearButtonClick = this.onClearButtonClick.bind(this);
+        this.onPeriodButtonClick = this.onPeriodButtonClick.bind(this);
+        this.onNegativeValueButtonClick = this.onNegativeValueButtonClick.bind(this);
         this.onEqualButtonClick = this.onEqualButtonClick.bind(this);
+        this.onClearButtonClick = this.onClearButtonClick.bind(this);
+
     };
     render() {
         const wrapperDiv = document.createElement('div');
@@ -68,10 +71,12 @@ class Calculator {
         periodButton.classList.add("button");
         const periodButtonText = document.createTextNode(".");
         periodButton.appendChild(periodButtonText);
+        periodButton.addEventListener("click", this.onPeriodButtonClick);
         const negativeValueButton = document.createElement("button");
         negativeValueButton.classList.add("button");
         const negativeValueButtonText = document.createTextNode("±");
         negativeValueButton.appendChild(negativeValueButtonText);
+        negativeValueButton.addEventListener("click", this.onNegativeValueButtonClick);
         div4.appendChild(button0);
         div4.appendChild(periodButton);
         div4.appendChild(negativeValueButton);
@@ -137,22 +142,34 @@ class Calculator {
         this.resultElement.textContent = this.currentResult;
     }
     onOperatorButtonClick(event) {
-            // for selecting the clicked operator 
-            this.operator = event.target.dataset.operator;
-            // a flag helping in clearing the current result after clicking the next operands after operator buttons 
-            this.lastButtonClicked = "operator";
-            // assigning the current result which includes the first operand and the operator in new var for some purposes later
-            this.lastValue = this.currentResult;
-        }
-        // for clearing the resultDiv
-    onClearButtonClick() {
-        this.lastValue = "";
-        this.currentResult = "";
+        // for selecting the clicked operator 
+        this.operator = event.target.dataset.operator;
+        // a flag helping in clearing the current result after clicking the next operands after operator buttons 
+        this.lastButtonClicked = "operator";
+        // assigning the current result which includes the first operand and the operator in new var for some purposes later
+        this.lastValue = this.currentResult;
+    }
+    onPeriodButtonClick() {
+        const currentValueOfResult = this.currentResult;
+        if (currentValueOfResult.includes('.') !== true)
+            this.currentResult = currentValueOfResult + ".";
+        this.updateResultElement();
+    }
+    onNegativeValueButtonClick() {
+        const currentValueOfResult = this.currentResult;
+        if (currentValueOfResult !== "" && currentValueOfResult[0] !== "-") { this.currentResult = "-" + currentValueOfResult };
+        if (currentValueOfResult !== "" && currentValueOfResult[0] === "-") { this.currentResult = currentValueOfResult.slice(1) };
         this.updateResultElement();
     }
     onEqualButtonClick() {
 
     }
+    onClearButtonClick() {
+        this.lastValue = "";
+        this.currentResult = "";
+        this.updateResultElement();
+    }
+
 }
 
 const calculator1 = new Calculator(".wrapper");
