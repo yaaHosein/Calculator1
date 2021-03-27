@@ -41,7 +41,6 @@ class Calculator {
         this.onNegativeValueButtonClick = this.onNegativeValueButtonClick.bind(this);
         this.onEqualButtonClick = this.onEqualButtonClick.bind(this);
         this.onClearButtonClick = this.onClearButtonClick.bind(this);
-
     };
     render() {
         const wrapperDiv = document.createElement('div');
@@ -162,7 +161,19 @@ class Calculator {
         this.updateResultElement();
     }
     onEqualButtonClick() {
-
+        if (this.lastValue && this.currentResult && this.operator !== null) {
+            let firstOperand = parseFloat(this.lastValue);
+            let secondOperand = parseFloat(this.currentResult);
+            let _result;
+            if (this.operator === "+") _result = firstOperand + secondOperand;
+            if (this.operator === "-") _result = firstOperand - secondOperand;
+            if (this.operator === "*") _result = firstOperand * secondOperand;
+            if (this.operator === "/") _result = firstOperand / secondOperand;
+            this.currentResult = _result;
+            if (this.operator === "/" && secondOperand === 0)
+                this.currentResult = 'Cannot divide by zero';
+            this.updateResultElement();
+        }
     }
     onClearButtonClick() {
         this.lastValue = "";
