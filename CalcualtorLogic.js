@@ -168,7 +168,7 @@ class Calculator {
             if (this.operator === "+") _result = calculatorLogic.add(firstOperand, secondOperand);
             if (this.operator === "-") _result = calculatorLogic.subtract(firstOperand, secondOperand);
             if (this.operator === "*") _result = calculatorLogic.multiply(firstOperand, secondOperand);
-            if (this.operator === "/") _result = calculatorLogic.divide(firstOperand, secondOperand);
+            if (this.operator = "/") _result = calculatorLogic.divide(firstOperand, secondOperand);
             this.currentResult = _result;
             if (this.operator === "/" && secondOperand === 0)
                 this.currentResult = 'Cannot divide by zero';
