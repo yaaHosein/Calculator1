@@ -24,6 +24,7 @@ calculatorLogic.multiply();
 calculatorLogic.divide();
 
 class Calculator {
+    calculatorLogic = new CalculatorLogic();
     currentResult = 0;
     resultElement = null;
     operator = null;
@@ -31,7 +32,7 @@ class Calculator {
     lastButtonClicked = null;
     // for storing the current result and clicked operator 
     lastValue = null;
-
+    // calculatorLogic = new CalculatorLogic();
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
         // controling this property 
@@ -168,7 +169,7 @@ class Calculator {
             if (this.operator === "+") _result = calculatorLogic.add(firstOperand, secondOperand);
             if (this.operator === "-") _result = calculatorLogic.subtract(firstOperand, secondOperand);
             if (this.operator === "*") _result = calculatorLogic.multiply(firstOperand, secondOperand);
-            if (this.operator = "/") _result = calculatorLogic.divide(firstOperand, secondOperand);
+            if (this.operator === "/") _result = calculatorLogic.divide(firstOperand, secondOperand);
             this.currentResult = _result;
             if (this.operator === "/" && secondOperand === 0)
                 this.currentResult = 'Cannot divide by zero';
@@ -180,8 +181,8 @@ class Calculator {
         this.currentResult = "";
         this.updateResultElement();
     }
-}
 
+}
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
 // calculator1.updateResultElement()
