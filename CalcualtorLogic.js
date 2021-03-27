@@ -165,10 +165,10 @@ class Calculator {
             let firstOperand = parseFloat(this.lastValue);
             let secondOperand = parseFloat(this.currentResult);
             let _result;
-            if (this.operator === "+") _result = firstOperand + secondOperand;
-            if (this.operator === "-") _result = firstOperand - secondOperand;
-            if (this.operator === "*") _result = firstOperand * secondOperand;
-            if (this.operator === "/") _result = firstOperand / secondOperand;
+            if (this.operator === "+") _result = calculatorLogic.add(firstOperand, secondOperand);
+            if (this.operator === "-") _result = calculatorLogic.subtract(firstOperand, secondOperand);
+            if (this.operator === "*") _result = calculatorLogic.multiply(firstOperand, secondOperand);
+            if (this.operator === "/") _result = calculatorLogic.divide(firstOperand, secondOperand);
             this.currentResult = _result;
             if (this.operator === "/" && secondOperand === 0)
                 this.currentResult = 'Cannot divide by zero';
@@ -180,7 +180,6 @@ class Calculator {
         this.currentResult = "";
         this.updateResultElement();
     }
-
 }
 
 const calculator1 = new Calculator(".wrapper");
