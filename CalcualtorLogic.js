@@ -45,6 +45,7 @@ class Calculator {
     };
     render() {
         const wrapperDiv = document.createElement('div');
+        console.log(wrapperDiv);
         wrapperDiv.classList.add("wrapper");
         const resultDiv = document.createElement('div');
         resultDiv.classList.add("result");
@@ -84,6 +85,7 @@ class Calculator {
         const row4 = this.getOperatorsRow(["*", "+", "-"]);
         wrapperDiv.appendChild(row4);
         const dividingButton = document.createElement("button");
+        dividingButton.dataset.operator = "/";
         dividingButton.classList.add("button");
         const dividingButtonText = document.createTextNode("/");
         dividingButton.appendChild(dividingButtonText);
