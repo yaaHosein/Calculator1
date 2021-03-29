@@ -1,4 +1,5 @@
 class CalculatorLogic {
+
     add(number1, number2) {
         let result = number1 + number2;
         return result;
@@ -15,14 +16,7 @@ class CalculatorLogic {
         let result = number1 / number2;
         return result;
     };
-};
-
-let calculatorLogic = new CalculatorLogic();
-calculatorLogic.add();
-calculatorLogic.subtract();
-calculatorLogic.multiply();
-calculatorLogic.divide();
-
+}
 class Calculator {
     calculatorLogic = new CalculatorLogic();
     currentResult = 0;
@@ -32,7 +26,6 @@ class Calculator {
     lastButtonClicked = null;
     // for storing the current result and clicked operator 
     lastValue = null;
-    // calculatorLogic = new CalculatorLogic();
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
         // controling this property 
@@ -45,7 +38,6 @@ class Calculator {
     };
     render() {
         const wrapperDiv = document.createElement('div');
-        console.log(wrapperDiv);
         wrapperDiv.classList.add("wrapper");
         const resultDiv = document.createElement('div');
         resultDiv.classList.add("result");
@@ -173,8 +165,8 @@ class Calculator {
             if (this.operator === "*") _result = calculatorLogic.multiply(firstOperand, secondOperand);
             if (this.operator === "/") _result = calculatorLogic.divide(firstOperand, secondOperand);
             this.currentResult = _result;
-            if (this.operator === "/" && secondOperand === 0)
-                this.currentResult = 'Cannot divide by zero';
+            if (this.operator === "/" && secondOperand === 0);
+            this.currentResult = 'Cannot divide by zero';
             this.updateResultElement();
         }
     }
@@ -183,8 +175,8 @@ class Calculator {
         this.currentResult = "";
         this.updateResultElement();
     }
-
 }
 const calculator1 = new Calculator(".wrapper");
 calculator1.render();
-// calculator1.updateResultElement()
+// const calculator2 = new Calculator(".wrapper");
+// calculator2.onEqualButtonClick()
