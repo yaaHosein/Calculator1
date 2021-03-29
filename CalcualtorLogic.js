@@ -1,5 +1,4 @@
 class CalculatorLogic {
-
     add(number1, number2) {
         let result = number1 + number2;
         return result;
@@ -14,7 +13,6 @@ class CalculatorLogic {
     };
     divide(number1, number2) {
         let result = number1 / number2;
-        if (number2 === 0) result.textContent = 'Cannot divide by zero';
         return result;
     };
 }
