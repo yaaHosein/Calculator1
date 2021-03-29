@@ -14,9 +14,13 @@ class CalculatorLogic {
     };
     divide(number1, number2) {
         let result = number1 / number2;
+        if (number2 === 0) result.textContent = 'Cannot divide by zero';
         return result;
     };
 }
+let calculatorLogic1 = new CalculatorLogic()
+calculatorLogic1.divide();
+
 class Calculator {
     calculatorLogic = new CalculatorLogic();
     currentResult = 0;
@@ -165,8 +169,6 @@ class Calculator {
             if (this.operator === "*") _result = this.calculatorLogic.multiply(firstOperand, secondOperand);
             if (this.operator === "/") _result = this.calculatorLogic.divide(firstOperand, secondOperand);
             this.currentResult = _result;
-            if (this.operator === "/" && secondOperand === 0)
-                this.currentResult = 'Cannot divide by zero';
             this.updateResultElement();
         }
     }
