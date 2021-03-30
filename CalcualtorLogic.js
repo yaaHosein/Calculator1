@@ -13,11 +13,11 @@ class CalculatorLogic {
     };
     divide(number1, number2) {
         let result = number1 / number2;
+        if (number2 === 0) this.currentResult.textContent = 'Cannot divide by zero';
+        // if (number2 === 0) this.currentResult = 'Cannot divide by zero';
         return result;
     };
 }
-let calculatorLogic1 = new CalculatorLogic()
-calculatorLogic1.divide();
 
 class Calculator {
     calculatorLogic = new CalculatorLogic();
