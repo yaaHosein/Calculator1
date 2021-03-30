@@ -13,13 +13,13 @@ class CalculatorLogic {
     };
     divide(number1, number2) {
         let result = number1 / number2;
-        if (number2 === 0) this.currentResult.textContent = 'Cannot divide by zero';
-        // if (number2 === 0) this.currentResult = 'Cannot divide by zero';
+        if (number2 === 0) result = 'Cannot divide by zero';
         return result;
     };
 }
 
 class Calculator {
+    //instance
     calculatorLogic = new CalculatorLogic();
     currentResult = 0;
     resultElement = null;
