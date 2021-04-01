@@ -17,6 +17,7 @@
             return result;
         };
     }
+
     class Calculator {
         //instance
         calculatorLogic = new CalculatorLogic();
