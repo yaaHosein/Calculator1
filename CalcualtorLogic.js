@@ -138,23 +138,13 @@
             this.resultElement.textContent = this.currentResult;
         }
         onOperatorButtonClick(event) {
-            if (this.lastValue && this.currentResult && this.operator !== null) {
-                let firstOperand = parseFloat(this.lastValue);
-                let secondOperand = parseFloat(this.currentResult);
-                let _result;
-                if (this.operator === "+") _result = this.calculatorLogic.add(firstOperand, secondOperand);
-                if (this.operator === "-") _result = this.calculatorLogic.subtract(firstOperand, secondOperand);
-                if (this.operator === "*") _result = this.calculatorLogic.multiply(firstOperand, secondOperand);
-                if (this.operator === "/") _result = this.calculatorLogic.divide(firstOperand, secondOperand);
-                this.currentResult = _result;
-            }
+            this.evaluate();
             // for selecting the clicked operator 
             this.operator = event.target.dataset.operator;
             // a flag helping in clearing the current result after clicking the next operands after operator buttons 
             this.lastButtonClicked = "operator";
             // assigning the current result which includes the first operand and the operator in new var for some purposes later
             this.lastValue = this.currentResult;
-            this.updateResultElement();
         }
         onPeriodButtonClick() {
             const currentValueOfResult = this.currentResult;
@@ -169,6 +159,14 @@
             this.updateResultElement();
         }
         onEqualButtonClick() {
+            this.evaluate();
+        }
+        onClearButtonClick() {
+            this.lastValue = "";
+            this.currentResult = "";
+            this.updateResultElement();
+        }
+        evaluate() {
             if (this.lastValue && this.currentResult && this.operator !== null) {
                 let firstOperand = parseFloat(this.lastValue);
                 let secondOperand = parseFloat(this.currentResult);
@@ -180,11 +178,6 @@
                 this.currentResult = _result;
                 this.updateResultElement();
             }
-        }
-        onClearButtonClick() {
-            this.lastValue = "";
-            this.currentResult = "";
-            this.updateResultElement();
         }
     }
     const calculator1 = new Calculator(".wrapper");
