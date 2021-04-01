@@ -142,10 +142,10 @@
                 let firstOperand = parseFloat(this.lastValue);
                 let secondOperand = parseFloat(this.currentResult);
                 let _result;
-                if (this.operator === "+") _result = firstOperand + secondOperand;
-                if (this.operator === "-") _result = firstOperand - secondOperand;
-                if (this.operator === "*") _result = firstOperand * secondOperand;
-                if (this.operator === "/") _result = firstOperand / secondOperand;
+                if (this.operator === "+") _result = this.calculatorLogic.add(firstOperand, secondOperand);
+                if (this.operator === "-") _result = this.calculatorLogic.subtract(firstOperand, secondOperand);
+                if (this.operator === "*") _result = this.calculatorLogic.multiply(firstOperand, secondOperand);
+                if (this.operator === "/") _result = this.calculatorLogic.divide(firstOperand, secondOperand);
                 this.currentResult = _result;
             }
             // for selecting the clicked operator 
@@ -155,7 +155,6 @@
             // assigning the current result which includes the first operand and the operator in new var for some purposes later
             this.lastValue = this.currentResult;
             this.updateResultElement();
-
         }
         onPeriodButtonClick() {
             const currentValueOfResult = this.currentResult;
