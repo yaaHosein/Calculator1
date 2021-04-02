@@ -130,9 +130,11 @@ class Calculator {
     onButtonNumberClick(event) {
         // for making the first operand remove after clicking on the opertaor button so I can add the next operands only 
         if (this.lastButtonClicked === "operator") this.currentResult = "";
-        if (this.lastButtonClicked === "operator") this.lastButtonClicked = ".";
+        // if (this.lastButtonClicked === "operator") this.lastButtonClicked = ".";
         const currentResultAndclickedNumButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedNumButton;
+        this.lastButtonClicked = "number";
+        if (this.lastButtonClicked === "number") this.currentResult = "." + this.currentResult;
         const newValue = currentResultAndclickedNumButton;
         console.log(parseInt(newValue));
         this.currentResult = newValue;
