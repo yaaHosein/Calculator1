@@ -31,7 +31,7 @@ class Calculator {
 
     constructor(selector) {
         this.hostElem = document.querySelector(selector);
-        // controling this property 
+        // controling this property (line 35 - 40)
         this.onButtonNumberClick = this.onButtonNumberClick.bind(this);
         this.onOperatorButtonClick = this.onOperatorButtonClick.bind(this);
         this.onPeriodButtonClick = this.onPeriodButtonClick.bind(this);
@@ -128,16 +128,11 @@ class Calculator {
     };
 
     onButtonNumberClick(event) {
-        // for making the first operand remove after clicking on the opertaor button so I can add the next operands only 
+        // for making the first operand removed after clicking on the opertaor button so  can add the next operands only 
         if (this.lastButtonClicked === "operator") this.currentResult = "";
-        // if (this.lastButtonClicked === "operator") this.lastButtonClicked = ".";
         const currentResultAndclickedNumButton = this.currentResult + event.target.dataset.number;
         this.currentResult = currentResultAndclickedNumButton;
         this.lastButtonClicked = "number";
-        if (this.lastButtonClicked === "number") this.currentResult = "." + this.currentResult;
-        const newValue = currentResultAndclickedNumButton;
-        console.log(parseInt(newValue));
-        this.currentResult = newValue;
         // for copying the content of current result to the result div 
         this.updateResultElement();
     }
