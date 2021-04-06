@@ -179,7 +179,7 @@ class Calculator {
             if (this.operator === "-") _result = this.calculatorLogic.subtract(firstOperand, secondOperand);
             if (this.operator === "*") _result = this.calculatorLogic.multiply(firstOperand, secondOperand);
             if (this.operator === "/") _result = this.calculatorLogic.divide(firstOperand, secondOperand);
-            if (this.lastValue !== null) this.lastValue === null;
+            this.lastValue = null;
             this.currentResult = _result;
             this.updateResultElement();
         }
