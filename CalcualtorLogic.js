@@ -171,7 +171,7 @@ class Calculator {
         this.updateResultElement();
     }
     evaluate() {
-        if (this.lastValue && this.currentResult !== null) {
+        if (this.lastValue && this.currentResult !== null && this.operator !== null) {
             let firstOperand = parseFloat(this.lastValue);
             let secondOperand = parseFloat(this.currentResult);
             let _result;
@@ -179,6 +179,9 @@ class Calculator {
             if (this.operator === "-") _result = this.calculatorLogic.subtract(firstOperand, secondOperand);
             if (this.operator === "*") _result = this.calculatorLogic.multiply(firstOperand, secondOperand);
             if (this.operator === "/") _result = this.calculatorLogic.divide(firstOperand, secondOperand);
+            // for making the operation buttons do not calculate more befor adding new operands 
+            this.lastValue = null;
+            this.operator = null;
             this.currentResult = _result;
             this.updateResultElement();
         }
