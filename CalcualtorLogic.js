@@ -179,7 +179,9 @@ class Calculator {
             if (this.operator === "-") _result = this.calculatorLogic.subtract(firstOperand, secondOperand);
             if (this.operator === "*") _result = this.calculatorLogic.multiply(firstOperand, secondOperand);
             if (this.operator === "/") _result = this.calculatorLogic.divide(firstOperand, secondOperand);
+            // for making the operation buttons do not calculate more befor adding new operands 
             this.lastValue = null;
+            this.operator = null;
             this.currentResult = _result;
             this.updateResultElement();
         }
