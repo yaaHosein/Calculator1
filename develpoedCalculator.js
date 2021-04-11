@@ -1,3 +1,1 @@
-class DevelopedCalculator {
-    developedCalculator = new Calculator();
-};
+class DevelopedCalculator extends Calculator {};
