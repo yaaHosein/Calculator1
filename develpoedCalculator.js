@@ -1,1 +1,3 @@
-class developedCalculator {};
+class DevelopedCalculator {
+    developedCalculator = new Calculator();
+};
