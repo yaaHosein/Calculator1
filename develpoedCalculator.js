@@ -3,5 +3,5 @@ class DevelopedCalculator extends Calculator {
         this.hostElem1 = document.querySelector(selector);
     }
 };
-let developedCalculator = new DevelopedCalculator("#hostElem_");
+let developedCalculator = new DevelopedCalculator("#hostElement_");
 developedCalculator.render();
