@@ -1,6 +1,5 @@
 class DevelopedCalculator extends Calculator {
 
-
 }
 
 const developedCalculator = new DevelopedCalculator("#hostElement_");
