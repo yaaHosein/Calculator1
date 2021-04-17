@@ -1,4 +1,7 @@
 class DevelopedCalculator extends Calculator {
+    render_() {
+        super.render()
+    }
 
 }
 
