@@ -1,8 +1,7 @@
 class DevelopedCalculator extends Calculator {
-    render_() {
+    render() {
         super.render()
     }
-
 }
 
 const developedCalculator = new DevelopedCalculator("#hostElement_");
