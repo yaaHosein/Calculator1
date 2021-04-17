@@ -1,10 +1,10 @@
 class DevelopedCalculator extends Calculator {
     render() {
         super.render()
+        this.hostElm.prepend(historyDiv);
         const historyDiv = document.createElement('div');
         const historyDivText = document.createTextNode("History:");
         historyDiv_.appendChild(historyDivText);
-        this.hostElm.prepend(historyDiv);
         historyDiv.appendChild(historyDiv_);
     }
 }
