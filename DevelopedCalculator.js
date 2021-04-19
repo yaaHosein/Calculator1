@@ -6,9 +6,8 @@ class DevelopedCalculator extends Calculator {
         // add the text to the div
         historyDiv.appendChild(document.createTextNode("History:"));
         // prepend the historyDiv in the host element 
-        this.hostElm.prepend(historyDiv);
+        this.hostElem.prepend(historyDiv);
     }
 }
-
 const developedCalculator = new DevelopedCalculator("#hostElement_");
-developedCalculator.render()
+developedCalculator.render();
