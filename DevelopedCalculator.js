@@ -1,5 +1,5 @@
 class DevelopedCalculator extends Calculator {
-    history = null;
+    history = 0;
     render() {
         super.render()
             // first create a div 
