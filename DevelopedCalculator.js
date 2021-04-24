@@ -10,7 +10,7 @@ class DevelopedCalculator extends Calculator {
         this.hostElem.prepend(historyDiv);
     }
 
-    onButtonNumberClick_(event) {
+    onButtonNumberClick(event) {
         this.history.push(this.currentResult);
     }
     history = [this.currentResult];
