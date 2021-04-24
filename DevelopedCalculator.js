@@ -1,7 +1,6 @@
 class DevelopedCalculator extends Calculator {
-
+    history = null;
     render() {
-        super.history = null;
         super.render()
             // first create a div 
         const historyDiv = document.createElement("div");
