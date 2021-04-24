@@ -1,5 +1,5 @@
 class DevelopedCalculator extends Calculator {
-    history = 0;
+    history = [];
     render() {
         super.render()
             // first create a div 
@@ -8,9 +8,6 @@ class DevelopedCalculator extends Calculator {
         historyDiv.appendChild(document.createTextNode("History:" + this.currentResult));
         // prepend the historyDiv in the host element 
         this.hostElem.prepend(historyDiv);
-
-
-        const currentResultUpdate = [];
     }
 
     onButtonNumberClick_(event) {
