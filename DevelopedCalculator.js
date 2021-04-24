@@ -1,6 +1,7 @@
 class DevelopedCalculator extends Calculator {
 
     render() {
+        super.history = null;
         super.render()
             // first create a div 
         const historyDiv = document.createElement("div");
@@ -14,7 +15,8 @@ class DevelopedCalculator extends Calculator {
     }
 
     onButtonNumberClick_(event) {
-        super.history.push(this.currentResult)
+
+        this.super.history.push(this.currentResult)
     }
 
 }
