@@ -11,7 +11,7 @@ class DevelopedCalculator extends Calculator {
     }
 
     onButtonNumberClick_(event) {
-        super.this.history.push(this.currentResult)
+        this.history.push(this.currentResult)
         this.updateResultElement();
     }
     history = [this.currentResult];
