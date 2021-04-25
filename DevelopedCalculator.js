@@ -9,7 +9,6 @@ class DevelopedCalculator extends Calculator {
         // prepend the historyDiv in the host element 
         this.hostElem.prepend(historyDiv);
     }
-
     onButtonNumberClick(event) {
         this.history.push(this.currentResult);
     }
