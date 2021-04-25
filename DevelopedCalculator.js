@@ -13,6 +13,7 @@ class DevelopedCalculator extends Calculator {
         this.history.push(this.currentResult);
     }
     history = [this.currentResult];
+
 }
 const developedCalculator = new DevelopedCalculator("#hostElement_");
 developedCalculator.render();
