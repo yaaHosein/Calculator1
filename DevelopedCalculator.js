@@ -9,9 +9,9 @@ class DevelopedCalculator extends Calculator {
         // prepend the historyDiv in the host element 
         this.hostElem.prepend(historyDiv);
     }
-    onButtonNumberClick() {
+    onButtonNumberClick(event) {
+        super.onButtonNumberClick(event);
         this.history.push(this.currentResult);
-        super.onButtonNumberClick()
     }
 }
 const developedCalculator = new DevelopedCalculator("#hostElement_");
