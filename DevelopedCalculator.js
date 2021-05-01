@@ -1,5 +1,7 @@
 class DevelopedCalculator extends Calculator {
     history = [this.currentResult];
+    historyDiv = null;
+    historyDiv = document.querySelector('div');
     render() {
         super.render()
             // first create a div 
