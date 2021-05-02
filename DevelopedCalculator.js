@@ -1,16 +1,16 @@
 class DevelopedCalculator extends Calculator {
     history = [this.currentResult];
-    historyElement = null;
+    historyDiv = null;
     render() {
         super.render()
             // first create a div 
-        const historyDiv = document.createElement("div");
+        this.historyDiv = document.createElement("div");
         // add the text to the div
-        historyDiv.appendChild(document.createTextNode("History:" + this.currentResult));
+        this.historyDiv.appendChild(document.createTextNode("History:" + this.currentResult));
         // prepend the historyDiv in the host element 
-        this.hostElem.prepend(historyDiv);
+        this.hostElem.prepend(this.historyDiv);
         this.historyDiv = document.querySelectorAll('div');
-        this.historyElement = historyDiv;
+
     }
     onButtonNumberClick(event) {
         super.onButtonNumberClick(event);
