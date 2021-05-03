@@ -13,7 +13,7 @@ class DevelopedCalculator extends Calculator {
             this.historyDiv.appendChild(document.createTextNode("History:" + this.currentResult));
             // prepend the historyDiv in the host element 
             this.hostElem.prepend(this.historyDiv);
-            //gettingHistoryArray();
+            // this.gettingHistoryArray();
         }
         // new method has a parameter
     onButtonNumberClick(event) {
@@ -21,7 +21,7 @@ class DevelopedCalculator extends Calculator {
         super.onButtonNumberClick(event);
         // pushing the history array with current result
         this.history.push(this.currentResult);
-        //gettingHistoryArray();
+        this.gettingHistoryArray();
     }
     gettingHistoryArray() {
         this.history.join(",");
