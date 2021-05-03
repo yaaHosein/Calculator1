@@ -13,7 +13,7 @@ class DevelopedCalculator extends Calculator {
             this.historyElement.appendChild(document.createTextNode("History:" + this.currentResult));
             // prepend the historyElement in the host element 
             this.hostElem.prepend(this.historyElement);
-            // this.gettingHistoryArray();
+            this.gettingHistoryArray();
         }
         // new method has a parameter
     onButtonNumberClick(event) {
