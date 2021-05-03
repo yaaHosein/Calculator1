@@ -2,17 +2,17 @@
 class DevelopedCalculator extends Calculator {
     // defining history as an array
     history = [this.currentResult];
-    // saving historyDiv as a property on the class
-    historyDiv = null;
+    // saving historyElement as a property on the class
+    historyElement = null;
     render() {
             //calling the render method of the parent class
             super.render()
                 // first create a div 
-            this.historyDiv = document.createElement("div");
+            this.historyElement = document.createElement("div");
             // add the text to the div
-            this.historyDiv.appendChild(document.createTextNode("History:" + this.currentResult));
-            // prepend the historyDiv in the host element 
-            this.hostElem.prepend(this.historyDiv);
+            this.historyElement.appendChild(document.createTextNode("History:" + this.currentResult));
+            // prepend the historyElement in the host element 
+            this.hostElem.prepend(this.historyElement);
             // this.gettingHistoryArray();
         }
         // new method has a parameter
