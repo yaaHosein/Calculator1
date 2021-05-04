@@ -23,8 +23,7 @@ class DevelopedCalculator extends Calculator {
         this.gettingHistoryArray();
     }
     gettingHistoryArray() {
-        this.history.join(",");
-        this.historyElement.textContent = this.history;
+        this.historyElement.textContent = this.history.join(",");
     };
 }
 // defining instance 
