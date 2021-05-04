@@ -24,7 +24,7 @@ class DevelopedCalculator extends Calculator {
     }
     gettingHistoryArray() {
         this.history.join(",");
-        this.historyElement.textContent = this.currentResult;
+        this.historyElement.textContent = this.history;
     };
 }
 // defining instance 
