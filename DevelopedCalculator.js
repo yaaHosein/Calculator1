@@ -3,7 +3,7 @@ class DevelopedCalculator extends Calculator {
     // defining history as an array
     history = [this.currentResult];
     // saving historyElement as a property on the class
-    historyElement = null;
+    historyElement = this.currentResult;
     render() {
             //calling the render method of the parent class
             super.render()
@@ -32,8 +32,6 @@ class DevelopedCalculator extends Calculator {
         super.onOperatorButtonClick(event);
         // for adding the clicked operator 
         this.operator = event.target.dataset.operator;
-        // pushing the history array with current result..
-        this.history.push(this.currentResult);
         // calling gettingHistoryArray to update the history element after clicking any operator button 
         this.gettingHistoryArray();
     }
