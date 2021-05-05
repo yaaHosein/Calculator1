@@ -20,7 +20,7 @@ class DevelopedCalculator extends Calculator {
         super.onButtonNumberClick(event);
         // pushing the history array with current result
         this.history.push(this.currentResult);
-        // calling gettingHistoryArray
+        // calling gettingHistoryArray to update the history element after clicking any number button 
         this.gettingHistoryArray();
     }
     gettingHistoryArray() {
