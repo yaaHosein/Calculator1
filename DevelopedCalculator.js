@@ -20,10 +20,12 @@ class DevelopedCalculator extends Calculator {
         super.onButtonNumberClick(event);
         // pushing the history array with current result
         this.history.push(this.currentResult);
+        // calling gettingHistoryArray
         this.gettingHistoryArray();
     }
     gettingHistoryArray() {
-        this.historyElement.textContent = this.history.join(",");
+        // updating the history element by the history which is joined with the clicked operators in the future (.. will be changed with an operator)
+        this.historyElement.textContent = this.history.join("..");
     };
 }
 // defining instance 
