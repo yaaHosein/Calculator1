@@ -24,9 +24,19 @@ class DevelopedCalculator extends Calculator {
         this.gettingHistoryArray();
     }
     gettingHistoryArray() {
-        // updating the history element by the history which is joined with the clicked operators in the future (.. will be changed with an operator)
-        this.historyElement.textContent = this.history.join("..");
+        // updating the history element by the history which is joined with the clicked operators
+        this.historyElement.textContent = this.history.join(this.operator);
     };
+    onOperatorButtonClick(event) {
+        // calling parent class's onOperatorButtonClick method
+        super.onOperatorButtonClick(event);
+        // for adding the clicked operator 
+        this.operator = event.target.dataset.operator;
+        // pushing the history array with current result..
+        this.history.push(this.currentResult);
+        // calling gettingHistoryArray to update the history element after clicking any operator button 
+        this.gettingHistoryArray();
+    }
 }
 // defining instance 
 const developedCalculator = new DevelopedCalculator("#hostElement_");
