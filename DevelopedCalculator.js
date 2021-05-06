@@ -20,6 +20,7 @@ class DevelopedCalculator extends Calculator {
         super.onButtonNumberClick(event);
         // pushing the currentResult to the history array 
         this.history.push(this.currentResult);
+        console.log("in Number method", this.currentResult);
         // calling gettingHistoryArray to update the history element after clicking any number button 
         this.gettingHistoryArray();
     }
@@ -32,6 +33,7 @@ class DevelopedCalculator extends Calculator {
         super.onOperatorButtonClick(event);
         // pushing the currentResult to the history array 
         this.history.push(this.currentResult);
+        console.log("in operator", this.currentResult);
         // calling gettingHistoryArray to update the history element after clicking any operator button 
         this.gettingHistoryArray();
     }
