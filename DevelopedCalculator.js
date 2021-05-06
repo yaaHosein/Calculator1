@@ -30,8 +30,8 @@ class DevelopedCalculator extends Calculator {
     onOperatorButtonClick(event) {
         // calling parent class's onOperatorButtonClick method
         super.onOperatorButtonClick(event);
-        // for adding the clicked operator 
-        this.operator = event.target.dataset.operator;
+        // pushing the history array with current result
+        this.history.push(this.currentResult);
         // calling gettingHistoryArray to update the history element after clicking any operator button 
         this.gettingHistoryArray();
     }
