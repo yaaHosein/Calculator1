@@ -10,7 +10,7 @@ class DevelopedCalculator extends Calculator {
                 // first create a div 
             this.historyElement = document.createElement("div");
             // add the text to the div
-            this.historyElement.appendChild(document.createTextNode("History:" + this.currentResult));
+            this.historyElement.appendChild(document.createTextNode(this.currentResult));
             // prepend the historyElement in the host element 
             this.hostElem.prepend(this.historyElement);
         }
@@ -20,7 +20,6 @@ class DevelopedCalculator extends Calculator {
         super.onButtonNumberClick(event);
         // pushing the currentResult to the history array 
         this.history.push(this.currentResult);
-        console.log("in Number method", this.currentResult);
         // calling gettingHistoryArray to update the history element after clicking any number button 
         this.gettingHistoryArray();
     }
@@ -33,7 +32,6 @@ class DevelopedCalculator extends Calculator {
         super.onOperatorButtonClick(event);
         // pushing the currentResult to the history array 
         this.history.push(this.currentResult);
-        console.log("in operator", this.currentResult);
         // calling gettingHistoryArray to update the history element after clicking any operator button 
         this.gettingHistoryArray();
     }
