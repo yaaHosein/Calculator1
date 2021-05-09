@@ -24,13 +24,13 @@ class DevelopedCalculator extends Calculator {
         this.gettingHistoryArray();
     }
     gettingHistoryArray() {
-        // updating the history element by the history which is joined with the clicked operators
+        // updating the history element by the history which is joined with ,
         this.historyElement.textContent = this.history.join(",");
     };
     onOperatorButtonClick(event) {
         // calling parent class's onOperatorButtonClick method
         super.onOperatorButtonClick(event);
-        // pushing the currentResult to the history array 
+        // pushing the operator to the history array 
         this.history.push(this.operator);
         // calling gettingHistoryArray to update the history element after clicking any operator button 
         this.gettingHistoryArray(event);
