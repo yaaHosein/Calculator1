@@ -156,11 +156,6 @@ class Calculator {
         this.lastButtonClicked = "operator";
         // assigning the current result which includes the first operand and the operator in new var for some purposes later
         this.lastValue = this.currentResult;
-
-
-
-
-        this.updateResultElement();
     }
     onPeriodButtonClick() {
         const currentValueOfResult = this.currentResult;
