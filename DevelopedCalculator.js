@@ -33,7 +33,7 @@ class DevelopedCalculator extends Calculator {
         const currentResultAndclickedOperButton = this.currentResult + event.target.dataset.operator;
         this.currentResult = currentResultAndclickedOperButton;
         // pushing the currentResult to the history array 
-        this.history.push(this.currentResult);
+        this.history.push(currentResultAndclickedOperButton);
         // calling gettingHistoryArray to update the history element after clicking any operator button 
         this.gettingHistoryArray(event);
     }
