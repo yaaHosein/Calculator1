@@ -22,7 +22,6 @@ class Calculator {
     //instance
     calculatorLogic = new CalculatorLogic();
     currentResult = 0;
-
     resultElement = null;
     operator = null;
     // for making the first operand remove after clicking on the operator button
