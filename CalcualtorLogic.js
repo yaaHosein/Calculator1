@@ -143,13 +143,6 @@ class Calculator {
     }
     onOperatorButtonClick(event) {
         this.evaluate();
-
-        const currentResultAndclickedOperButton = this.currentResult + event.target.dataset.operator;
-        this.currentResult = currentResultAndclickedOperButton;
-
-
-
-
         // for selecting the clicked operator 
         this.operator = event.target.dataset.operator;
         // a flag helping in clearing the current result after clicking the next operands after operator buttons 
