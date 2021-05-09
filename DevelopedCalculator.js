@@ -22,12 +22,10 @@ class DevelopedCalculator extends Calculator {
         this.history.push(this.currentResult);
         // calling gettingHistoryArray to update the history element after clicking any number button 
         this.gettingHistoryArray();
-        //console.log(this.history)
-        //console.log(this.currentResult);
     }
     gettingHistoryArray() {
         // updating the history element by the history which is joined with the clicked operators
-        this.historyElement.textContent = this.history.join(this.operator);
+        this.historyElement.textContent = this.history.join(",");
     };
     onOperatorButtonClick(event) {
         // calling parent class's onOperatorButtonClick method
@@ -35,9 +33,7 @@ class DevelopedCalculator extends Calculator {
         // pushing the currentResult to the history array 
         this.history.push(this.currentResult);
         // calling gettingHistoryArray to update the history element after clicking any operator button 
-        this.gettingHistoryArray();
-        //console.log(this.history)
-        //console.log(this.currentResult)
+        this.gettingHistoryArray(event);
     }
 }
 // defining instance 
