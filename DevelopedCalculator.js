@@ -3,7 +3,7 @@ class DevelopedCalculator extends Calculator {
     // defining history as an array
     history = [this.currentResult];
     // saving historyElement as a property on the class
-    historyElement = this.currentResult;
+    historyElement = null;
     render() {
             //calling the render method of the parent class
             super.render()
