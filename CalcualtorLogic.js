@@ -22,7 +22,6 @@ class Calculator {
     //instance
     calculatorLogic = new CalculatorLogic();
     currentResult = 0;
-
     resultElement = null;
     operator = null;
     // for making the first operand remove after clicking on the operator button
@@ -144,12 +143,24 @@ class Calculator {
     }
     onOperatorButtonClick(event) {
         this.evaluate();
+
+        const currentResultAndclickedNumButton_ = this.currentResult + event.target.dataset.operator;
+        this.currentResult = currentResultAndclickedNumButton_;
+
+
+
+
         // for selecting the clicked operator 
         this.operator = event.target.dataset.operator;
         // a flag helping in clearing the current result after clicking the next operands after operator buttons 
         this.lastButtonClicked = "operator";
         // assigning the current result which includes the first operand and the operator in new var for some purposes later
         this.lastValue = this.currentResult;
+
+
+
+
+        this.updateResultElement();
     }
     onPeriodButtonClick() {
         const currentValueOfResult = this.currentResult;
