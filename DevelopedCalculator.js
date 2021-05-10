@@ -26,6 +26,7 @@ class DevelopedCalculator extends Calculator {
     gettingHistoryArray() {
         // updating the history element by the history which is joined with ,
         this.historyElement.textContent = this.history.join(",");
+        // updating the history element by the history which is joined with ""
         this.historyElement.textContent = this.history.join("");
     };
     onOperatorButtonClick(event) {
