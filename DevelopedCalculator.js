@@ -20,7 +20,9 @@ class DevelopedCalculator extends Calculator {
         // calling parent class's onButtonNumberClick method1
         super.onButtonNumberClick(event);
         // pushing the currentResult to the history array 
-        this.history.push(this.currentResult);
+        let nn = this.currentResult + this.operator
+        if (nn.includes(this.operator))
+            this.history.push(nn);
         // calling gettingHistoryArray to update the history element after clicking any number button 
         this.gettingHistoryArray();
     }
