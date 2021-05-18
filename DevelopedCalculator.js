@@ -31,7 +31,7 @@ class DevelopedCalculator extends Calculator {
     onOperatorButtonClick(event) {
             // calling parent class's onOperatorButtonClick method
             super.onOperatorButtonClick(event);
-            const curntresultandopr = this.currentResult + this.operator
+            const curntresultandopr = this.currentResult + "," + this.operator
             this.history.push(curntresultandopr);
             this.operator = null;
             if (this.history.includes(this.operator)) this.history.push(curntresultandopr);
