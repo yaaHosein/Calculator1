@@ -20,7 +20,7 @@ class DevelopedCalculator extends Calculator {
         // calling parent class's onButtonNumberClick method1
         super.onButtonNumberClick(event);
         // pushing the currentResult to the history array 
-        // this.history.push(this.currentResult);
+        this.history.push(this.currentResult);
         // calling gettingHistoryArray to update the history element after clicking any number button 
         this.gettingHistoryArray();
     }
@@ -31,10 +31,8 @@ class DevelopedCalculator extends Calculator {
     onOperatorButtonClick(event) {
             // calling parent class's onOperatorButtonClick method
             super.onOperatorButtonClick(event);
-            const curntresultandopr = this.currentResult + "," + this.operator
-            this.history.push(curntresultandopr);
-            this.operator = null;
-            if (this.history.includes(this.operator)) this.history.push(curntresultandopr);
+            // pushing the operator to the history array
+            this.history.push(this.operator);
             // calling gettingHistoryArray to update the history element after clicking any operator button 
             this.gettingHistoryArray();
         }
