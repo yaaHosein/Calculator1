@@ -19,8 +19,6 @@ class DevelopedCalculator extends Calculator {
     onButtonNumberClick(event) {
         // calling parent class's onButtonNumberClick method1
         super.onButtonNumberClick(event);
-        // pushing the currentResult to the history array 
-        this.history.push(this.currentResult);
         // calling gettingHistoryArray to update the history element after clicking any number button 
         this.gettingHistoryArray();
     }
@@ -32,7 +30,7 @@ class DevelopedCalculator extends Calculator {
             // calling parent class's onOperatorButtonClick method
             super.onOperatorButtonClick(event);
             // pushing current result and the operator to the history array
-            this.history.push(this.operator, this.currentResult);
+            this.history.push(this.currentResult, this.operator);
             // calling gettingHistoryArray to update the history element after clicking any operator button 
             this.gettingHistoryArray();
             // this.history.push(this.currentResult, this.operator);
