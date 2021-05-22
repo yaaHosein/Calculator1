@@ -30,6 +30,12 @@ class DevelopedCalculator extends Calculator {
         //onClearButtonClick() {
         //    super.onClearButtonClick()
         // }
+    onEqualButtonClick() {
+        this.operator = null
+        super.onEqualButtonClick()
+        this.history.push(this.currentResult);
+        this.gettingHistoryArray();
+    }
 }
 // defining instance 
 const developedCalculator = new DevelopedCalculator("#hostElement_");
