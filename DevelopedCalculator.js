@@ -31,7 +31,7 @@ class DevelopedCalculator extends Calculator {
         //    super.onClearButtonClick()
         // }
     onEqualButtonClick() {
-        this.history.push(this.currentResult);
+        this.history.push(this.currentResult, "=");
         super.onEqualButtonClick()
         this.gettingHistoryArray();
     }
