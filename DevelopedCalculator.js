@@ -19,17 +19,21 @@ class DevelopedCalculator extends Calculator {
         this.historyElement.textContent = this.history.join(",")
     };
     onOperatorButtonClick(event) {
-            // calling parent class's onOperatorButtonClick method
-            super.onOperatorButtonClick(event);
-            // pushing current result and the operator to the history array
-            this.history.push(this.currentResult, this.operator);
-            // calling gettingHistoryArray to update the history element after clicking any operator button 
-            this.gettingHistoryArray();
-            // this.history.push(this.currentResult, this.operator);
-        }
-        //onClearButtonClick() {
-        //    super.onClearButtonClick()
-        // }
+        // calling parent class's onOperatorButtonClick method
+        super.onOperatorButtonClick(event);
+        // pushing current result and the operator to the history array
+        this.history.push(this.currentResult, this.operator);
+        // calling gettingHistoryArray to update the history element after clicking any operator button 
+        this.gettingHistoryArray();
+        // this.history.push(this.currentResult, this.operator);
+    }
+    onClearButtonClick() {
+        // calling parent class's onClearButtonClick method
+        super.onClearButtonClick()
+            // assigning the history element to empty array (we use "" for strings for that)
+        this.history = []
+        this.gettingHistoryArray();
+    }
     onEqualButtonClick() {
         this.history.push(this.currentResult, "=");
         super.onEqualButtonClick()
