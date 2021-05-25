@@ -29,7 +29,7 @@ class DevelopedCalculator extends Calculator {
     }
     onClearButtonClick() {
         super.onClearButtonClick()
-        this.history = ""
+        this.history = [""]
         this.historyElement.textContent = this.history
     }
     onEqualButtonClick() {
