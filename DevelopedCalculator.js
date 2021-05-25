@@ -28,7 +28,9 @@ class DevelopedCalculator extends Calculator {
         // this.history.push(this.currentResult, this.operator);
     }
     onClearButtonClick() {
+        // calling parent class's onClearButtonClick method
         super.onClearButtonClick()
+            // assigning the history element to empty array (we use "" for strings for that)
         this.history = []
         this.gettingHistoryArray();
     }
