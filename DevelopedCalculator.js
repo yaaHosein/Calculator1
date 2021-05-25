@@ -30,7 +30,7 @@ class DevelopedCalculator extends Calculator {
     onClearButtonClick() {
         super.onClearButtonClick()
         this.history = []
-        this.historyElement.textContent = this.history
+        this.gettingHistoryArray();
     }
     onEqualButtonClick() {
         this.history.push(this.currentResult, "=");
